@@ -245,7 +245,7 @@ public class user_main1 extends AppCompatActivity{
 
         /*context =this;*/
 
-
+        //z
         //액션바 설정하기//
         //액션바 타이틀 변경하기
         getSupportActionBar().setTitle("[메인]  "+user_name1+"님 안녕하세요.");
