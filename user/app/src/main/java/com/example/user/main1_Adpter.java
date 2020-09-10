@@ -91,6 +91,8 @@ public class main1_Adpter extends RecyclerView.Adapter<main1_Adpter.CustomViewHo
                 }
             });*/
         }
+
+        //하하하
         viewholder.o_pw.setText(mList.get(position).getMember_o_pw());
         viewholder.data2.setText(mList.get(position).getMember_data2());
         viewholder.data3.setText(mList.get(position).getMember_data3());
