@@ -1,0 +1,212 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.user"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="24"
+8-->D:\Android Storage\user\app\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="29" />
+9-->D:\Android Storage\user\app\src\main\AndroidManifest.xml
+10
+11    <uses-permission android:name="android.permission.INTERNET" />
+11-->D:\Android Storage\user\app\src\main\AndroidManifest.xml:5:5-67
+11-->D:\Android Storage\user\app\src\main\AndroidManifest.xml:5:22-64
+12    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+12-->D:\Android Storage\user\app\src\main\AndroidManifest.xml:6:5-80
+12-->D:\Android Storage\user\app\src\main\AndroidManifest.xml:6:22-77
+13    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+13-->D:\Android Storage\user\app\src\main\AndroidManifest.xml:7:5-81
+13-->D:\Android Storage\user\app\src\main\AndroidManifest.xml:7:22-78
+14    <uses-permission android:name="android.permission.SEND_SMS" />
+14-->D:\Android Storage\user\app\src\main\AndroidManifest.xml:8:5-67
+14-->D:\Android Storage\user\app\src\main\AndroidManifest.xml:8:22-64
+15    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+15-->D:\Android Storage\user\app\src\main\AndroidManifest.xml:9:5-70
+15-->D:\Android Storage\user\app\src\main\AndroidManifest.xml:9:22-67
+16    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+16-->D:\Android Storage\user\app\src\main\AndroidManifest.xml:10:5-75
+16-->D:\Android Storage\user\app\src\main\AndroidManifest.xml:10:22-72
+17    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+17-->D:\Android Storage\user\app\src\main\AndroidManifest.xml:11:5-79
+17-->D:\Android Storage\user\app\src\main\AndroidManifest.xml:11:22-76
+18    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+18-->D:\Android Storage\user\app\src\main\AndroidManifest.xml:12:5-81
+18-->D:\Android Storage\user\app\src\main\AndroidManifest.xml:12:22-78
+19
+20    <!-- Include required permissions for Google Maps API to run. -->
+21    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+21-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\akdma\.gradle\caches\transforms-2\files-2.1\7752dcb5f35954b62a1d54735ffd34b4\jetified-play-services-maps-17.0.0\AndroidManifest.xml:23:5-79
+21-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\akdma\.gradle\caches\transforms-2\files-2.1\7752dcb5f35954b62a1d54735ffd34b4\jetified-play-services-maps-17.0.0\AndroidManifest.xml:23:22-76
+22
+23    <uses-feature
+23-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\akdma\.gradle\caches\transforms-2\files-2.1\7752dcb5f35954b62a1d54735ffd34b4\jetified-play-services-maps-17.0.0\AndroidManifest.xml:26:5-28:35
+24        android:glEsVersion="0x00020000"
+24-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\akdma\.gradle\caches\transforms-2\files-2.1\7752dcb5f35954b62a1d54735ffd34b4\jetified-play-services-maps-17.0.0\AndroidManifest.xml:27:9-41
+25        android:required="true" />
+25-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\akdma\.gradle\caches\transforms-2\files-2.1\7752dcb5f35954b62a1d54735ffd34b4\jetified-play-services-maps-17.0.0\AndroidManifest.xml:28:9-32
+26
+27    <application
+27-->D:\Android Storage\user\app\src\main\AndroidManifest.xml:14:5-65:19
+28        android:allowBackup="true"
+28-->D:\Android Storage\user\app\src\main\AndroidManifest.xml:15:9-35
+29        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+29-->[androidx.core:core:1.1.0] C:\Users\akdma\.gradle\caches\transforms-2\files-2.1\76f2b6439d16df60df3177021482ee5a\core-1.1.0\AndroidManifest.xml:24:18-86
+30        android:debuggable="true"
+31        android:extractNativeLibs="false"
+32        android:icon="@mipmap/washing_machine"
+32-->D:\Android Storage\user\app\src\main\AndroidManifest.xml:16:9-47
+33        android:label="@string/app_name"
+33-->D:\Android Storage\user\app\src\main\AndroidManifest.xml:17:9-41
+34        android:networkSecurityConfig="@xml/network_security_config"
+34-->D:\Android Storage\user\app\src\main\AndroidManifest.xml:21:9-69
+35        android:roundIcon="@mipmap/washing_machine_round"
+35-->D:\Android Storage\user\app\src\main\AndroidManifest.xml:18:9-58
+36        android:supportsRtl="true"
+36-->D:\Android Storage\user\app\src\main\AndroidManifest.xml:19:9-35
+37        android:testOnly="true"
+38        android:theme="@style/AppTheme" >
+38-->D:\Android Storage\user\app\src\main\AndroidManifest.xml:20:9-40
+39        <activity android:name="com.example.user.user_main2" />
+39-->D:\Android Storage\user\app\src\main\AndroidManifest.xml:23:9-48
+39-->D:\Android Storage\user\app\src\main\AndroidManifest.xml:23:19-45
+40        <activity android:name="com.example.user.user_frag_first" />
+40-->D:\Android Storage\user\app\src\main\AndroidManifest.xml:24:9-53
+40-->D:\Android Storage\user\app\src\main\AndroidManifest.xml:24:19-50
+41        <activity android:name="com.example.user.see_others_review" />
+41-->D:\Android Storage\user\app\src\main\AndroidManifest.xml:25:9-55
+41-->D:\Android Storage\user\app\src\main\AndroidManifest.xml:25:19-52
+42        <activity android:name="com.example.user.user_forgot_pw_change" />
+42-->D:\Android Storage\user\app\src\main\AndroidManifest.xml:26:9-59
+42-->D:\Android Storage\user\app\src\main\AndroidManifest.xml:26:19-56
+43        <activity android:name="com.example.user.user_write_review" />
+43-->D:\Android Storage\user\app\src\main\AndroidManifest.xml:27:9-55
+43-->D:\Android Storage\user\app\src\main\AndroidManifest.xml:27:19-52
+44        <activity android:name="com.example.user.user_order_record2" />
+44-->D:\Android Storage\user\app\src\main\AndroidManifest.xml:28:9-56
+44-->D:\Android Storage\user\app\src\main\AndroidManifest.xml:28:19-53
+45        <activity android:name="com.example.user.user_now_order2" />
+45-->D:\Android Storage\user\app\src\main\AndroidManifest.xml:29:9-53
+45-->D:\Android Storage\user\app\src\main\AndroidManifest.xml:29:19-50
+46        <activity android:name="com.example.user.user_forpay" />
+46-->D:\Android Storage\user\app\src\main\AndroidManifest.xml:30:9-49
+46-->D:\Android Storage\user\app\src\main\AndroidManifest.xml:30:19-46
+47        <activity android:name="com.example.user.user_info1" />
+47-->D:\Android Storage\user\app\src\main\AndroidManifest.xml:31:9-48
+47-->D:\Android Storage\user\app\src\main\AndroidManifest.xml:31:19-45
+48        <activity android:name="com.example.user.user_storereview" />
+48-->D:\Android Storage\user\app\src\main\AndroidManifest.xml:32:9-54
+48-->D:\Android Storage\user\app\src\main\AndroidManifest.xml:32:19-51
+49        <activity android:name="com.example.user.user_itembasket" />
+49-->D:\Android Storage\user\app\src\main\AndroidManifest.xml:33:9-53
+49-->D:\Android Storage\user\app\src\main\AndroidManifest.xml:33:19-50
+50        <activity android:name="com.example.user.user_itempage" />
+50-->D:\Android Storage\user\app\src\main\AndroidManifest.xml:34:9-51
+50-->D:\Android Storage\user\app\src\main\AndroidManifest.xml:34:19-48
+51        <activity android:name="com.example.user.user_logout" />
+51-->D:\Android Storage\user\app\src\main\AndroidManifest.xml:35:9-49
+51-->D:\Android Storage\user\app\src\main\AndroidManifest.xml:35:19-46
+52        <activity android:name="com.example.user.user_order_record" />
+52-->D:\Android Storage\user\app\src\main\AndroidManifest.xml:36:9-55
+52-->D:\Android Storage\user\app\src\main\AndroidManifest.xml:36:19-52
+53        <activity android:name="com.example.user.user_now_order" />
+53-->D:\Android Storage\user\app\src\main\AndroidManifest.xml:37:9-52
+53-->D:\Android Storage\user\app\src\main\AndroidManifest.xml:37:19-49
+54        <activity android:name="com.example.user.user_review" />
+54-->D:\Android Storage\user\app\src\main\AndroidManifest.xml:38:9-49
+54-->D:\Android Storage\user\app\src\main\AndroidManifest.xml:38:19-46
+55        <activity android:name="com.example.user.user_info" />
+55-->D:\Android Storage\user\app\src\main\AndroidManifest.xml:39:9-47
+55-->D:\Android Storage\user\app\src\main\AndroidManifest.xml:39:19-44
+56        <activity android:name="com.example.user.user_changelocation" />
+56-->D:\Android Storage\user\app\src\main\AndroidManifest.xml:40:9-57
+56-->D:\Android Storage\user\app\src\main\AndroidManifest.xml:40:19-54
+57        <activity android:name="com.example.user.user_gongji" />
+57-->D:\Android Storage\user\app\src\main\AndroidManifest.xml:41:9-49
+57-->D:\Android Storage\user\app\src\main\AndroidManifest.xml:41:19-46
+58        <activity android:name="com.example.user.user_main1" />
+58-->D:\Android Storage\user\app\src\main\AndroidManifest.xml:42:9-48
+58-->D:\Android Storage\user\app\src\main\AndroidManifest.xml:42:19-45
+59        <activity android:name="com.example.user.forgot_id_pw" />
+59-->D:\Android Storage\user\app\src\main\AndroidManifest.xml:43:9-50
+59-->D:\Android Storage\user\app\src\main\AndroidManifest.xml:43:19-47
+60        <activity android:name="com.example.user.mainloading" />
+60-->D:\Android Storage\user\app\src\main\AndroidManifest.xml:44:9-49
+60-->D:\Android Storage\user\app\src\main\AndroidManifest.xml:44:19-46
+61        <activity android:name="com.example.user.user_login" />
+61-->D:\Android Storage\user\app\src\main\AndroidManifest.xml:45:9-48
+61-->D:\Android Storage\user\app\src\main\AndroidManifest.xml:45:19-45
+62        <activity android:name="com.example.user.user_signup4" />
+62-->D:\Android Storage\user\app\src\main\AndroidManifest.xml:46:9-50
+62-->D:\Android Storage\user\app\src\main\AndroidManifest.xml:46:19-47
+63        <activity android:name="com.example.user.user_signup3" />
+63-->D:\Android Storage\user\app\src\main\AndroidManifest.xml:47:9-50
+63-->D:\Android Storage\user\app\src\main\AndroidManifest.xml:47:19-47
+64        <activity android:name="com.example.user.user_signup2" />
+64-->D:\Android Storage\user\app\src\main\AndroidManifest.xml:48:9-50
+64-->D:\Android Storage\user\app\src\main\AndroidManifest.xml:48:19-47
+65        <activity android:name="com.example.user.user_signup1" />
+65-->D:\Android Storage\user\app\src\main\AndroidManifest.xml:49:9-50
+65-->D:\Android Storage\user\app\src\main\AndroidManifest.xml:49:19-47
+66        <activity android:name="com.example.user.MainActivity" >
+66-->D:\Android Storage\user\app\src\main\AndroidManifest.xml:50:9-56:20
+66-->D:\Android Storage\user\app\src\main\AndroidManifest.xml:50:19-47
+67            <intent-filter>
+67-->D:\Android Storage\user\app\src\main\AndroidManifest.xml:51:13-55:29
+68                <action android:name="android.intent.action.MAIN" />
+68-->D:\Android Storage\user\app\src\main\AndroidManifest.xml:52:17-69
+68-->D:\Android Storage\user\app\src\main\AndroidManifest.xml:52:25-66
+69
+70                <category android:name="android.intent.category.LAUNCHER" />
+70-->D:\Android Storage\user\app\src\main\AndroidManifest.xml:54:17-77
+70-->D:\Android Storage\user\app\src\main\AndroidManifest.xml:54:27-74
+71            </intent-filter>
+72        </activity>
+73        <activity android:name="com.example.user.ImageActivity" />
+73-->D:\Android Storage\user\app\src\main\AndroidManifest.xml:57:9-51
+73-->D:\Android Storage\user\app\src\main\AndroidManifest.xml:57:19-48
+74        <activity android:name="com.example.user.user_itempage_list" />
+74-->D:\Android Storage\user\app\src\main\AndroidManifest.xml:58:9-56
+74-->D:\Android Storage\user\app\src\main\AndroidManifest.xml:58:19-53
+75        <activity android:name="com.example.user.user_itempage_Adpter" />
+75-->D:\Android Storage\user\app\src\main\AndroidManifest.xml:59:9-58
+75-->D:\Android Storage\user\app\src\main\AndroidManifest.xml:59:19-55
+76        <activity android:name="com.example.user.user_storereview_Adpter" />
+76-->D:\Android Storage\user\app\src\main\AndroidManifest.xml:60:9-61
+76-->D:\Android Storage\user\app\src\main\AndroidManifest.xml:60:19-58
+77        <activity android:name="com.example.user.user_storereview_list" /> <!-- 구글 API -->
+77-->D:\Android Storage\user\app\src\main\AndroidManifest.xml:61:9-59
+77-->D:\Android Storage\user\app\src\main\AndroidManifest.xml:61:19-56
+78        <meta-data
+78-->D:\Android Storage\user\app\src\main\AndroidManifest.xml:62:9-64:71
+79            android:name="com.google.android.geo.API_KEY"
+79-->D:\Android Storage\user\app\src\main\AndroidManifest.xml:63:13-58
+80            android:value="AIzaSyCVgBM9ZWqFJdEPp_QgpLsqMxQIb3qqEBI" />
+80-->D:\Android Storage\user\app\src\main\AndroidManifest.xml:64:13-68
+81        <!-- Needs to be explicitly declared on P+ -->
+82        <uses-library
+82-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\akdma\.gradle\caches\transforms-2\files-2.1\7752dcb5f35954b62a1d54735ffd34b4\jetified-play-services-maps-17.0.0\AndroidManifest.xml:33:9-35:40
+83            android:name="org.apache.http.legacy"
+83-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\akdma\.gradle\caches\transforms-2\files-2.1\7752dcb5f35954b62a1d54735ffd34b4\jetified-play-services-maps-17.0.0\AndroidManifest.xml:34:13-50
+84            android:required="false" />
+84-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\akdma\.gradle\caches\transforms-2\files-2.1\7752dcb5f35954b62a1d54735ffd34b4\jetified-play-services-maps-17.0.0\AndroidManifest.xml:35:13-37
+85
+86        <activity
+86-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\akdma\.gradle\caches\transforms-2\files-2.1\a1794986c7a3c4986f9feb2359005476\jetified-play-services-base-17.0.0\AndroidManifest.xml:23:9-26:75
+87            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+87-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\akdma\.gradle\caches\transforms-2\files-2.1\a1794986c7a3c4986f9feb2359005476\jetified-play-services-base-17.0.0\AndroidManifest.xml:24:13-79
+88            android:exported="false"
+88-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\akdma\.gradle\caches\transforms-2\files-2.1\a1794986c7a3c4986f9feb2359005476\jetified-play-services-base-17.0.0\AndroidManifest.xml:25:13-37
+89            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+89-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\akdma\.gradle\caches\transforms-2\files-2.1\a1794986c7a3c4986f9feb2359005476\jetified-play-services-base-17.0.0\AndroidManifest.xml:26:13-72
+90
+91        <meta-data
+91-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\akdma\.gradle\caches\transforms-2\files-2.1\294cc5ecc9001f3e94c034cd71f64fdf\jetified-play-services-basement-17.0.0\AndroidManifest.xml:23:9-25:69
+92            android:name="com.google.android.gms.version"
+92-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\akdma\.gradle\caches\transforms-2\files-2.1\294cc5ecc9001f3e94c034cd71f64fdf\jetified-play-services-basement-17.0.0\AndroidManifest.xml:24:13-58
+93            android:value="@integer/google_play_services_version" />
+93-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\akdma\.gradle\caches\transforms-2\files-2.1\294cc5ecc9001f3e94c034cd71f64fdf\jetified-play-services-basement-17.0.0\AndroidManifest.xml:25:13-66
+94    </application>
+95
+96</manifest>

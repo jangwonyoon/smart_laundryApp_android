@@ -1,0 +1,370 @@
+[
+    {
+        "merged": "D:\\Android Storage\\user\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_image.xml.flat",
+        "source": "D:\\Android Storage\\user\\app\\src\\main\\res\\layout\\activity_image.xml"
+    },
+    {
+        "merged": "D:\\Android Storage\\user\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_user_main2.xml.flat",
+        "source": "D:\\Android Storage\\user\\app\\src\\main\\res\\layout\\activity_user_main2.xml"
+    },
+    {
+        "merged": "D:\\Android Storage\\user\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "D:\\Android Storage\\user\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "D:\\Android Storage\\user\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "D:\\Android Storage\\user\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "D:\\Android Storage\\user\\app\\build\\intermediates\\res\\merged\\debug\\xml_network_security_config.xml.flat",
+        "source": "D:\\Android Storage\\user\\app\\src\\main\\res\\xml\\network_security_config.xml"
+    },
+    {
+        "merged": "D:\\Android Storage\\user\\app\\build\\intermediates\\res\\merged\\debug\\menu_menu1.xml.flat",
+        "source": "D:\\Android Storage\\user\\app\\src\\main\\res\\menu\\menu1.xml"
+    },
+    {
+        "merged": "D:\\Android Storage\\user\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_washing_machine.png.flat",
+        "source": "D:\\Android Storage\\user\\app\\src\\main\\res\\mipmap-xxhdpi\\washing_machine.png"
+    },
+    {
+        "merged": "D:\\Android Storage\\user\\app\\build\\intermediates\\res\\merged\\debug\\drawable_edittextshape1.xml.flat",
+        "source": "D:\\Android Storage\\user\\app\\src\\main\\res\\drawable\\edittextshape1.xml"
+    },
+    {
+        "merged": "D:\\Android Storage\\user\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_washing_machine.png.flat",
+        "source": "D:\\Android Storage\\user\\app\\src\\main\\res\\mipmap-mdpi\\washing_machine.png"
+    },
+    {
+        "merged": "D:\\Android Storage\\user\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_user_itembasket.xml.flat",
+        "source": "D:\\Android Storage\\user\\app\\src\\main\\res\\layout\\activity_user_itembasket.xml"
+    },
+    {
+        "merged": "D:\\Android Storage\\user\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_washing_machine_round.png.flat",
+        "source": "D:\\Android Storage\\user\\app\\src\\main\\res\\mipmap-xxhdpi\\washing_machine_round.png"
+    },
+    {
+        "merged": "D:\\Android Storage\\user\\app\\build\\intermediates\\res\\merged\\debug\\layout_user_review_info.xml.flat",
+        "source": "D:\\Android Storage\\user\\app\\src\\main\\res\\layout\\user_review_info.xml"
+    },
+    {
+        "merged": "D:\\Android Storage\\user\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_user_write_review.xml.flat",
+        "source": "D:\\Android Storage\\user\\app\\src\\main\\res\\layout\\activity_user_write_review.xml"
+    },
+    {
+        "merged": "D:\\Android Storage\\user\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_user_now_order.xml.flat",
+        "source": "D:\\Android Storage\\user\\app\\src\\main\\res\\layout\\activity_user_now_order.xml"
+    },
+    {
+        "merged": "D:\\Android Storage\\user\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_user_info.xml.flat",
+        "source": "D:\\Android Storage\\user\\app\\src\\main\\res\\layout\\activity_user_info.xml"
+    },
+    {
+        "merged": "D:\\Android Storage\\user\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher_foreground.png.flat",
+        "source": "D:\\Android Storage\\user\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_foreground.png"
+    },
+    {
+        "merged": "D:\\Android Storage\\user\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher_foreground.png.flat",
+        "source": "D:\\Android Storage\\user\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_foreground.png"
+    },
+    {
+        "merged": "D:\\Android Storage\\user\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_user_changelocation.xml.flat",
+        "source": "D:\\Android Storage\\user\\app\\src\\main\\res\\layout\\activity_user_changelocation.xml"
+    },
+    {
+        "merged": "D:\\Android Storage\\user\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_user_login.xml.flat",
+        "source": "D:\\Android Storage\\user\\app\\src\\main\\res\\layout\\activity_user_login.xml"
+    },
+    {
+        "merged": "D:\\Android Storage\\user\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_user_order_record.xml.flat",
+        "source": "D:\\Android Storage\\user\\app\\src\\main\\res\\layout\\activity_user_order_record.xml"
+    },
+    {
+        "merged": "D:\\Android Storage\\user\\app\\build\\intermediates\\res\\merged\\debug\\layout_user_itempage_info.xml.flat",
+        "source": "D:\\Android Storage\\user\\app\\src\\main\\res\\layout\\user_itempage_info.xml"
+    },
+    {
+        "merged": "D:\\Android Storage\\user\\app\\build\\intermediates\\res\\merged\\debug\\drawable_loading.png.flat",
+        "source": "D:\\Android Storage\\user\\app\\src\\main\\res\\drawable\\loading.png"
+    },
+    {
+        "merged": "D:\\Android Storage\\user\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher_foreground.png.flat",
+        "source": "D:\\Android Storage\\user\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_foreground.png"
+    },
+    {
+        "merged": "D:\\Android Storage\\user\\app\\build\\intermediates\\res\\merged\\debug\\layout_user_now_order_info.xml.flat",
+        "source": "D:\\Android Storage\\user\\app\\src\\main\\res\\layout\\user_now_order_info.xml"
+    },
+    {
+        "merged": "D:\\Android Storage\\user\\app\\build\\intermediates\\res\\merged\\debug\\font_medium.ttf.flat",
+        "source": "D:\\Android Storage\\user\\app\\src\\main\\res\\font\\medium.ttf"
+    },
+    {
+        "merged": "D:\\Android Storage\\user\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_user_signup2.xml.flat",
+        "source": "D:\\Android Storage\\user\\app\\src\\main\\res\\layout\\activity_user_signup2.xml"
+    },
+    {
+        "merged": "D:\\Android Storage\\user\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher.png.flat",
+        "source": "D:\\Android Storage\\user\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "D:\\Android Storage\\user\\app\\build\\intermediates\\res\\merged\\debug\\font_font.xml.flat",
+        "source": "D:\\Android Storage\\user\\app\\src\\main\\res\\font\\font.xml"
+    },
+    {
+        "merged": "D:\\Android Storage\\user\\app\\build\\intermediates\\res\\merged\\debug\\drawable_reject.png.flat",
+        "source": "D:\\Android Storage\\user\\app\\src\\main\\res\\drawable\\reject.png"
+    },
+    {
+        "merged": "D:\\Android Storage\\user\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_user_review.xml.flat",
+        "source": "D:\\Android Storage\\user\\app\\src\\main\\res\\layout\\activity_user_review.xml"
+    },
+    {
+        "merged": "D:\\Android Storage\\user\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_user_logout.xml.flat",
+        "source": "D:\\Android Storage\\user\\app\\src\\main\\res\\layout\\activity_user_logout.xml"
+    },
+    {
+        "merged": "D:\\Android Storage\\user\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher_foreground.png.flat",
+        "source": "D:\\Android Storage\\user\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_foreground.png"
+    },
+    {
+        "merged": "D:\\Android Storage\\user\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_user_main1.xml.flat",
+        "source": "D:\\Android Storage\\user\\app\\src\\main\\res\\layout\\activity_user_main1.xml"
+    },
+    {
+        "merged": "D:\\Android Storage\\user\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_mainloading.xml.flat",
+        "source": "D:\\Android Storage\\user\\app\\src\\main\\res\\layout\\activity_mainloading.xml"
+    },
+    {
+        "merged": "D:\\Android Storage\\user\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "D:\\Android Storage\\user\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "D:\\Android Storage\\user\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_user_forgot_pw_change.xml.flat",
+        "source": "D:\\Android Storage\\user\\app\\src\\main\\res\\layout\\activity_user_forgot_pw_change.xml"
+    },
+    {
+        "merged": "D:\\Android Storage\\user\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_user_storereview.xml.flat",
+        "source": "D:\\Android Storage\\user\\app\\src\\main\\res\\layout\\activity_user_storereview.xml"
+    },
+    {
+        "merged": "D:\\Android Storage\\user\\app\\build\\intermediates\\res\\merged\\debug\\drawable_share.png.flat",
+        "source": "D:\\Android Storage\\user\\app\\src\\main\\res\\drawable\\share.png"
+    },
+    {
+        "merged": "D:\\Android Storage\\user\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_see_others_review.xml.flat",
+        "source": "D:\\Android Storage\\user\\app\\src\\main\\res\\layout\\activity_see_others_review.xml"
+    },
+    {
+        "merged": "D:\\Android Storage\\user\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "D:\\Android Storage\\user\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "D:\\Android Storage\\user\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_user_order_record2.xml.flat",
+        "source": "D:\\Android Storage\\user\\app\\src\\main\\res\\layout\\activity_user_order_record2.xml"
+    },
+    {
+        "merged": "D:\\Android Storage\\user\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_washing_machine.png.flat",
+        "source": "D:\\Android Storage\\user\\app\\src\\main\\res\\mipmap-xxxhdpi\\washing_machine.png"
+    },
+    {
+        "merged": "D:\\Android Storage\\user\\app\\build\\intermediates\\res\\merged\\debug\\layout_user_itembasket_info.xml.flat",
+        "source": "D:\\Android Storage\\user\\app\\src\\main\\res\\layout\\user_itembasket_info.xml"
+    },
+    {
+        "merged": "D:\\Android Storage\\user\\app\\build\\intermediates\\res\\merged\\debug\\drawable_arrow_comment.png.flat",
+        "source": "D:\\Android Storage\\user\\app\\src\\main\\res\\drawable\\arrow_comment.png"
+    },
+    {
+        "merged": "D:\\Android Storage\\user\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_user_frag_first.xml.flat",
+        "source": "D:\\Android Storage\\user\\app\\src\\main\\res\\layout\\activity_user_frag_first.xml"
+    },
+    {
+        "merged": "D:\\Android Storage\\user\\app\\build\\intermediates\\res\\merged\\debug\\drawable_camera.png.flat",
+        "source": "D:\\Android Storage\\user\\app\\src\\main\\res\\drawable\\camera.png"
+    },
+    {
+        "merged": "D:\\Android Storage\\user\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "D:\\Android Storage\\user\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
+    },
+    {
+        "merged": "D:\\Android Storage\\user\\app\\build\\intermediates\\res\\merged\\debug\\layout_human_info.xml.flat",
+        "source": "D:\\Android Storage\\user\\app\\src\\main\\res\\layout\\human_info.xml"
+    },
+    {
+        "merged": "D:\\Android Storage\\user\\app\\build\\intermediates\\res\\merged\\debug\\font_nexonlight.ttf.flat",
+        "source": "D:\\Android Storage\\user\\app\\src\\main\\res\\font\\nexonlight.ttf"
+    },
+    {
+        "merged": "D:\\Android Storage\\user\\app\\build\\intermediates\\res\\merged\\debug\\layout_user_order_record_info.xml.flat",
+        "source": "D:\\Android Storage\\user\\app\\src\\main\\res\\layout\\user_order_record_info.xml"
+    },
+    {
+        "merged": "D:\\Android Storage\\user\\app\\build\\intermediates\\res\\merged\\debug\\drawable_bubble.png.flat",
+        "source": "D:\\Android Storage\\user\\app\\src\\main\\res\\drawable\\bubble.png"
+    },
+    {
+        "merged": "D:\\Android Storage\\user\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher.png.flat",
+        "source": "D:\\Android Storage\\user\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "D:\\Android Storage\\user\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_forgot_id_pw.xml.flat",
+        "source": "D:\\Android Storage\\user\\app\\src\\main\\res\\layout\\activity_forgot_id_pw.xml"
+    },
+    {
+        "merged": "D:\\Android Storage\\user\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_main.xml.flat",
+        "source": "D:\\Android Storage\\user\\app\\src\\main\\res\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "D:\\Android Storage\\user\\app\\build\\intermediates\\res\\merged\\debug\\font_nexonbold.ttf.flat",
+        "source": "D:\\Android Storage\\user\\app\\src\\main\\res\\font\\nexonbold.ttf"
+    },
+    {
+        "merged": "D:\\Android Storage\\user\\app\\build\\intermediates\\res\\merged\\debug\\drawable_buttonshape.xml.flat",
+        "source": "D:\\Android Storage\\user\\app\\src\\main\\res\\drawable\\buttonshape.xml"
+    },
+    {
+        "merged": "D:\\Android Storage\\user\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_user_info1.xml.flat",
+        "source": "D:\\Android Storage\\user\\app\\src\\main\\res\\layout\\activity_user_info1.xml"
+    },
+    {
+        "merged": "D:\\Android Storage\\user\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_washing_machine.png.flat",
+        "source": "D:\\Android Storage\\user\\app\\src\\main\\res\\mipmap-hdpi\\washing_machine.png"
+    },
+    {
+        "merged": "D:\\Android Storage\\user\\app\\build\\intermediates\\res\\merged\\debug\\font_title.ttf.flat",
+        "source": "D:\\Android Storage\\user\\app\\src\\main\\res\\font\\title.ttf"
+    },
+    {
+        "merged": "D:\\Android Storage\\user\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_ic_launcher_foreground.xml.flat",
+        "source": "D:\\Android Storage\\user\\app\\src\\main\\res\\drawable-v24\\ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "D:\\Android Storage\\user\\app\\build\\intermediates\\res\\merged\\debug\\font_nexonregular.ttf.flat",
+        "source": "D:\\Android Storage\\user\\app\\src\\main\\res\\font\\nexonregular.ttf"
+    },
+    {
+        "merged": "D:\\Android Storage\\user\\app\\build\\intermediates\\res\\merged\\debug\\layout_see_others_review_info.xml.flat",
+        "source": "D:\\Android Storage\\user\\app\\src\\main\\res\\layout\\see_others_review_info.xml"
+    },
+    {
+        "merged": "D:\\Android Storage\\user\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_user_signup1.xml.flat",
+        "source": "D:\\Android Storage\\user\\app\\src\\main\\res\\layout\\activity_user_signup1.xml"
+    },
+    {
+        "merged": "D:\\Android Storage\\user\\app\\build\\intermediates\\res\\merged\\debug\\drawable_menu.png.flat",
+        "source": "D:\\Android Storage\\user\\app\\src\\main\\res\\drawable\\menu.png"
+    },
+    {
+        "merged": "D:\\Android Storage\\user\\app\\build\\intermediates\\res\\merged\\debug\\font_title2.ttf.flat",
+        "source": "D:\\Android Storage\\user\\app\\src\\main\\res\\font\\title2.ttf"
+    },
+    {
+        "merged": "D:\\Android Storage\\user\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_washing_machine_round.png.flat",
+        "source": "D:\\Android Storage\\user\\app\\src\\main\\res\\mipmap-mdpi\\washing_machine_round.png"
+    },
+    {
+        "merged": "D:\\Android Storage\\user\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_washing_machine.png.flat",
+        "source": "D:\\Android Storage\\user\\app\\src\\main\\res\\mipmap-xhdpi\\washing_machine.png"
+    },
+    {
+        "merged": "D:\\Android Storage\\user\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_washing_machine_round.xml.flat",
+        "source": "D:\\Android Storage\\user\\app\\src\\main\\res\\mipmap-anydpi-v26\\washing_machine_round.xml"
+    },
+    {
+        "merged": "D:\\Android Storage\\user\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "D:\\Android Storage\\user\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "D:\\Android Storage\\user\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_user_now_order2.xml.flat",
+        "source": "D:\\Android Storage\\user\\app\\src\\main\\res\\layout\\activity_user_now_order2.xml"
+    },
+    {
+        "merged": "D:\\Android Storage\\user\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_washing_machine.xml.flat",
+        "source": "D:\\Android Storage\\user\\app\\src\\main\\res\\mipmap-anydpi-v26\\washing_machine.xml"
+    },
+    {
+        "merged": "D:\\Android Storage\\user\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_user_signup4.xml.flat",
+        "source": "D:\\Android Storage\\user\\app\\src\\main\\res\\layout\\activity_user_signup4.xml"
+    },
+    {
+        "merged": "D:\\Android Storage\\user\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_launcher_background.xml.flat",
+        "source": "D:\\Android Storage\\user\\app\\src\\main\\res\\drawable\\ic_launcher_background.xml"
+    },
+    {
+        "merged": "D:\\Android Storage\\user\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "D:\\Android Storage\\user\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "D:\\Android Storage\\user\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "D:\\Android Storage\\user\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "D:\\Android Storage\\user\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_user_itempage.xml.flat",
+        "source": "D:\\Android Storage\\user\\app\\src\\main\\res\\layout\\activity_user_itempage.xml"
+    },
+    {
+        "merged": "D:\\Android Storage\\user\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_washing_machine_round.png.flat",
+        "source": "D:\\Android Storage\\user\\app\\src\\main\\res\\mipmap-xhdpi\\washing_machine_round.png"
+    },
+    {
+        "merged": "D:\\Android Storage\\user\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_user_forpay.xml.flat",
+        "source": "D:\\Android Storage\\user\\app\\src\\main\\res\\layout\\activity_user_forpay.xml"
+    },
+    {
+        "merged": "D:\\Android Storage\\user\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "D:\\Android Storage\\user\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+    },
+    {
+        "merged": "D:\\Android Storage\\user\\app\\build\\intermediates\\res\\merged\\debug\\font_boldsuzin.ttf.flat",
+        "source": "D:\\Android Storage\\user\\app\\src\\main\\res\\font\\boldsuzin.ttf"
+    },
+    {
+        "merged": "D:\\Android Storage\\user\\app\\build\\intermediates\\res\\merged\\debug\\drawable_washing_machine.png.flat",
+        "source": "D:\\Android Storage\\user\\app\\src\\main\\res\\drawable\\washing_machine.png"
+    },
+    {
+        "merged": "D:\\Android Storage\\user\\app\\build\\intermediates\\res\\merged\\debug\\drawable_buttonshape2.xml.flat",
+        "source": "D:\\Android Storage\\user\\app\\src\\main\\res\\drawable\\buttonshape2.xml"
+    },
+    {
+        "merged": "D:\\Android Storage\\user\\app\\build\\intermediates\\res\\merged\\debug\\drawable_arrow_back.png.flat",
+        "source": "D:\\Android Storage\\user\\app\\src\\main\\res\\drawable\\arrow_back.png"
+    },
+    {
+        "merged": "D:\\Android Storage\\user\\app\\build\\intermediates\\res\\merged\\debug\\drawable_picture.PNG.flat",
+        "source": "D:\\Android Storage\\user\\app\\src\\main\\res\\drawable\\picture.PNG"
+    },
+    {
+        "merged": "D:\\Android Storage\\user\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher_foreground.png.flat",
+        "source": "D:\\Android Storage\\user\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_foreground.png"
+    },
+    {
+        "merged": "D:\\Android Storage\\user\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "D:\\Android Storage\\user\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "D:\\Android Storage\\user\\app\\build\\intermediates\\res\\merged\\debug\\layout_user_storereview_info.xml.flat",
+        "source": "D:\\Android Storage\\user\\app\\src\\main\\res\\layout\\user_storereview_info.xml"
+    },
+    {
+        "merged": "D:\\Android Storage\\user\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_user_gongji.xml.flat",
+        "source": "D:\\Android Storage\\user\\app\\src\\main\\res\\layout\\activity_user_gongji.xml"
+    },
+    {
+        "merged": "D:\\Android Storage\\user\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_user_signup3.xml.flat",
+        "source": "D:\\Android Storage\\user\\app\\src\\main\\res\\layout\\activity_user_signup3.xml"
+    },
+    {
+        "merged": "D:\\Android Storage\\user\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_washing_machine_round.png.flat",
+        "source": "D:\\Android Storage\\user\\app\\src\\main\\res\\mipmap-hdpi\\washing_machine_round.png"
+    },
+    {
+        "merged": "D:\\Android Storage\\user\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_washing_machine_round.png.flat",
+        "source": "D:\\Android Storage\\user\\app\\src\\main\\res\\mipmap-xxxhdpi\\washing_machine_round.png"
+    },
+    {
+        "merged": "D:\\Android Storage\\user\\app\\build\\intermediates\\res\\merged\\debug\\drawable_textback.xml.flat",
+        "source": "D:\\Android Storage\\user\\app\\src\\main\\res\\drawable\\textback.xml"
+    }
+]
