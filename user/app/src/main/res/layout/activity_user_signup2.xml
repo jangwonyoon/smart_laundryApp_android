@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".user_signup2"
+    android:orientation="vertical"
+    android:weightSum="1"
+    android:background="@color/white"
+    >
+
+    <LinearLayout
+        android:id="@+id/layout2_1"
+        android:layout_width="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:layout_weight="0.1">
+
+        <!--<View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#FF000000" />-->
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/layout2_b1"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="left"
+                android:background="@drawable/arrow_back"
+                android:layout_margin="10dp">
+
+            </Button>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/title2"
+                android:gravity="center"
+                android:text="회원가입"
+                android:textSize="30dp"
+                android:textStyle="bold"></TextView>
+        </FrameLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#FF000000" />
+
+    </LinearLayout>
+
+    <!--<android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout2_1">
+
+        <android.support.design.widget.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="이름(name)"/>
+
+    </android.support.design.widget.TextInputLayout>-->
+    <TextView
+        android:layout_weight="0.15"
+        android:id="@+id/info"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:text="* 아래정보를 기입해주세요. *\n정보에 공백이 있을 시 공백이 제거되어 입력됩니다.
+\n비밀번호를 제외한 특수문자는 사용이 불가능합니다"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:layout_below="@+id/layout2_1"
+        android:fontFamily="@font/medium"
+        >
+
+    </TextView>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="0.65"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:gravity="center">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/layout1">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/layout2_et1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="이름(name)"
+                android:maxLength="30"
+                android:inputType="text"
+                android:layout_margin="7dp"
+                android:fontFamily="@font/medium"
+                android:singleLine="true"
+                >
+
+            </com.google.android.material.textfield.TextInputEditText>
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <LinearLayout
+            android:id="@+id/layout2_2"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layout1"
+            android:weightSum="10">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/layout2"
+                android:layout_weight="8">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/layout2_et2"
+                    android:layout_width="270dp"
+                    android:layout_height="wrap_content"
+                    android:hint="아이디(ID)(8~16자)"
+                    android:layout_margin="7dp"
+                    android:fontFamily="@font/medium"
+                    android:singleLine="true"
+                    >
+
+                </com.google.android.material.textfield.TextInputEditText>
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <Button
+                android:layout_weight="2"
+                android:id="@+id/redundency_id"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="중복확인"
+                android:layout_margin="7dp"
+                android:background="@drawable/textback"
+                android:fontFamily="@font/medium"/>
+        </LinearLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/layout3"
+            android:layout_below="@+id/layout2_2">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/layout2_et3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layout2_2"
+                android:hint="비밀번호(Password)(8~16자)"
+                android:maxLength="20"
+                android:inputType="textPassword"
+                android:layout_margin="7dp"
+                android:fontFamily="@font/medium"
+                android:singleLine="true"
+                >
+
+            </com.google.android.material.textfield.TextInputEditText>
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+        <LinearLayout
+            android:id="@+id/layout2_3"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layout3"
+            android:weightSum="10">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="8"
+                android:id="@+id/layout4">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/layout2_et4"
+                    android:layout_width="270dp"
+                    android:layout_height="wrap_content"
+                    android:hint="이메일(E-mail)"
+                    android:text=""
+                    android:layout_margin="7dp"
+                    android:fontFamily="@font/medium"
+                    android:singleLine="true"
+                    >
+
+                </com.google.android.material.textfield.TextInputEditText>
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <Button
+                android:layout_weight="2"
+                android:id="@+id/redundency_email"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="인증"
+                android:layout_margin="7dp"
+                android:layout_gravity="center"
+                android:background="@drawable/textback"
+                android:fontFamily="@font/medium"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout2_4"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layout2_3"
+            android:weightSum="10">
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="8"
+                android:id="@+id/layout5">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/layout2_et6"
+                    android:layout_width="270dp"
+                    android:layout_height="wrap_content"
+                    android:hint="인증번호입력"
+                    android:maxLength="10"
+                    android:inputType="number"
+                    android:layout_margin="7dp"
+                    android:fontFamily="@font/medium"
+                    android:singleLine="true"
+                    >
+
+                </com.google.android.material.textfield.TextInputEditText>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/num_check"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="확인"
+                android:layout_margin="7dp"
+                android:background="@drawable/textback"
+                android:fontFamily="@font/medium"
+                android:layout_gravity="center"/>
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:id="@+id/layout2_5"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layout2_4">
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/layout6">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/layout2_et5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/layout2_4"
+                    android:hint="연락처(-제외) ex)01012345678"
+                    android:maxLength="11"
+                    android:inputType="number"
+                    android:layout_margin="7dp"
+                    android:fontFamily="@font/medium"
+                    android:singleLine="true"
+                    >
+
+                </com.google.android.material.textfield.TextInputEditText>
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+
+
+
+
+    </RelativeLayout>
+
+
+
+
+    <Button
+        android:id="@+id/layout2_b2"
+        android:layout_weight="0.1"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_below="@+id/layout2_5"
+        android:gravity="center"
+        android:text="진행하기"
+        android:textSize="20dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/buttonshape"
+        android:fontFamily="@font/medium">
+
+    </Button>
+
+
+</LinearLayout>

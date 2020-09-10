@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".user_changelocation"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/layout3_2"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:id="@+id/layout3_tv1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:gravity="top"
+            android:textStyle="bold"
+            android:textSize="15dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/medium"
+            android:text="위치를 지정해주세요.\n*지정한 위치로 서비스합니다.*\n"
+            >
+
+        </TextView>
+
+        <Button
+            android:id="@+id/layout3_b2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:text="진행하기"
+            android:textSize="15dp"
+            android:layout_gravity="center"
+            android:fontFamily="@font/medium"
+            android:background="@drawable/buttonshape">
+
+        </Button>
+
+
+    </LinearLayout>
+
+    <EditText
+        android:layout_below="@+id/layout3_2"
+        android:layout_margin="10dp"
+        android:id="@+id/layout3_et1"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:hint="상세주소를 적어주세요."
+        android:fontFamily="@font/medium"
+        android:singleLine="true">
+
+    </EditText>
+
+
+    <fragment
+        android:id="@+id/googlemap"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout3_et1"
+        class="com.google.android.gms.maps.MapFragment"
+        ></fragment>
+
+</LinearLayout>

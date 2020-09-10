@@ -1,0 +1,443 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".user_frag_first"
+    android:weightSum="10"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:id="@+id/layout2_1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:layout_weight="1.5">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginTop="20dp"
+            android:background="#FF000000" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/layout2_b1"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_gravity="left"
+                android:layout_margin="10dp"
+                android:background="@drawable/arrow_back">
+
+            </Button>
+
+            <TextView
+                android:id="@+id/title1"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:text=""
+                android:textSize="25dp"
+                android:textStyle="bold"
+                android:fontFamily="@font/title2"></TextView>
+
+            <Button
+                android:id="@+id/btn1"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/share"
+                android:layout_gravity="right"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="15dp"/>
+        </FrameLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#FF000000" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="7.5"
+        android:layout_margin="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="*공지사항*"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:layout_margin="5dp"
+                android:fontFamily="@font/nexonbold"/>
+            <TextView
+                android:id="@+id/gongjiforuser"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="아직 공지가 없네요ㅠ.ㅠ"
+                android:textStyle="bold"
+                android:textSize="17dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:padding="5dp"
+                ></TextView>
+
+            <View
+                android:layout_width="390dp"
+                android:layout_height="2dp"
+                android:background="#000000"
+                android:layout_gravity="center"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="*가게정보*"
+                android:textSize="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="5dp"
+                android:textStyle="bold"
+                android:fontFamily="@font/nexonbold"/>
+
+            <TextView
+                android:layout_margin="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="영업정보"
+                android:textStyle="bold"
+                android:textSize="17dp"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginLeft="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="영업시간: "
+                    android:textSize="14dp"
+                    android:fontFamily="@font/nexonregular"/>
+                <TextView
+                    android:id="@+id/o_c_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="14dp"
+                    android:fontFamily="@font/nexonregular"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="휴무일: "
+                    android:textSize="14dp"
+                    android:fontFamily="@font/nexonregular"/>
+                <TextView
+                    android:id="@+id/closed_day"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="14dp"
+                    android:fontFamily="@font/nexonregular"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="390dp"
+                android:layout_height="2dp"
+                android:background="#A7DFDA"
+                android:layout_marginTop="5dp"
+                android:layout_gravity="center"/>
+
+            <TextView
+                android:layout_margin="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="가게정보"
+                android:textStyle="bold"
+                android:textSize="17dp"
+                android:fontFamily="@font/nexonregular"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginLeft="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="주문 수: "
+                    android:textSize="14dp"
+                    android:fontFamily="@font/nexonregular"/>
+                <TextView
+                    android:id="@+id/t_order"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="14dp"
+                    android:fontFamily="@font/nexonregular"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="390dp"
+                android:layout_height="2dp"
+                android:background="#A7DFDA"
+                android:layout_marginTop="5dp"
+                android:layout_gravity="center"/>
+
+            <TextView
+                android:layout_margin="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="사업자정보"
+                android:textStyle="bold"
+                android:textSize="17dp"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginLeft="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="대표자명: "
+                    android:textSize="14dp"
+                    android:fontFamily="@font/nexonregular"/>
+                <TextView
+                    android:id="@+id/o_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="14dp"
+                    android:fontFamily="@font/nexonregular"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginLeft="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="상호명: "
+                    android:textSize="14dp"
+                    android:fontFamily="@font/nexonregular"/>
+                <TextView
+                    android:id="@+id/s_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="14dp"
+                    android:fontFamily="@font/nexonregular"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginLeft="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="사업자주소: "
+                    android:textSize="14dp"
+                    android:fontFamily="@font/nexonregular"/>
+                <TextView
+                    android:id="@+id/s_address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="14dp"
+                    android:fontFamily="@font/nexonregular"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginLeft="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="사업자등록번호: "
+                    android:textSize="14dp"
+                    android:fontFamily="@font/nexonregular"/>
+                <TextView
+                    android:id="@+id/o_nin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="14dp"
+                    android:fontFamily="@font/nexonregular"/>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/intoitemlist"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="상품"
+            android:textSize="22dp"
+            android:background="@color/colorAccent"
+            android:fontFamily="@font/boldsuzin"></Button>
+
+        <!--<Button
+            android:id="@+id/intoreview"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:textSize="25dp"
+            android:text="리뷰">
+
+        </Button>-->
+
+    </LinearLayout>
+
+
+
+
+    <!--<ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/image1"
+        android:src="@drawable/ic_launcher_foreground"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="가나다"
+        android:textSize="30dp"/>
+
+    <TextView
+        android:id="@+id/gender1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="가나다라마바사"
+        android:textSize="30dp"/>
+
+    <TextView
+        android:id="@+id/age1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="가나다라마"
+        android:textSize="30dp"/>-->
+
+
+</LinearLayout>
+
+    <!--
+    <?xml version="1.0" encoding="utf-8"?>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:orientation="vertical"
+        tools:context=".ImageActivity"
+        >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/image"
+            android:src="@drawable/ic_launcher_foreground"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/image1"
+                android:text="가게정보 넣을 곳, 틀 만들고 서버, 디비에서 값 가져와서 틀에 넣을꺼임"
+                android:textSize="30dp" />
+            <TextView
+                android:id="@+id/title1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="가나다"
+                android:textSize="30dp"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_below="@id/title1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="아아ㅏ"
+                android:textSize="30dp" />
+            <TextView
+                android:id="@+id/age1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="가나다라마"
+                android:textSize="30dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_below="@+id/age"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="좀되라시발비ㅏ랍젖바더ㅏㅂ더"
+                android:textSize="30dp"/>
+
+            <TextView
+                android:id="@+id/gender1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="가나다라마바사"
+                android:textSize="30dp"/>
+        </LinearLayout>
+
+    </LinearLayout>-->

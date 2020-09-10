@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".rider_gongji"
+    android:orientation="vertical"
+    android:weightSum="10"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:id="@+id/gongjititle"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="15dp"
+        android:layout_weight="1">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="세탁의민족이 라이더님께 올리는 말씀!"
+            android:textSize="20dp"
+            android:fontFamily="@font/title2"
+            android:textAppearance="?android:attr/textAppearanceLarge"></TextView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="8"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_below="@+id/gongjititle"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="5"
+            android:layout_marginBottom="10dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="15dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textSize="15dp"
+                    android:text="공지사항을 씁시다.\n공지사항을 씁시다.\n공지사항을 씁시다.\n공지사항을 씁시다.\n공지사항을 씁시다.\n공지사항을 씁시다.\n공지사항을 씁시다.\n공지사항을 씁시다.\n공지사항을 씁시다.\n공지사항을 씁시다.\n공지사항을 씁시다.\n공지사항을 씁시다.\n공지사항을 씁시다.\n공지사항을 씁시다.\n공지사항을 씁시다.\n공지사항을 씁시다.\n공지사항을 씁시다.\n공지사항을 씁시다.\n공지사항을 씁시다.\n공지사항을 씁시다.\n공지사항을 씁시다.\n공지사항을 씁시다.\n공지사항을 씁시다.\n공지사항을 씁시다.\n공지사항을 씁시다.\n공지사항을 씁시다.\n공지사항을 씁시다.\n공지사항을 씁시다.\n공지사항을 씁시다.\n공지사항을 씁시다.\n공지사항을 씁시다.\n공지사항을 씁시다.\n공지사항을 씁시다.\n공지사항을 씁시다.\n공지사항을 씁시다.\n공지사항을 씁시다.\n"></TextView>
+
+            </LinearLayout>
+
+        </ScrollView>
+    </LinearLayout>
+
+
+
+
+
+
+</LinearLayout>

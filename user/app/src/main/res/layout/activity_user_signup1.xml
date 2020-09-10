@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="1"
+    tools:context=".user_signup1"
+    android:background="@color/white"
+    >
+
+
+    <LinearLayout
+        android:id="@+id/layout2_1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.1"
+        android:layout_gravity="center"
+
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <!--<View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#FF000000"
+            />-->
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/layout2_b1"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="left"
+                android:layout_margin="10dp"
+                android:background="@drawable/arrow_back">
+
+            </Button>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:layout_gravity="center"
+                android:text="회원가입"
+                android:textSize="30dp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:fontFamily="@font/title2"></TextView>
+        </FrameLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#FF000000"
+            />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.7"
+        android:id="@+id/layout2_2"
+        android:layout_below="@+id/layout2_1"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            android:fillViewport="true">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="약관동의"
+                android:fontFamily="@font/medium">
+
+            </TextView>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:id="@+id/layout2_3"
+        android:layout_below="@+id/layout2_2"
+        android:layout_weight="0.2"
+        android:weightSum="1"
+        android:orientation="horizontal"
+        android:layout_marginBottom="20dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:gravity="center"
+            android:layout_gravity="center">
+
+            <CheckBox
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/layouy2_c1"
+                android:gravity="center"
+                >
+
+            </CheckBox>
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="동의"
+                android:textSize="20dp"
+                android:gravity="center"
+                android:fontFamily="@font/medium"
+                >
+
+            </TextView>
+        </LinearLayout>
+
+
+        <Button
+            android:layout_weight="0.5"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:id="@+id/layout2_b2"
+            android:layout_gravity="center"
+            android:text="진행하기"
+            android:textSize="20dp"
+            android:layout_margin="20dp"
+            android:background="@drawable/buttonshape"
+            android:fontFamily="@font/medium">
+
+        </Button>
+
+
+    </LinearLayout>
+
+    <!--<ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout2_1"
+        android:fillViewport="true"
+
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="안녕"
+            >
+
+        </TextView>
+    </ScrollView>-->
+
+
+
+</LinearLayout>
