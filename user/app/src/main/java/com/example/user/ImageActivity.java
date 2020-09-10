@@ -1,5 +1,5 @@
 package com.example.user;
-
+// 장
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -34,7 +34,7 @@ import java.util.ArrayList;
 public class ImageActivity extends AppCompatActivity {
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle sa원vedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_image);
 
