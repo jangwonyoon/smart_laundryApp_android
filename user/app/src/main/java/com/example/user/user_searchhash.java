@@ -33,7 +33,7 @@ import java.net.URL;
 import java.util.ArrayList;
 
 public class user_searchhash extends Activity {
-    Button b1,b2,b3;
+    Button b1,b2,b3,back;
     TextView tv11;
     ImageView iv11;
     Button searchbutton;
@@ -41,6 +41,8 @@ public class user_searchhash extends Activity {
     String getsearch;
     LinearLayout searchbuttonlayout;
     int count=0;
+
+    private long backBtnTime = 0;
 
     public String var_name, var_address,  var_id;
     public Double var_lat, var_long;
@@ -84,6 +86,21 @@ public class user_searchhash extends Activity {
         b1 = findViewById(R.id.showdata1);
         b2 = findViewById(R.id.showdata2);
         b3 = findViewById(R.id.showdata3);
+        back = findViewById(R.id.layout3_b1);
+
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplication(),user_main1.class);
+                intent.putExtra("user_name",user_name1);
+                intent.putExtra("user_address",user_address1);
+                intent.putExtra("user_lat",user_lat1);
+                intent.putExtra("user_long",user_long1);
+                intent.putExtra("user_id",user_id1);
+                intent.putExtra("user_address_detail",user_address_detail1);
+                startActivity(intent);
+            }
+        });
 
         b1.setText(data1);
         b2.setText(data2);
@@ -225,7 +242,6 @@ public class user_searchhash extends Activity {
 
         RecyclerDecoration spaceDecoration = new RecyclerDecoration(10);
         mRecyclerView.addItemDecoration(spaceDecoration);
-        Toast.makeText(this, data1+data2+data3,Toast.LENGTH_SHORT).show();
 
         user_searchhash.GetData task = new user_searchhash.GetData();
         task.execute("http://edit0.dothome.co.kr/user_searchhash_db.php",String.valueOf(user_lat1),String.valueOf(user_long1),String.valueOf(data1),
@@ -242,6 +258,22 @@ public class user_searchhash extends Activity {
 
 
 
+    }
+
+    @Override
+    public void onBackPressed() {
+        long curTime = System.currentTimeMillis();
+        long gapTime = curTime - backBtnTime;
+
+        if(0 <= gapTime && 2000 >= gapTime) {
+            moveTaskToBack(true);
+            finish();
+            android.os.Process.killProcess(android.os.Process.myPid());
+        }
+        else {
+            backBtnTime = curTime;
+            Toast.makeText(this, "한번 더 누르면 종료됩니다.",Toast.LENGTH_SHORT).show();
+        }
     }
 
 
