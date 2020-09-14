@@ -25,14 +25,14 @@ public class user_signup1 extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_signup1);
 
-        user_signup_back = (Button) findViewById(R.id.layout2_b1);
-
-        user_signup_back.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                Intent intent = new Intent(user_signup1.this, MainActivity.class);
-                startActivity(intent);
-            }
-        });
+//        user_signup_back = (Button) findViewById(R.id.layout2_b1);
+//
+//        user_signup_back.setOnClickListener(new View.OnClickListener() {
+//            public void onClick(View v) {
+//                Intent intent = new Intent(user_signup1.this, MainActivity.class);
+//                startActivity(intent);
+//            }
+//        });
 
         user_signup_go = (Button) findViewById(R.id.layout2_b2);
         user_signup_agree = (CheckBox) findViewById(R.id.layouy2_c1);
