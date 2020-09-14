@@ -1,6 +1,7 @@
 package com.example.delivery;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.UiThread;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
@@ -10,6 +11,7 @@ import android.app.Activity;
 import android.app.FragmentManager;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.graphics.PointF;
 import android.graphics.drawable.ColorDrawable;
 import android.location.Address;
 import android.location.Geocoder;
@@ -34,9 +36,16 @@ import com.android.volley.toolbox.Volley;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapFragment;
-import com.google.android.gms.maps.OnMapReadyCallback;
-import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.naver.maps.geometry.LatLng;
+import com.naver.maps.map.CameraAnimation;
+import com.naver.maps.map.CameraUpdate;
+import com.naver.maps.map.NaverMap;
+import com.naver.maps.map.OnMapReadyCallback;
+import com.naver.maps.map.UiSettings;
+import com.naver.maps.map.overlay.InfoWindow;
+import com.naver.maps.map.overlay.Marker;
+import com.naver.maps.map.util.FusedLocationSource;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -44,19 +53,24 @@ import org.json.JSONObject;
 import java.io.IOException;
 import java.util.List;
 
-public class rider_changelocation extends AppCompatActivity implements GoogleMap.OnMyLocationButtonClickListener,
-        GoogleMap.OnMyLocationClickListener,
-        OnMapReadyCallback {
+public class rider_changelocation extends AppCompatActivity
+        implements OnMapReadyCallback {
 
     public static String rider_name1, rider_address1,rider_id1;
     public static Double rider_lat1, rider_long1;
+
+    Double latitude,longitude;
+    List<Address> a=null;
+
+    private FusedLocationSource locationSource;
+    private static final int LOCATION_PERMISSION_REQUEST_CODE = 1000;
+    private NaverMap naverMap;
 
 
 
     private FragmentManager fragmentManager;
     private MapFragment mapFragment;
     private GoogleMap mMap;
-    Double latitude, longitude;
     private long backBtnTime = 0;
 
     TextView get_text;
@@ -72,8 +86,6 @@ public class rider_changelocation extends AppCompatActivity implements GoogleMap
 
     Double rider_lat, rider_long;
     String user_address, user_id, user_address_detail;
-
-    List<Address> a;
 
     @Override
     public void onBackPressed() {
@@ -163,16 +175,27 @@ public class rider_changelocation extends AppCompatActivity implements GoogleMap
         });
 
 
-        fragmentManager = getFragmentManager();
+        /*fragmentManager = getFragmentManager();
         mapFragment = (MapFragment) fragmentManager.findFragmentById(R.id.googlemap);
+        mapFragment.getMapAsync(this);*/
+
+        locationSource =
+                new FusedLocationSource(this, LOCATION_PERMISSION_REQUEST_CODE);
+        androidx.fragment.app.FragmentManager fm = getSupportFragmentManager();
+        com.naver.maps.map.MapFragment mapFragment = (com.naver.maps.map.MapFragment)fm.findFragmentById(R.id.map);
+        if (mapFragment == null) {
+            mapFragment = com.naver.maps.map.MapFragment.newInstance();
+            fm.beginTransaction().add(R.id.map, mapFragment).commit();
+        }
+
         mapFragment.getMapAsync(this);
     }
 
-    @Override
+    /*@Override
     public void onMapReady(final GoogleMap googleMap) {
 
 
-        /*마커*/
+        *//*마커*//*
         LatLng location = new LatLng(rider_lat1, rider_long1);
         MarkerOptions markerOptions = new MarkerOptions();
         markerOptions.title("현재 배달 위치");
@@ -180,7 +203,7 @@ public class rider_changelocation extends AppCompatActivity implements GoogleMap
         markerOptions.position(location);
         googleMap.addMarker(markerOptions);
 
-        /*googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(location,16));*/
+        *//*googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(location,16));*//*
         googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(location, 16));
 
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
@@ -227,13 +250,71 @@ public class rider_changelocation extends AppCompatActivity implements GoogleMap
                 }
 
 
-                /*Double temp1 = latitude;
+                *//*Double temp1 = latitude;
                 Double temp2 = longitude;
                 if (latitude == temp1 || longitude == temp2){
                     googleMap.remove
-                }*/
+                }*//*
             }
         });
+    }*/
+
+    @UiThread
+    @Override
+    public void onMapReady(@NonNull final NaverMap naverMap) {
+        final InfoWindow infoWindow = new InfoWindow();
+        infoWindow.setAdapter(new InfoWindow.DefaultTextAdapter(getApplication()) {
+            @NonNull
+            @Override
+            public CharSequence getText(@NonNull InfoWindow infoWindow) {
+                return "주소 지정";
+            }
+        });
+
+
+        final Marker marker = new Marker();
+        marker.setPosition(new com.naver.maps.geometry.LatLng( rider_lat1,rider_long1));
+        marker.setMap(naverMap);
+        CameraUpdate cameraUpdate = CameraUpdate.scrollTo(new com.naver.maps.geometry.LatLng(rider_lat1,rider_long1))
+                .animate(CameraAnimation.Fly, 3000);
+        naverMap.moveCamera(cameraUpdate);
+
+        final Geocoder g = new Geocoder(this);
+
+        UiSettings uiSettings = naverMap.getUiSettings();
+        uiSettings.setCompassEnabled(true);
+        uiSettings.setLocationButtonEnabled(true);
+        naverMap.setLocationSource(locationSource);
+
+        infoWindow.open(marker);
+
+        naverMap.setOnMapClickListener(new NaverMap.OnMapClickListener(){
+            @Override
+            public void onMapClick(@NonNull PointF pointF, @NonNull com.naver.maps.geometry.LatLng latLng) {
+                /*Toast.makeText(getApplicationContext(), latLng.latitude + ", " + latLng.longitude+"", Toast.LENGTH_SHORT).show();*/
+                marker.setPosition(new LatLng( latLng.latitude,latLng.longitude));
+                marker.setMap(naverMap);
+                latitude=latLng.latitude;
+                longitude=latLng.longitude;
+
+                /*naverMap.setLocationTrackingMode(LocationTrackingMode.Follow);*/
+
+                try {
+                    a = g.getFromLocation(latitude,longitude,1);
+                    Toast.makeText(getApplicationContext(), ""+a.get(0).getAddressLine(0), Toast.LENGTH_SHORT).show();
+                    set_address = a.get(0).getAddressLine(0);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+
+
+        /*LatLng coord = new LatLng(37.5670135, 126.9783740);
+
+        Toast.makeText(getApplication(),
+                "위도: " + coord.latitude + ", 경도: " + coord.longitude,
+                Toast.LENGTH_SHORT).show();*/
     }
 
 
@@ -306,7 +387,7 @@ public class rider_changelocation extends AppCompatActivity implements GoogleMap
 
     }
 
-    @Override
+    /*@Override
     public boolean onMyLocationButtonClick() {
         return false;
     }
@@ -314,5 +395,5 @@ public class rider_changelocation extends AppCompatActivity implements GoogleMap
     @Override
     public void onMyLocationClick(@NonNull Location location) {
 
-    }
+    }*/
 }

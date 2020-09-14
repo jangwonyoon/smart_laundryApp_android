@@ -44,7 +44,7 @@
         <activity android:name=".mainloading" />
         <activity android:name=".user_login" />
         <activity android:name=".user_signup4" />
-        <activity android:name=".user_signup3" />
+        <activity android:name=".user_signup3"/>
         <activity android:name=".user_signup2" />
         <activity android:name=".user_signup1" />
         <activity android:name=".MainActivity">
@@ -52,7 +52,7 @@
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            </intent-filter>-
         </activity>
         <activity android:name=".ImageActivity" />
         <activity android:name=".user_itempage_list" />
@@ -62,6 +62,10 @@
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyCVgBM9ZWqFJdEPp_QgpLsqMxQIb3qqEBI" />
+
+        <meta-data
+            android:name="com.naver.maps.map.CLIENT_ID"
+            android:value="e4xx0ayy2g"/>
     </application>
 
 </manifest>

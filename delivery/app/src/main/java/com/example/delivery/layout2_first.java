@@ -1,14 +1,17 @@
 package com.example.delivery;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.UiThread;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
+import androidx.fragment.app.FragmentActivity;
 
 import android.Manifest;
 import android.app.Activity;
 import android.app.FragmentManager;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.graphics.PointF;
 import android.location.Address;
 import android.location.Geocoder;
 import android.location.Location;
@@ -26,9 +29,16 @@ import com.android.volley.toolbox.Volley;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapFragment;
-import com.google.android.gms.maps.OnMapReadyCallback;
-import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.naver.maps.geometry.LatLng;
+import com.naver.maps.map.CameraAnimation;
+import com.naver.maps.map.CameraUpdate;
+import com.naver.maps.map.NaverMap;
+import com.naver.maps.map.OnMapReadyCallback;
+import com.naver.maps.map.UiSettings;
+import com.naver.maps.map.overlay.InfoWindow;
+import com.naver.maps.map.overlay.Marker;
+import com.naver.maps.map.util.FusedLocationSource;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -40,9 +50,15 @@ import java.util.Date;
 import java.util.List;
 import java.util.Locale;
 
-public class layout2_first extends Activity implements GoogleMap.OnMyLocationButtonClickListener,
-        GoogleMap.OnMyLocationClickListener,
-        OnMapReadyCallback {
+public class layout2_first extends FragmentActivity
+        implements OnMapReadyCallback {
+
+    Double latitude,longitude;
+    List<Address> a=null;
+
+    private FusedLocationSource locationSource;
+    private static final int LOCATION_PERMISSION_REQUEST_CODE = 1000;
+    private NaverMap naverMap;
 
     private FragmentManager fragmentManager;
     private MapFragment mapFragment;
@@ -51,8 +67,6 @@ public class layout2_first extends Activity implements GoogleMap.OnMyLocationBut
     private GoogleMap mMap;
 
     String set_address;
-    Double latitude, longitude;
-    List<Address> a;
 
     Double o_lat,o_long,u_lat,u_long;
 
@@ -200,12 +214,23 @@ public class layout2_first extends Activity implements GoogleMap.OnMyLocationBut
         });
 
 
-        fragmentManager = getFragmentManager();
+        /*fragmentManager = getFragmentManager();
         mapFragment = (MapFragment) fragmentManager.findFragmentById(R.id.googlemap);
+        mapFragment.getMapAsync(this);*/
+
+        locationSource =
+                new FusedLocationSource(this, LOCATION_PERMISSION_REQUEST_CODE);
+        androidx.fragment.app.FragmentManager fm = getSupportFragmentManager();
+        com.naver.maps.map.MapFragment mapFragment = (com.naver.maps.map.MapFragment)fm.findFragmentById(R.id.map);
+        if (mapFragment == null) {
+            mapFragment = com.naver.maps.map.MapFragment.newInstance();
+            fm.beginTransaction().add(R.id.map, mapFragment).commit();
+        }
+
         mapFragment.getMapAsync(this);
     }
 
-    @Override
+    /*@Override
     public void onMapReady(final GoogleMap googleMap) {
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
             // TODO: Consider calling
@@ -254,7 +279,7 @@ public class layout2_first extends Activity implements GoogleMap.OnMyLocationBut
                         LatLng location1 = new LatLng(num1, num2);
                         MarkerOptions markerOptions1 = new MarkerOptions();
                         markerOptions1.title("목적지");
-                        /*markerOptions.snippet("");*/
+                        *//*markerOptions.snippet("");*//*
                         markerOptions1.position(location1);
                         googleMap.addMarker(markerOptions1);
                         googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(location1,16));
@@ -262,7 +287,7 @@ public class layout2_first extends Activity implements GoogleMap.OnMyLocationBut
                         LatLng location = new LatLng(num3, num4);
                         MarkerOptions markerOptions = new MarkerOptions();
                         markerOptions.title("출발지");
-                        /*markerOptions.snippet("");*/
+                        *//*markerOptions.snippet("");*//*
                         markerOptions.position(location);
                         googleMap.addMarker(markerOptions);
                         googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(location,16));
@@ -286,7 +311,7 @@ public class layout2_first extends Activity implements GoogleMap.OnMyLocationBut
         Toast.makeText(getApplicationContext(),""+o_lat+o_long+"",Toast.LENGTH_SHORT).show();
 
 
-        /*googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(location,16));*/
+        *//*googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(location,16));*//*
 
 
         googleMap.setMyLocationEnabled(true);
@@ -295,7 +320,7 @@ public class layout2_first extends Activity implements GoogleMap.OnMyLocationBut
 
 
 
-        /*final Geocoder g = new Geocoder(this);
+        *//*final Geocoder g = new Geocoder(this);
         mMap = googleMap;
         mMap.setOnMapClickListener(new GoogleMap.OnMapClickListener(){
             @Override
@@ -306,7 +331,7 @@ public class layout2_first extends Activity implements GoogleMap.OnMyLocationBut
                 latitude = point.latitude; // 위도
                 longitude = point.longitude; // 경도
                 // 마커의 스니펫(간단한 텍스트) 설정
-                *//*mOptions.snippet(latitude.toString() + ", " + longitude.toString());*//*
+                *//**//*mOptions.snippet(latitude.toString() + ", " + longitude.toString());*//**//*
                 // LatLng: 위도 경도 쌍을 나타냄
                 mOptions.position(new LatLng(latitude, longitude));
 
@@ -324,16 +349,135 @@ public class layout2_first extends Activity implements GoogleMap.OnMyLocationBut
                 }
 
 
-                *//*Double temp1 = latitude;
+                *//**//*Double temp1 = latitude;
                 Double temp2 = longitude;
                 if (latitude == temp1 || longitude == temp2){
                     googleMap.remove
-                }*//*
+                }*//**//*
             }
-        });*/
+        });*//*
+    }*/
+
+    @UiThread
+    @Override
+    public void onMapReady(@NonNull final NaverMap naverMap) {
+        final InfoWindow infoWindow = new InfoWindow();
+        infoWindow.setAdapter(new InfoWindow.DefaultTextAdapter(getApplication()) {
+            @NonNull
+            @Override
+            public CharSequence getText(@NonNull InfoWindow infoWindow) {
+                return "목적지";
+            }
+        });
+        final InfoWindow infoWindow1 = new InfoWindow();
+        infoWindow1.setAdapter(new InfoWindow.DefaultTextAdapter(getApplication()) {
+            @NonNull
+            @Override
+            public CharSequence getText(@NonNull InfoWindow infoWindow) {
+                return "출발지";
+            }
+        });
+
+
+        final Geocoder g = new Geocoder(this);
+
+        UiSettings uiSettings = naverMap.getUiSettings();
+        uiSettings.setCompassEnabled(true);
+        uiSettings.setLocationButtonEnabled(true);
+        naverMap.setLocationSource(locationSource);
+
+        Response.Listener<String> responseListener = new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+                try {
+                    JSONObject jsonObject = new JSONObject(response);
+                    boolean success = jsonObject.getBoolean("success"); //php보면 response가 success면 ㄱㄱ
+                    if(success){ //회원등록에 성공한 경우
+                        Double num1= 0.0;
+                        Double num2 = 0.0;
+                        Double num3 = 0.0;
+                        Double num4 = 0.0;
+
+                        if(d_type.equals("0")){
+                            o_lat = jsonObject.getDouble("o_lat");
+                            o_long = jsonObject.getDouble("o_long");
+                            num1=o_lat;
+                            num2=o_long;
+                            u_lat = jsonObject.getDouble("u_lat");
+                            u_long = jsonObject.getDouble("u_long");
+                            num3=u_lat;
+                            num4 = u_long;
+                        }
+                        else{
+                            o_lat = jsonObject.getDouble("o_lat");
+                            o_long = jsonObject.getDouble("o_long");
+                            num3=o_lat;
+                            num4=o_long;
+                            u_lat = jsonObject.getDouble("u_lat");
+                            u_long = jsonObject.getDouble("u_long");
+                            num1=u_lat;
+                            num2 = u_long;
+                        }
+
+                        final Marker marker = new Marker();
+                        final Marker marker1 = new Marker();
+                        marker.setPosition(new com.naver.maps.geometry.LatLng(num1,num2));
+                        marker.setMap(naverMap);
+
+                        marker1.setPosition(new com.naver.maps.geometry.LatLng(num3,num4));
+                        marker1.setMap(naverMap);
+
+                        infoWindow.open(marker);
+                        infoWindow1.open(marker1);
+
+                        CameraUpdate cameraUpdate = CameraUpdate.scrollTo(new com.naver.maps.geometry.LatLng(num3,num4))
+                                .animate(CameraAnimation.Fly, 3000);
+                        naverMap.moveCamera(cameraUpdate);
+
+
+                        /*LatLng location1 = new LatLng(num1, num2);
+                        MarkerOptions markerOptions1 = new MarkerOptions();
+                        markerOptions1.title("목적지");
+                        *//*markerOptions.snippet("");*//*
+                        markerOptions1.position(location1);
+                        googleMap.addMarker(markerOptions1);
+                        googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(location1,16));*/
+
+                        /*LatLng location = new LatLng(num3, num4);
+                        MarkerOptions markerOptions = new MarkerOptions();
+                        markerOptions.title("출발지");
+                        *//*markerOptions.snippet("");*//*
+                        markerOptions.position(location);
+                        googleMap.addMarker(markerOptions);
+                        googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(location,16));*/
+                    }
+                    //실패한 경우
+                    else{
+                        Toast.makeText(getApplicationContext(),"오류",Toast.LENGTH_SHORT).show();
+                        return;
+                    }
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+
+            }
+        };
+
+        //서버로 Volley를 이용해서 요청을 함
+        layout2_first_map_db registerRequest = new layout2_first_map_db(d_type,u_number,u_address,s_number,s_address, responseListener);
+        RequestQueue queue = Volley.newRequestQueue(layout2_first.this);
+        queue.add(registerRequest);
+        /*Toast.makeText(getApplicationContext(),""+o_lat+o_long+"",Toast.LENGTH_SHORT).show();*/
+
+
+        /*LatLng coord = new LatLng(37.5670135, 126.9783740);
+
+        Toast.makeText(getApplication(),
+                "위도: " + coord.latitude + ", 경도: " + coord.longitude,
+                Toast.LENGTH_SHORT).show();*/
     }
 
-    @Override
+    /*@Override
     public boolean onMyLocationButtonClick() {
         return false;
     }
@@ -341,5 +485,5 @@ public class layout2_first extends Activity implements GoogleMap.OnMyLocationBut
     @Override
     public void onMyLocationClick(@NonNull Location location) {
 
-    }
+    }*/
 }

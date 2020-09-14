@@ -42,6 +42,7 @@ dependencies {
     implementation "androidx.core:core:1.0.2"
     implementation 'com.kyleduo.switchbutton:library:2.0.0'
     implementation 'com.android.support:support-v4:28.1.0'
+    implementation 'com.naver.maps:map-sdk:3.9.1'
 
     implementation files('libs\\commons-net-3.7.jar')
     implementation files('libs\\commons-net-3.7-sources.jar')
