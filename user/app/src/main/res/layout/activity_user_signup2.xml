@@ -20,9 +20,8 @@
             style="@style/Widget.MaterialComponents.Toolbar.Primary"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            app:title="회원가입"
-            app:titleTextColor="@color/white"
-            />
+            app:title="Step2. 회원정보 입력"
+            app:titleTextColor="@color/white" />
 
     </com.google.android.material.appbar.AppBarLayout>
 

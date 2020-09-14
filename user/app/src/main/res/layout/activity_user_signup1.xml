@@ -19,9 +19,8 @@
             style="@style/Widget.MaterialComponents.Toolbar.Primary"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            app:title="회원가입"
+            app:title="STEP1. 약관 동의"
             app:titleTextColor="@color/white"
-            app:titleMarginStart="160dp"
             />
 
     </com.google.android.material.appbar.AppBarLayout>

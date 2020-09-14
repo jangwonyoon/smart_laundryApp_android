@@ -71,13 +71,13 @@ public class user_signup3 extends Activity implements GoogleMap.OnMyLocationButt
         Intent intent = getIntent();
         user_id1 = intent.getStringExtra("user_id");
 
-        user_signup_back = (Button) findViewById(R.id.layout3_b1);
-        user_signup_back.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                Intent intent = new Intent(user_signup3.this, user_signup2.class);
-                startActivity(intent);
-            }
-        });
+//        user_signup_back = (Button) findViewById(R.id.layout3_b1);
+//        user_signup_back.setOnClickListener(new View.OnClickListener() {
+//            public void onClick(View v) {
+//                Intent intent = new Intent(user_signup3.this, user_signup2.class);
+//                startActivity(intent);
+//            }
+//        });
 
         user_address_detail1 = (EditText) findViewById(R.id.layout3_et1);
         user_signup_go = (Button) findViewById(R.id.layout3_b2);
