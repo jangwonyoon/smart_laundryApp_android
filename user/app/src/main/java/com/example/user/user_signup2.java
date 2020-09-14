@@ -47,13 +47,13 @@ public class user_signup2 extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_signup2);
 
-        user_signup_back = (Button) findViewById(R.id.layout2_b1);
-        user_signup_back.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                Intent intent = new Intent(user_signup2.this, user_signup1.class);
-                startActivity(intent);
-            }
-        });
+//        user_signup_back = (Button) findViewById(R.id.layout2_b1);
+//        user_signup_back.setOnClickListener(new View.OnClickListener() {
+//            public void onClick(View v) {
+//                Intent intent = new Intent(user_signup2.this, user_signup1.class);
+//                startActivity(intent);
+//            }
+//        });
 
 
         et1 = findViewById(R.id.layout2_et1);
