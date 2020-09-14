@@ -25,12 +25,11 @@
         android:textStyle="bold"
         android:textSize="30dp"
         android:fontFamily="@font/title2"/>
-
+<!--    app:endIconMode="clear_text"-->
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="아이디(ID)"
-        app:endIconMode="clear_text"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         >
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/layout5_et1"
@@ -38,17 +37,18 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="30dp"
             android:layout_marginRight="30dp"
-            android:text="edit0"
+            android:hint="아이디(ID)"
             android:fontFamily="@font/medium"
-            >
-
-        </com.google.android.material.textfield.TextInputEditText>
+            />
     </com.google.android.material.textfield.TextInputLayout>
+
+<!--    app:endIconMode="password_toggle"-->
 
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:endIconMode="password_toggle"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+
         >
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/layout5_et2"
@@ -57,14 +57,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="비밀번호(PW)"
-            android:text="12345678"
             android:inputType="textPassword"
             android:layout_marginLeft="30dp"
             android:layout_marginRight="30dp"
             android:fontFamily="@font/medium"
-            >
-
-        </com.google.android.material.textfield.TextInputEditText>
+            />
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
