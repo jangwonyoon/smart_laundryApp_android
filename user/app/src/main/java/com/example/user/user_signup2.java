@@ -189,7 +189,7 @@ public class user_signup2 extends Activity {
                     user_email=user_email.replace(" ","");
 
                     a = String.valueOf("0"+user_number);
-                    Toast.makeText(getApplicationContext(), a, Toast.LENGTH_SHORT).show();
+                    /*Toast.makeText(getApplicationContext(), a, Toast.LENGTH_SHORT).show();*/
 
                 } catch (Exception e) {
                     Toast.makeText(getApplicationContext(), "번호를 공백없이 입력해주세요.", Toast.LENGTH_SHORT).show();

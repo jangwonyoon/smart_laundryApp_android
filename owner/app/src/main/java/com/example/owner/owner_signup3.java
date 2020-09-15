@@ -93,7 +93,8 @@ public class owner_signup3 extends FragmentActivity
                 //현재 입력되어 있는 값을 가져온다(get)
                 Double owner_lat = latitude;
                 Double owner_long = longitude;
-                final String owner_address = a.get(0).getAddressLine(0);
+                String m = a.get(0).getAddressLine(0).replaceAll("대한민국","");
+                final String owner_address = m;
                 String owner_nin = owner_nin1;
 
                 Response.Listener<String> responseListener = new Response.Listener<String>() {
@@ -273,7 +274,8 @@ public class owner_signup3 extends FragmentActivity
 
                 try {
                     a = g.getFromLocation(latitude,longitude,1);
-                    Toast.makeText(getApplicationContext(), ""+a.get(0).getAddressLine(0), Toast.LENGTH_SHORT).show();
+                    String m = a.get(0).getAddressLine(0).replaceAll("대한민국","");
+                    Toast.makeText(getApplicationContext(), ""+m, Toast.LENGTH_SHORT).show();
                     set_address = a.get(0).getAddressLine(0);
                 } catch (IOException e) {
                     e.printStackTrace();

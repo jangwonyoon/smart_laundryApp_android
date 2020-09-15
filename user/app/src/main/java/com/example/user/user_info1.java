@@ -72,7 +72,7 @@ public class user_info1 extends Activity {
         et2 = (EditText) findViewById(R.id.layout_et2);
         et3 = (EditText) findViewById(R.id.layout_et3);
 
-        et2.setHint(String.valueOf(user_number1));
+        et2.setHint("0"+String.valueOf(user_number1));
         et3.setHint(user_email1);
 
 

@@ -186,8 +186,8 @@
                 android:id="@+id/layout2_et5"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="연락처(-제외) ex)1012345678"
-                android:maxLength="10"
+                android:hint="연락처(-제외) ex)01012345678"
+                android:maxLength="11"
                 android:inputType="number"
                 >
 
@@ -254,7 +254,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/layout2_6"
             android:hint="가게 연락처(-제외, 없을시 개인 연락처 입력)"
-            android:maxLength="10"
+            android:maxLength="11"
             android:inputType="number"
             >
 

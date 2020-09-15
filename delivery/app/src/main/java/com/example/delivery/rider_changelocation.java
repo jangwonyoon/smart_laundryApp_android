@@ -133,7 +133,8 @@ public class rider_changelocation extends AppCompatActivity
                 try {
                     rider_lat = latitude;
                     rider_long = longitude;
-                    user_address = a.get(0).getAddressLine(0);
+                    String m = a.get(0).getAddressLine(0).replaceAll("대한민국","");
+                    user_address = m;
                     user_id = user_id1;
                     user_address_detail = et1.getText().toString();
                 } catch (Exception e) {
@@ -301,7 +302,8 @@ public class rider_changelocation extends AppCompatActivity
 
                 try {
                     a = g.getFromLocation(latitude,longitude,1);
-                    Toast.makeText(getApplicationContext(), ""+a.get(0).getAddressLine(0), Toast.LENGTH_SHORT).show();
+                    String m = a.get(0).getAddressLine(0).replaceAll("대한민국","");
+                    Toast.makeText(getApplicationContext(), ""+m, Toast.LENGTH_SHORT).show();
                     set_address = a.get(0).getAddressLine(0);
                 } catch (IOException e) {
                     e.printStackTrace();

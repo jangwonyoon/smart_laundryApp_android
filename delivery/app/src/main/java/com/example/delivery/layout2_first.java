@@ -57,6 +57,7 @@ import java.util.Locale;
 public class layout2_first extends FragmentActivity
         implements OnMapReadyCallback {
 
+    int i=0;
     Double latitude,longitude;
     List<Address> a=null;
 
@@ -449,9 +450,12 @@ public class layout2_first extends FragmentActivity
                                 infoWindow.open(marker);
                                 infoWindow1.open(marker1);
 
-                                CameraUpdate cameraUpdate = CameraUpdate.scrollTo(new com.naver.maps.geometry.LatLng(num3,num4))
-                                        .animate(CameraAnimation.Fly, 3000);
-                                naverMap.moveCamera(cameraUpdate);
+                                if(i==0) {
+                                    CameraUpdate cameraUpdate = CameraUpdate.scrollTo(new com.naver.maps.geometry.LatLng(num3, num4))
+                                            .animate(CameraAnimation.Fly, 3000);
+                                    naverMap.moveCamera(cameraUpdate);
+                                    i++;
+                                }
 
                                 final Double f_num1 = num1;
                                 final Double f_num2 = num2;
