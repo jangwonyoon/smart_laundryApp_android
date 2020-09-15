@@ -36,7 +36,7 @@
         android:inputType="textPassword"
         android:singleLine="true"
         android:fontFamily="@font/medium"
-        ></EditText>
+        />
 
     <Button
         android:id="@+id/layout5_b1"
@@ -45,10 +45,12 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="160dp"
         android:text="확인"
-
         android:textSize="20dp"
         android:fontFamily="@font/medium"
+        android:textColor="@color/white"
         android:background="@drawable/buttonshape"
-        ></Button>
+        />
+
+
 
 </RelativeLayout>
