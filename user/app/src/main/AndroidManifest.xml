@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.user">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/washing_machine"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/washing_machine_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:networkSecurityConfig="@xml/network_security_config">
+
+        <activity android:name=".user_main2" />
+        <activity android:name=".user_frag_first" />
+        <activity android:name=".see_others_review" />
+        <activity android:name=".user_forgot_pw_change" />
+        <activity android:name=".user_write_review" />
+        <activity android:name=".user_order_record2" />
+        <activity android:name=".user_now_order2" />
+        <activity android:name=".user_forpay" />
+        <activity android:name=".user_info1" />
+        <activity android:name=".user_storereview" />
+        <activity android:name=".user_itembasket" />
+        <activity android:name=".user_itempage" />
+        <activity android:name=".user_logout" />
+        <activity android:name=".user_order_record" />
+        <activity android:name=".user_now_order" />
+        <activity android:name=".user_review" />
+        <activity android:name=".user_info" />
+        <activity android:name=".user_changelocation" />
+        <activity android:name=".user_gongji" />
+        <activity android:name=".user_main1" />
+        <activity android:name=".forgot_id_pw" />
+        <activity android:name=".mainloading" />
+        <activity android:name=".user_login" />
+        <activity android:name=".user_signup4" />
+        <activity android:name=".user_signup3" />
+        <activity android:name=".user_signup2" />
+        <activity android:name=".user_signup1" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ImageActivity" />
+        <activity android:name=".user_itempage_list" />
+        <activity android:name=".user_itempage_Adpter" />
+        <activity android:name=".user_storereview_Adpter" />
+        <activity android:name=".user_storereview_list" /> <!-- 구글 API -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyCVgBM9ZWqFJdEPp_QgpLsqMxQIb3qqEBI" />
+    </application>
+
+</manifest>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    tools:context=".rider_info"
+    android:background="@color/white">
+
+
+    <TextView
+        android:id="@+id/layout5_tv1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="비밀번호 입력"
+        android:textColor="#111111"
+        android:textSize="20dp"
+        android:layout_marginLeft="30dp"
+        android:textStyle="bold"
+        android:fontFamily="@font/medium">
+
+    </TextView>
+
+    <EditText
+        android:id="@+id/layout5_et2"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"
+        android:layout_below="@+id/layout5_tv1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="비밀번호(Password)"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:text="12345678"
+        android:inputType="textPassword"
+        android:singleLine="true"
+        android:fontFamily="@font/medium"
+        ></EditText>
+
+    <Button
+        android:id="@+id/layout5_b1"
+        android:layout_below="@+id/layout5_et2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="160dp"
+        android:text="확인"
+
+        android:textSize="20dp"
+        android:fontFamily="@font/medium"
+        android:background="@drawable/buttonshape"
+        ></Button>
+
+</RelativeLayout>

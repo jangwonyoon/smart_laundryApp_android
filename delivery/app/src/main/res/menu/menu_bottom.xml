@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/tab1"
+        app:showAsAction="always"
+        android:enabled="true"
+        android:checked="true"
+        android:icon="@drawable/laundry_basket"
+        android:title="주문받기" />
+    <item android:id="@+id/tab2"
+        app:showAsAction="always"
+        android:icon="@drawable/truck"
+        android:enabled="true"
+        android:title="받은주문"/>
+    <item
+        android:id="@+id/tab3"
+        app:showAsAction="always"
+        android:enabled="true"
+        android:icon="@drawable/record"
+        android:title="주문기록"/>
+
+</menu>

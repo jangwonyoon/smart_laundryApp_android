@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "581168249328",
+    "firebase_url": "https://pushalram-78982.firebaseio.com",
+    "project_id": "pushalram-78982",
+    "storage_bucket": "pushalram-78982.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:581168249328:android:dbceffbc32a5077a038535",
+        "android_client_info": {
+          "package_name": "com.example.owner"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "581168249328-unol7pon0m779n66f9i884k94osg6vkc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.owner",
+            "certificate_hash": "126c9ea0e26fc0194a42dfabdc0ac7733589ea36"
+          }
+        },
+        {
+          "client_id": "581168249328-m3asjfrdiju7q404r4qo5qq10c6tolpo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAEYzMV2zdyVVTOubYyCHMTbXB5TJ_rFiA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "581168249328-m3asjfrdiju7q404r4qo5qq10c6tolpo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

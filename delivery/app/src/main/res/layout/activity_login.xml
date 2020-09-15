@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".login"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:weightSum="10">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="4"
+        android:text="세탁이 라이더"
+        android:textStyle="bold"
+        android:textSize="50dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:fontFamily="@font/title2"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/layout5_et1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:hint="아이디(ID)"
+            android:text=""
+            android:fontFamily="@font/medium"
+            android:singleLine="true">
+
+        </com.google.android.material.textfield.TextInputEditText>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/layout5_et2"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/layout5_et1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="비밀번호(PW)"
+            android:text=""
+            android:inputType="textPassword"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:fontFamily="@font/medium"
+            android:singleLine="true"
+            >
+
+        </com.google.android.material.textfield.TextInputEditText>
+    </com.google.android.material.textfield.TextInputLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_weight="4"
+        >
+
+        <Button
+            android:id="@+id/layout5_b1"
+            android:layout_below="@+id/layout5_et2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ID/PW찾기"
+            android:textSize="20dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/buttonshape"
+            android:fontFamily="@font/medium"
+            ></Button>
+
+        <Button
+            android:id="@+id/layout5_b2"
+            android:layout_below="@+id/layout5_et2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="     로그인    "
+            android:textSize="20dp"
+            android:background="@drawable/buttonshape"
+            android:fontFamily="@font/medium"
+            ></Button>
+
+        <Button
+            android:id="@+id/layout5_b3"
+            android:layout_below="@+id/layout5_et2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="회원가입"
+            android:textSize="20dp"
+            android:layout_margin="20dp"
+            android:background="@drawable/buttonshape"
+            android:fontFamily="@font/medium"
+            ></Button>
+    </LinearLayout>
+
+
+</LinearLayout>

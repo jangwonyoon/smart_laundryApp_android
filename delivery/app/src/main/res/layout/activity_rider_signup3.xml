@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="1"
+    tools:context=".rider_signup3"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:id="@+id/layout3_1"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!--<View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#FF000000" />-->
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/layout3_b1"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="left"
+                android:background="@drawable/arrow_back"
+                android:layout_margin="10dp">
+
+            </Button>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_marginTop="5dp"
+                android:text="회원가입"
+                android:textSize="30dp"
+                android:textStyle="bold"
+                android:fontFamily="@font/title2"></TextView>
+        </FrameLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#FF000000" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:id="@+id/layout3_2"
+        android:orientation="horizontal"
+        android:layout_margin="10dp"
+        android:weightSum="1">
+
+        <TextView
+            android:id="@+id/layout3_tv1"
+            android:layout_weight="0.8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layout3_1"
+            android:gravity="top"
+            android:textStyle="bold"
+            android:textSize="15dp"
+            android:text="위치를 지정해주세요.\n*지정한 위치로 서비스합니다.*"
+            android:layout_margin="10dp"
+            android:fontFamily="@font/medium"
+            >
+
+        </TextView>
+
+        <Button
+            android:layout_weight="0.2"
+            android:id="@+id/layout3_b2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="진행하기"
+            android:textSize="17dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/buttonshape"
+            android:fontFamily="@font/medium">
+
+        </Button>
+
+
+    </LinearLayout>
+    <EditText
+        android:layout_margin="10dp"
+        android:id="@+id/layout3_et1"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/layout3_2"
+        android:hint="상세주소를 입력하세요."
+        android:fontFamily="@font/medium"
+        android:singleLine="true"
+        >
+
+    </EditText>
+
+
+    <fragment
+        android:id="@+id/googlemap"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout3_et1"
+        android:layout_margin="10dp"
+        class="com.google.android.gms.maps.MapFragment"
+        ></fragment>
+
+
+</LinearLayout>
