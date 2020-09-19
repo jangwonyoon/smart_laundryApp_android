@@ -152,12 +152,10 @@
 
 
     <fragment
-        android:id="@+id/googlemap"
+        android:id="@+id/map"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/layout3_et1"
-        android:layout_margin="10dp"
-        class="com.google.android.gms.maps.MapFragment" />
-
+        android:layout_height="match_parent"
+        android:name="com.naver.maps.map.MapFragment"
+        />
 
 </LinearLayout>

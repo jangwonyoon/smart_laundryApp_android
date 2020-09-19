@@ -8,6 +8,8 @@
     <uses-permission android:name="android.permission.SEND_SMS" />
     <uses-permission android:name="android.permission.RECEIVE_SMS" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
     <uses-permission android:name="android.permission.WAKE_LOCK" />
 
@@ -42,7 +44,7 @@
         <activity android:name=".mainloading" />
         <activity android:name=".owner_login" />
         <activity android:name=".owner_signup4" />
-        <activity android:name=".owner_signup3" />
+        <activity android:name=".owner_signup3"/>
         <activity android:name=".owner_signup2" />
         <activity android:name=".owner_signup1" />
         <activity android:name=".MainActivity">
@@ -62,6 +64,11 @@
             android:name=".BackgroundService"
             android:exported="false"
             android:stopWithTask="false"/>
+
+
+        <meta-data
+            android:name="com.naver.maps.map.CLIENT_ID"
+            android:value="e4xx0ayy2g"/>
 
 
 

@@ -1,5 +1,5 @@
 package com.example.user;
-//zzzzzzzzzzzz
+//테스트테스트
 public class main1_list {
     private String member_s_name;
     private String member_o_id;
