@@ -16,13 +16,13 @@
         android:layout_weight="0.07">
 
         <com.google.android.material.appbar.MaterialToolbar
+            android:background="@color/mainColor"
             android:id="@+id/topAppBar1"
             style="@style/Widget.MaterialComponents.Toolbar.Primary"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             app:title="STEP1. 약관 동의"
-            app:titleTextColor="@color/white"
-            />
+            app:titleTextColor="@color/white" />
 
     </com.google.android.material.appbar.AppBarLayout>
 
@@ -304,6 +304,7 @@
             android:textSize="20dp"
             android:layout_margin="20dp"
             android:background="@drawable/buttonshape"
+            android:textColor="@color/white"
             android:fontFamily="@font/medium">
 
         </Button>
