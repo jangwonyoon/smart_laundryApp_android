@@ -61,7 +61,8 @@ public class user_itembasket_Adpter extends RecyclerView.Adapter<user_itembasket
         protected TextView price;
         protected LinearLayout layout_get_item;
 
-        protected Button b1;
+        protected Button b1,b2;
+        protected TextView tv1;
 
 
         public CustomViewHolder(View view) {
@@ -70,6 +71,8 @@ public class user_itembasket_Adpter extends RecyclerView.Adapter<user_itembasket
             this.price = (TextView) view.findViewById(R.id.price);
             this.layout_get_item = (LinearLayout) view.findViewById(R.id.layout_get_item);
             this.b1 = (Button) view.findViewById(R.id.deleteitem);
+            this.b2 = (Button) view.findViewById(R.id.putitem);
+            this.tv1 = view.findViewById(R.id.count);
         }
 
 
@@ -85,12 +88,140 @@ public class user_itembasket_Adpter extends RecyclerView.Adapter<user_itembasket
     }
 
     @Override
-    public void onBindViewHolder(@NonNull CustomViewHolder viewholder, final int position) {
+    public void onBindViewHolder(@NonNull final CustomViewHolder viewholder, final int position) {
         final String a,b;
         viewholder.menu.setText(mList.get(position).getMember_menu());
         viewholder.price.setText(mList.get(position).getMember_price()+"원");
         a = mList.get(position).getMember_menu();
         b = mList.get(position).getMember_price();
+
+        Response.Listener<String> responseListener = new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+                try {
+                    JSONObject jsonObject = new JSONObject(response);
+                    boolean success = jsonObject.getBoolean("success"); //php보면 response가 success면 ㄱㄱ
+                    if(success){ //회원등록에 성공한 경우
+                        /*Toast.makeText(context.getApplicationContext(),"담기성공",Toast.LENGTH_SHORT).show();*/
+                        int count = jsonObject.getInt("count");
+                        viewholder.tv1.setText(String.valueOf(count));
+                                /*Intent intent = new Intent(user_signup2.this, user_signup3.class);
+                                intent.putExtra("user_id",user_id);
+
+                                startActivity(intent);*/
+                    }
+                    //실패한 경우
+                    else{
+                        Toast.makeText(context.getApplicationContext(),"중복된 아이디입니다.",Toast.LENGTH_SHORT).show();
+                        return;
+                    }
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+
+            }
+        };
+
+        //서버로 Volley를 이용해서 요청을 함
+        user_itempage_temp1_count_db registerRequest = new user_itempage_temp1_count_db(a, Integer.parseInt(b), user_id, title,responseListener);
+        RequestQueue queue = Volley.newRequestQueue(context.getApplicationContext());
+        queue.add(registerRequest);
+
+
+
+        /*viewholder.b1.setOnClickListener(new View.OnClickListener() {
+            String menu = a;
+            int price = Integer.parseInt(b);
+
+            @Override
+            public void onClick(View v) {
+                Response.Listener<String> responseListener = new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+                        try {
+                            JSONObject jsonObject = new JSONObject(response);
+                            boolean success = jsonObject.getBoolean("success"); //php보면 response가 success면 ㄱㄱ
+                            if(success){ //회원등록에 성공한 경우
+                                *//*Toast.makeText(context.getApplicationContext(),"담기성공",Toast.LENGTH_SHORT).show();*//*
+                                int count = jsonObject.getInt("count");
+                                viewholder.tv1.setText(String.valueOf(count));
+                                *//*Intent intent = new Intent(user_signup2.this, user_signup3.class);
+                                intent.putExtra("user_id",user_id);
+
+                                startActivity(intent);*//*
+                            }
+                            //실패한 경우
+                            else{
+                                Toast.makeText(context.getApplicationContext(),"중복된 아이디입니다.",Toast.LENGTH_SHORT).show();
+                                return;
+                            }
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+
+                    }
+                };
+
+                //서버로 Volley를 이용해서 요청을 함
+                user_itempage_temp1_db registerRequest = new user_itempage_temp1_db(menu, price, user_id, title,responseListener);
+                RequestQueue queue = Volley.newRequestQueue(context.getApplicationContext());
+                queue.add(registerRequest);
+            }
+        });*/
+
+        viewholder.b2.setOnClickListener(new View.OnClickListener() {
+            String menu = a;
+            int price = Integer.parseInt(b);
+
+            @Override
+            public void onClick(View v) {
+                Response.Listener<String> responseListener = new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+                        try {
+                            JSONObject jsonObject = new JSONObject(response);
+                            boolean success = jsonObject.getBoolean("success"); //php보면 response가 success면 ㄱㄱ
+                            if(success){ //회원등록에 성공한 경우
+                                /*Toast.makeText(context.getApplicationContext(),"담기성공",Toast.LENGTH_SHORT).show();*/
+                                int count = jsonObject.getInt("count");
+                                viewholder.tv1.setText(String.valueOf(count));
+                                /*Intent intent = new Intent(user_signup2.this, user_signup3.class);
+                                intent.putExtra("user_id",user_id);
+
+                                startActivity(intent);*/
+
+                                Intent intent = new Intent(context.getApplicationContext(),user_itembasket.class);
+                                intent.putExtra("user_name",user_name);
+                                intent.putExtra("user_address",user_address);
+                                intent.putExtra("user_lat",user_lat);
+                                intent.putExtra("user_long",user_long);
+                                intent.putExtra("title",title);
+                                intent.putExtra("user_id",user_id);
+                                intent.putExtra("user_address_detail",user_address_detail);
+
+                                context.startActivity(intent);
+                            }
+                            //실패한 경우
+                            else{
+                                Toast.makeText(context.getApplicationContext(),"중복된 아이디입니다.",Toast.LENGTH_SHORT).show();
+                                return;
+                            }
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+
+                    }
+                };
+
+                //서버로 Volley를 이용해서 요청을 함
+                user_itempage_temp1_db registerRequest = new user_itempage_temp1_db(menu, price, user_id, title,responseListener);
+                RequestQueue queue = Volley.newRequestQueue(context.getApplicationContext());
+                queue.add(registerRequest);
+            }
+        });
+
+
+
 
         viewholder.b1.setOnClickListener(new View.OnClickListener() {
             String menu = a;
