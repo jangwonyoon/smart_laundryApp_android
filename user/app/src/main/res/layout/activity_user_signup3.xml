@@ -9,52 +9,67 @@
     tools:context=".user_signup3"
     android:background="@color/white">
 
-    <LinearLayout
-        android:id="@+id/layout3_1"
-        android:layout_gravity="center"
-        android:gravity="center"
-        android:layout_marginTop="10dp"
+    <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_height="wrap_content">
 
-        <!--<View
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/topAppBar3"
+            style="@style/Widget.MaterialComponents.Toolbar.Primary"
             android:layout_width="match_parent"
-            android:layout_height="2dp"
-            android:background="#FF000000" />-->
+            android:layout_height="?attr/actionBarSize"
+            app:title="STEP3. 위치 설정"
+            app:titleTextColor="@color/white"
+            />
 
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+    </com.google.android.material.appbar.AppBarLayout>
 
-            <Button
-                android:id="@+id/layout3_b1"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_gravity="left"
-                android:background="@drawable/arrow_back"
-                android:layout_margin="10dp">
+<!--    <LinearLayout-->
+<!--        android:id="@+id/layout3_1"-->
+<!--        android:layout_gravity="center"-->
+<!--        android:gravity="center"-->
+<!--        android:layout_marginTop="10dp"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="vertical">-->
 
-            </Button>
+<!--        &lt;!&ndash;<View-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="2dp"-->
+<!--            android:background="#FF000000" />&ndash;&gt;-->
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:layout_marginTop="5dp"
-                android:text="회원가입"
-                android:textSize="30dp"
-                android:textStyle="bold"
-                android:fontFamily="@font/title2"></TextView>
-        </FrameLayout>
+<!--        <FrameLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content">-->
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="2dp"
-            android:background="#FF000000" />
+<!--            <Button-->
+<!--                android:id="@+id/layout3_b1"-->
+<!--                android:layout_width="30dp"-->
+<!--                android:layout_height="30dp"-->
+<!--                android:layout_gravity="left"-->
+<!--                android:background="@drawable/arrow_back"-->
+<!--                android:layout_margin="10dp">-->
 
-    </LinearLayout>
+<!--            </Button>-->
+
+<!--            <TextView-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:layout_gravity="center"-->
+<!--                android:gravity="center"-->
+<!--                android:layout_marginTop="5dp"-->
+<!--                android:text="회원가입"-->
+<!--                android:textSize="30dp"-->
+<!--                android:textStyle="bold"-->
+<!--                android:fontFamily="@font/title2"></TextView>-->
+<!--        </FrameLayout>-->
+
+<!--        <View-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="2dp"-->
+<!--            android:background="#FF000000" />-->
+
+<!--    </LinearLayout>-->
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -95,34 +110,52 @@
 
 
     </LinearLayout>
-    <EditText
-        android:layout_margin="10dp"
-        android:id="@+id/layout3_et1"
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:layout_below="@+id/layout3_2"
-        android:hint="상세주소를 입력하세요."
-        android:fontFamily="@font/medium"
-        android:singleLine="true"
-        >
 
-    </EditText>
+        <EditText
+            android:layout_margin="10dp"
+            android:id="@+id/layout3_et1"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/layout3_2"
+            android:hint="상세주소를 입력하세요."
+            android:fontFamily="@font/medium"
+            android:singleLine="true"
+            >
+        </EditText>
 
 
-    <!--<fragment
-        android:id="@+id/googlemap"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/layout3_et1"
-        android:layout_margin="10dp"
-        class="com.google.android.gms.maps.MapFragment"
-        ></fragment>-->
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content">-->
+<!--        <com.google.android.material.textfield.TextInputLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:id="@+id/layout3"-->
+<!--            android:layout_below="@+id/layout3_et1"-->
+<!--            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">-->
+<!--            <com.google.android.material.textfield.TextInputEditText-->
+<!--                android:id="@+id/layout2_et3"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="40dp"-->
+<!--                android:layout_below="@+id/layout3_2"-->
+<!--                android:maxLength="20"-->
+<!--                android:inputType="textPassword"-->
+<!--                android:layout_margin="7dp"-->
+<!--                android:fontFamily="@font/medium"-->
+<!--                android:singleLine="true"-->
+<!--                android:hint="상세주소를 입력하세요"-->
+<!--                >-->
+
+<!--            </com.google.android.material.textfield.TextInputEditText>-->
+<!--        </com.google.android.material.textfield.TextInputLayout>-->
+<!--    </LinearLayout>-->
+
 
     <fragment
         android:id="@+id/map"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:name="com.naver.maps.map.MapFragment" />
-
+        android:name="com.naver.maps.map.MapFragment"
+        />
 
 </LinearLayout>

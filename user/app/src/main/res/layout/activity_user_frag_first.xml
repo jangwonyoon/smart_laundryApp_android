@@ -13,17 +13,12 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:orientation="vertical"
-        android:layout_weight="1.5">
+        android:layout_weight="1.0">
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="2dp"
-            android:layout_marginTop="20dp"
-            android:background="#FF000000" />
 
         <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="56dp">
 
             <Button
                 android:id="@+id/layout2_b1"
@@ -35,34 +30,120 @@
 
             </Button>
 
-            <TextView
-                android:id="@+id/title1"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="5dp"
-                android:gravity="center"
-                android:text=""
-                android:textSize="25dp"
-                android:textStyle="bold"
-                android:fontFamily="@font/title2"></TextView>
-
-            <Button
-                android:id="@+id/btn1"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:background="@drawable/share"
-                android:layout_gravity="right"
-                android:layout_marginRight="15dp"
-                android:layout_marginTop="15dp"/>
+<!--            <Button-->
+<!--                android:id="@+id/btn1"-->
+<!--                android:layout_width="17dp"-->
+<!--                android:layout_height="30dp"-->
+<!--                android:layout_gravity="right"-->
+<!--                android:layout_marginTop="15dp"-->
+<!--                android:layout_marginRight="15dp"-->
+<!--                android:background="@drawable/share" />-->
         </FrameLayout>
 
-        <View
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/title1"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/title2"
+        android:gravity="center"
+        android:textSize="35dp"
+        android:textStyle="bold"
+
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RatingBar
+            android:gravity="center"
+            android:id="@+id/rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:numStars="5"
+            android:isIndicator="false"
+            android:stepSize="1"
+            android:max="5"
+            android:layout_marginStart="40dp"
+            style="?android:attr/ratingBarStyleIndicator"
+            />
+
+        <TextView
             android:layout_width="match_parent"
-            android:layout_height="2dp"
-            android:background="#FF000000" />
+            android:layout_height="match_parent"
+            android:text="별점"
+            android:textStyle="bold"
+            android:textSize="30dp"
+            android:paddingLeft="20dp"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="최근리뷰 1,400"
+            android:textStyle="bold"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="최근사장님댓글 1,300"
+            android:textStyle="bold"
+            />
 
     </LinearLayout>
+
+    <View
+        android:layout_width="380dp"
+        android:layout_height="2dp"
+        android:background="#808080"
+        android:layout_gravity="center"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        >
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/call"
+            android:text="전화걸기"
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="찜"
+            />
+        <Button
+            android:id="@+id/btn1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="공유"
+            />
+
+    </LinearLayout>
+
 
     <ScrollView
         android:layout_width="match_parent"
@@ -77,7 +158,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="*공지사항*"
+                android:text="공지사항"
                 android:textStyle="bold"
                 android:textSize="20dp"
                 android:layout_margin="5dp"
@@ -92,7 +173,7 @@
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
                 android:padding="5dp"
-                ></TextView>
+                />
 
             <View
                 android:layout_width="390dp"
@@ -320,18 +401,9 @@
             android:layout_height="match_parent"
             android:text="상품"
             android:textSize="22dp"
-            android:background="@color/colorAccent"
-            android:fontFamily="@font/boldsuzin"></Button>
-
-        <!--<Button
-            android:id="@+id/intoreview"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="0.5"
-            android:textSize="25dp"
-            android:text="리뷰">
-
-        </Button>-->
+            android:fontFamily="@font/boldsuzin"
+            android:background="@color/mainColor"
+            />
 
     </LinearLayout>
 

@@ -9,45 +9,20 @@
     tools:context=".user_signup4"
     android:background="@color/white">
 
-    <LinearLayout
-        android:layout_weight="0.1"
-        android:id="@+id/layout4_1"
+    <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_gravity="center"
-        android:gravity="center"
-        android:orientation="vertical">
+        android:layout_height="wrap_content">
 
-        <!--<View
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/topAppBar4"
+            style="@style/Widget.MaterialComponents.Toolbar.Primary"
             android:layout_width="match_parent"
-            android:layout_height="2dp"
-            android:background="#FF000000" />-->
+            android:layout_height="?attr/actionBarSize"
+            app:title="STEP4. 가입완료"
+            app:titleTextColor="@color/white"
+            />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center">
-
-
-            <TextView
-                android:layout_width="280dp"
-                android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:layout_marginTop="15dp"
-                android:layout_marginBottom="10dp"
-                android:text="회원가입"
-                android:textSize="30dp"
-                android:textStyle="bold"
-                android:gravity="center"
-                android:fontFamily="@font/title2"></TextView>
-        </LinearLayout>
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="2dp"
-            android:background="#FF000000" />
-
-    </LinearLayout>
+    </com.google.android.material.appbar.AppBarLayout>
 
     <RelativeLayout
         android:layout_weight="0.9"
