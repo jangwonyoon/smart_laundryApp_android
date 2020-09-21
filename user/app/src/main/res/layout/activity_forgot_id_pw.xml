@@ -69,6 +69,7 @@
             android:layout_height="?attr/actionBarSize"
             app:title="아이디/패스워드 찾기"
             app:titleTextColor="@color/white"
+            android:background="@color/mainColor"
             />
 
 <!--        app:titleTextAppearance=""-->

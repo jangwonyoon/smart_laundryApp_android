@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -8,7 +9,7 @@
     android:weightSum="10"
     android:background="@color/white">
 
-    <LinearLayout
+        <LinearLayout
         android:layout_weight="1.4"
         android:id="@+id/layout2_1"
         android:layout_width="match_parent"
@@ -48,13 +49,8 @@
                 android:text=""
                 android:textSize="25dp"
                 android:textStyle="bold"
-                android:fontFamily="@font/title2"></TextView>
+                android:fontFamily="@font/title 2"/>
         </FrameLayout>
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="2dp"
-            android:background="#FF000000" />
 
     </LinearLayout>
 

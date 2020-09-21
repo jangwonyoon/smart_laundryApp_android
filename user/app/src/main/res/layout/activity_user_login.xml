@@ -29,6 +29,7 @@
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        app:endIconMode="clear_text"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         >
         <com.google.android.material.textfield.TextInputEditText
@@ -42,13 +43,11 @@
             />
     </com.google.android.material.textfield.TextInputLayout>
 
-<!--    app:endIconMode="password_toggle"-->
-
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        app:endIconMode="password_toggle"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-
         >
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/layout5_et2"

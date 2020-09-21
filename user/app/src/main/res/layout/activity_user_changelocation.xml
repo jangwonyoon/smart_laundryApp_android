@@ -27,9 +27,7 @@
             android:layout_marginTop="10dp"
             android:fontFamily="@font/medium"
             android:text="위치를 지정해주세요.\n*지정한 위치로 서비스합니다.*\n"
-            >
-
-        </TextView>
+            />
 
         <Button
             android:id="@+id/layout3_b2"
@@ -40,11 +38,8 @@
             android:textSize="15dp"
             android:layout_gravity="center"
             android:fontFamily="@font/medium"
-            android:background="@drawable/buttonshape">
-
-        </Button>
-
-
+            android:background="@color/mainColor"
+            />
     </LinearLayout>
 
     <EditText
@@ -58,15 +53,6 @@
         android:singleLine="true">
 
     </EditText>
-
-
-    <!--<fragment
-        android:id="@+id/googlemap"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/layout3_et1"
-        class="com.google.android.gms.maps.MapFragment"
-        ></fragment>-->
 
     <fragment
         android:id="@+id/map"
