@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".user_searchhash"
+    tools:context=".user_searchhash_plus"
     android:orientation="vertical"
     android:background="@color/white">
 
@@ -42,18 +42,11 @@
                 android:layout_gravity="center"
                 android:gravity="center"
                 android:layout_marginTop="5dp"
-                android:text="#검색"
+                android:text="#인기태그"
                 android:textSize="30dp"
                 android:textStyle="bold"
                 android:fontFamily="@font/title2"></TextView>
 
-            <Button
-                android:id="@+id/ingi"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:layout_gravity="right"
-                android:text="인기태그"/>
         </FrameLayout>
 
         <View
@@ -63,7 +56,7 @@
 
     </LinearLayout>
 
-    <FrameLayout
+    <!--<FrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center">
@@ -76,7 +69,7 @@
                 android:id="@+id/layout2_et1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="검색"
+                android:hint="#검색"
                 android:maxLength="30"
                 android:inputType="text"
                 android:layout_margin="7dp"
@@ -94,7 +87,7 @@
             android:layout_height="30dp"
             android:background="@drawable/searching"
             android:layout_gravity="right"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="10dp"
             android:layout_marginRight="20dp"/>
 
 
@@ -128,7 +121,7 @@
             android:text=""
             android:textSize="15dp"
             android:background="@color/white"/>
-    </LinearLayout>
+    </LinearLayout>-->
 
     <TextView
         android:id="@+id/textView_main_result"

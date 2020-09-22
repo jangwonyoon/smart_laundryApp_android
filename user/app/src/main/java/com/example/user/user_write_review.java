@@ -302,7 +302,7 @@ public class user_write_review extends Activity {
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
             }
-            uritobitmap.compress(Bitmap.CompressFormat.JPEG, 100, out);
+            uritobitmap.compress(Bitmap.CompressFormat.JPEG, 30, out);
 
 
         }

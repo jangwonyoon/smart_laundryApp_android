@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Matrix;
 import android.net.Uri;
 import android.os.Environment;
 import android.provider.MediaStore;
@@ -174,6 +175,13 @@ public class user_review_Adpter extends RecyclerView.Adapter<user_review_Adpter.
         Log.d(TAG,"여기는 가지고와서 보여주는 부분");
         String imgpath = Environment.getExternalStorageDirectory().getAbsolutePath() + "/saveimage/"+result;
         Bitmap bm = BitmapFactory.decodeFile(imgpath);
+        Matrix matrix = new Matrix();
+        matrix.preScale(0.5f, 0.3f);
+        try {
+            bm = Bitmap.createBitmap(bm, 0, 0, bm.getWidth(), bm.getHeight(), matrix, false);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
         viewholder.iv1.setImageBitmap(bm);
         del_file();
 

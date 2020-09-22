@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Matrix;
 import android.os.Environment;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -81,7 +82,6 @@ public class user_storereview_Adpter extends RecyclerView.Adapter<user_storerevi
         protected LinearLayout privatereview;
         protected TextView temp,start;
         protected ImageView iv1,iv2,iv3;
-
 
 
         public CustomViewHolder(View view) {
@@ -166,6 +166,13 @@ public class user_storereview_Adpter extends RecyclerView.Adapter<user_storerevi
         Log.d(TAG,"여기는 가지고와서 보여주는 부분");
         String imgpath = Environment.getExternalStorageDirectory().getAbsolutePath() + "/saveimage/"+result;
         Bitmap bm = BitmapFactory.decodeFile(imgpath);
+        Matrix matrix = new Matrix();
+        matrix.preScale(0.5f, 0.3f);
+        try {
+            bm = Bitmap.createBitmap(bm, 0, 0, bm.getWidth(), bm.getHeight(), matrix, false);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
         viewholder.iv1.setImageBitmap(bm);
         del_file();
 

@@ -60,7 +60,8 @@
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="0dp"
+        android:layout_weight="0.8">
 
         <com.google.android.material.appbar.MaterialToolbar
             android:id="@+id/layout2_1"
@@ -69,6 +70,7 @@
             android:layout_height="?attr/actionBarSize"
             app:title="아이디/패스워드 찾기"
             app:titleTextColor="@color/white"
+            android:background="#00c7f5"
             />
 
 <!--        app:titleTextAppearance=""-->
@@ -78,7 +80,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="3.75"
+        android:layout_weight="4.55"
         android:orientation="vertical"
         android:gravity="center">
 
@@ -175,7 +177,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_below="@id/layout2_b2"
-        android:layout_weight="3.75"
+        android:layout_weight="4.55"
         android:gravity="center"
         android:layout_gravity="center">
 

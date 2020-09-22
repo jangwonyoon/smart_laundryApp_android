@@ -19,6 +19,7 @@
         android:roundIcon="@mipmap/washing_machine_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".user_searchhash_plus"></activity>
         <activity android:name=".user_searchhash"></activity>
         <activity android:name=".user_main2" />
         <activity android:name=".user_frag_first" />
