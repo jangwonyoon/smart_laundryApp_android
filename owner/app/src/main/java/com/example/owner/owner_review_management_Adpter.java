@@ -5,11 +5,14 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Matrix;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
 import android.os.Environment;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RatingBar;
@@ -22,6 +25,7 @@ import org.apache.commons.net.ftp.FTP;
 import org.apache.commons.net.ftp.FTPClient;
 import org.apache.commons.net.ftp.FTPReply;
 
+import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.util.ArrayList;
@@ -68,7 +72,7 @@ public class owner_review_management_Adpter extends RecyclerView.Adapter<owner_r
         protected TextView items;
         protected LinearLayout privatereview;
         protected TextView temp,start;
-        protected ImageView iv1,iv2,iv3;
+        protected ImageButton iv1,iv2,iv3;
 
 
 
@@ -82,7 +86,7 @@ public class owner_review_management_Adpter extends RecyclerView.Adapter<owner_r
             this.privatereview = (LinearLayout) view.findViewById(R.id.privatereview);
             this.temp = (TextView) view.findViewById(R.id.temp);
             this.start = (TextView) view.findViewById(R.id.start);
-            this.iv1 = (ImageView) view.findViewById(R.id.image1);
+            this.iv1 = view.findViewById(R.id.image1);
             /*this.iv2 = (ImageView) view.findViewById(R.id.image2);
             this.iv3 = (ImageView) view.findViewById(R.id.image3);*/
 
@@ -173,6 +177,29 @@ public class owner_review_management_Adpter extends RecyclerView.Adapter<owner_r
             viewholder.temp.setText(mList.get(position).getMember_o_comment());
 
         }
+
+        viewholder.iv1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(context.getApplicationContext(), showimage.class);
+
+                try {
+                    Drawable temp = viewholder.iv1.getDrawable();
+                    Bitmap tmpBitmap = ((BitmapDrawable)temp).getBitmap();
+
+                    ByteArrayOutputStream stream = new ByteArrayOutputStream();
+                    tmpBitmap.compress(Bitmap.CompressFormat.JPEG, 100, stream);
+                    byte[] byteArray = stream.toByteArray();
+                    intent.putExtra("image", byteArray);
+                }catch (Exception e){
+                    e.printStackTrace();
+                }
+
+
+                context.startActivity(intent);
+            }
+        });
+
 
 
         /*viewholder.b1.setOnClickListener(new View.OnClickListener() {
