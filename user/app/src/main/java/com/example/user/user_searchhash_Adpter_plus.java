@@ -1,6 +1,7 @@
 package com.example.user;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -8,6 +9,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
@@ -47,6 +49,7 @@ public class user_searchhash_Adpter_plus extends RecyclerView.Adapter<user_searc
         protected TextView s_name;
         protected TextView o_pw,data2,data3;
         protected LinearLayout intothestore;
+        protected CardView cv1;
 
 
         public CustomViewHolder(View view) {
@@ -57,6 +60,7 @@ public class user_searchhash_Adpter_plus extends RecyclerView.Adapter<user_searc
             this.intothestore = (LinearLayout) view.findViewById(R.id.intothestore);
             this.data2 = view.findViewById(R.id.data2);
             this.data3 = view.findViewById(R.id.data3);*/
+            this.cv1 = view.findViewById(R.id.cardview);
         }
 
 
@@ -75,6 +79,24 @@ public class user_searchhash_Adpter_plus extends RecyclerView.Adapter<user_searc
     public void onBindViewHolder(@NonNull CustomViewHolder viewholder, final int position) {
 
         viewholder.s_name.setText(mList.get(position).getMember_s_name());
+
+        viewholder.cv1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(context.getApplicationContext(), user_searchhash.class);
+                intent.putExtra("user_name", user_name);
+                intent.putExtra("user_address", user_address);
+                intent.putExtra("user_lat", user_lat);
+                intent.putExtra("user_long", user_long);
+                intent.putExtra("user_id", user_id);
+                intent.putExtra("user_address_detail", user_address_detail);
+                intent.putExtra("data1",mList.get(position).getMember_s_name());
+                context.startActivity(intent);
+            }
+        });
+
+
+
         /*if(mList.get(position).getMember_o_id().equals("null")){
             viewholder.o_id.setText("★0.0");
         }

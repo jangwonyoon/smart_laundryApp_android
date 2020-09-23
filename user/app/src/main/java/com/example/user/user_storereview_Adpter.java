@@ -5,12 +5,15 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Matrix;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
 import android.os.Environment;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RatingBar;
@@ -30,6 +33,7 @@ import org.apache.commons.net.ftp.FTPReply;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.util.ArrayList;
@@ -57,6 +61,8 @@ public class user_storereview_Adpter extends RecyclerView.Adapter<user_storerevi
     String user_address_detail;
     String store_name;
 
+    Bitmap bm;
+
 
 
     public user_storereview_Adpter(Activity context, ArrayList<user_storereview_list> list, String store_name, String user_name, String user_address,
@@ -81,7 +87,7 @@ public class user_storereview_Adpter extends RecyclerView.Adapter<user_storerevi
         protected TextView items;
         protected LinearLayout privatereview;
         protected TextView temp,start;
-        protected ImageView iv1,iv2,iv3;
+        protected ImageButton iv1,iv2,iv3;
 
 
         public CustomViewHolder(View view) {
@@ -94,7 +100,7 @@ public class user_storereview_Adpter extends RecyclerView.Adapter<user_storerevi
             this.privatereview = (LinearLayout) view.findViewById(R.id.privatereview);
             this.temp = (TextView) view.findViewById(R.id.temp);
             this.start = (TextView) view.findViewById(R.id.start);
-            this.iv1 = (ImageView) view.findViewById(R.id.image1);
+            this.iv1 = view.findViewById(R.id.image1);
             /*this.iv2 = (ImageView) view.findViewById(R.id.image2);
             this.iv3 = (ImageView) view.findViewById(R.id.image3);*/
 
@@ -113,7 +119,7 @@ public class user_storereview_Adpter extends RecyclerView.Adapter<user_storerevi
     }
 
     @Override
-    public void onBindViewHolder(@NonNull CustomViewHolder viewholder, final int position) {
+    public void onBindViewHolder(@NonNull final CustomViewHolder viewholder, final int position) {
         ConnectFTP = new user_storereview_Adpter();
 
         viewholder.u_id.setText(mList.get(position).getMember_u_id());
@@ -165,9 +171,9 @@ public class user_storereview_Adpter extends RecyclerView.Adapter<user_storerevi
         Log.d(TAG,result);
         Log.d(TAG,"여기는 가지고와서 보여주는 부분");
         String imgpath = Environment.getExternalStorageDirectory().getAbsolutePath() + "/saveimage/"+result;
-        Bitmap bm = BitmapFactory.decodeFile(imgpath);
+        bm = BitmapFactory.decodeFile(imgpath);
         Matrix matrix = new Matrix();
-        matrix.preScale(0.5f, 0.3f);
+        matrix.preScale(0.3f, 0.3f);
         try {
             bm = Bitmap.createBitmap(bm, 0, 0, bm.getWidth(), bm.getHeight(), matrix, false);
         }catch (Exception e){
@@ -185,6 +191,36 @@ public class user_storereview_Adpter extends RecyclerView.Adapter<user_storerevi
             viewholder.temp.setText(mList.get(position).getMember_o_comment());
 
         }
+
+
+        viewholder.iv1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(context.getApplicationContext(), showimage.class);
+                intent.putExtra("user_name",user_name);
+                intent.putExtra("user_address",user_address);
+                intent.putExtra("user_lat",user_lat);
+                intent.putExtra("user_long",user_long);
+                intent.putExtra("user_id",user_id);
+                intent.putExtra("user_address_detail",user_address_detail);
+                intent.putExtra("title",store_name);
+
+                try {
+                    Drawable temp = viewholder.iv1.getDrawable();
+                    Bitmap tmpBitmap = ((BitmapDrawable)temp).getBitmap();
+
+                    ByteArrayOutputStream stream = new ByteArrayOutputStream();
+                    tmpBitmap.compress(Bitmap.CompressFormat.JPEG, 100, stream);
+                    byte[] byteArray = stream.toByteArray();
+                    intent.putExtra("image", byteArray);
+                }catch (Exception e){
+                    e.printStackTrace();
+                }
+
+
+                context.startActivity(intent);
+            }
+        });
 
 
         /*viewholder.b1.setOnClickListener(new View.OnClickListener() {
