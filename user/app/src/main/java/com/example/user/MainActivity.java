@@ -97,7 +97,6 @@ public class MainActivity extends Activity {
             }
         });*/
 
-
         Intent intent = new Intent(this, mainloading.class);
         startActivity(intent);
 

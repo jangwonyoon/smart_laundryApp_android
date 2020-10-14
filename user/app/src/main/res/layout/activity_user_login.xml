@@ -39,6 +39,7 @@
             android:layout_marginRight="30dp"
             android:hint="아이디(ID)"
             android:fontFamily="@font/medium"
+            android:singleLine="true"
             />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -61,6 +62,7 @@
             android:layout_marginLeft="30dp"
             android:layout_marginRight="30dp"
             android:fontFamily="@font/medium"
+            android:singleLine="true"
             />
     </com.google.android.material.textfield.TextInputLayout>
 
