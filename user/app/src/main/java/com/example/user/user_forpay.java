@@ -134,7 +134,7 @@ public class user_forpay extends Activity {
 
                 //서버로 Volley를 이용해서 요청을 함
                 user_forpay_db registerRequest = new user_forpay_db(n_o_count, u_address,date,memo1, delivery_check,
-                        item_list_laundry_list_s_name, user_u_id, yes_no, responseListener);
+                        item_list_laundry_list_s_name, user_u_id, yes_no, user_lat1,user_long1, responseListener);
                 RequestQueue queue = Volley.newRequestQueue(user_forpay.this);
                 queue.add(registerRequest);
             }

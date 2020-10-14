@@ -10,41 +10,37 @@
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-
     <uses-permission android:name="android.permission.WAKE_LOCK" />
 
-
     <application
+        android:requestLegacyExternalStorage="true"
         android:allowBackup="true"
         android:icon="@mipmap/washing_machine_owner"
         android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
         android:roundIcon="@mipmap/washing_machine_owner_foreground"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme"
-        android:networkSecurityConfig="@xml/network_security_config">
-        <activity android:name=".owner_forgot_pw_change"></activity>
+        android:theme="@style/AppTheme">
+        <activity android:name=".showimage"></activity>
+        <activity android:name=".owner_forgot_pw_change" />
         <activity android:name=".owner_forgot_id_pw" />
-
         <activity android:name=".owner_order_record2" />
         <activity android:name=".owner_order_record" />
         <activity android:name=".owner_review_management_reply" />
-
         <activity android:name=".owner_info1" />
         <activity android:name=".owner_item_add_del_up_del" />
         <activity android:name=".owner_item_add_del_add" />
-
         <activity android:name=".owner_item_add_del" />
         <activity android:name=".owner_logout" />
         <activity android:name=".owner_review_management" />
         <activity android:name=".owner_info" />
         <activity android:name=".owner_gongji_management" />
         <activity android:name=".owner_order_y_n" />
-
         <activity android:name=".owner_main" />
         <activity android:name=".mainloading" />
         <activity android:name=".owner_login" />
         <activity android:name=".owner_signup4" />
-        <activity android:name=".owner_signup3"/>
+        <activity android:name=".owner_signup3" />
         <activity android:name=".owner_signup2" />
         <activity android:name=".owner_signup1" />
         <activity android:name=".MainActivity">
@@ -54,8 +50,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ImageActivity_owner" /><!-- 구글 API -->
-
+        <activity android:name=".ImageActivity_owner" /> <!-- 구글 API -->
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyCVgBM9ZWqFJdEPp_QgpLsqMxQIb3qqEBI" />
@@ -63,15 +58,11 @@
         <service
             android:name=".BackgroundService"
             android:exported="false"
-            android:stopWithTask="false"/>
-
+            android:stopWithTask="false" />
 
         <meta-data
             android:name="com.naver.maps.map.CLIENT_ID"
-            android:value="e4xx0ayy2g"/>
-
-
-
+            android:value="e4xx0ayy2g" />
     </application>
 
 </manifest>

@@ -3,6 +3,7 @@ package com.example.user;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -41,6 +42,7 @@ import android.widget.Toast;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.toolbox.Volley;
+import com.google.android.material.navigation.NavigationView;
 import com.kyleduo.switchbutton.SwitchButton;
 
 import org.json.JSONArray;
@@ -57,6 +59,7 @@ import java.net.URL;
 import java.util.ArrayList;
 
 public class user_main1 extends AppCompatActivity{
+    private DrawerLayout mDrawerLayout;
     TextView tv11;
     ImageView iv11;
 
@@ -252,7 +255,8 @@ public class user_main1 extends AppCompatActivity{
         //액션바 배경색 변경
         getSupportActionBar().setBackgroundDrawable(new ColorDrawable(0xFF339999));
         //홈버튼 표시
-        getSupportActionBar().setDisplayHomeAsUpEnabled(false);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
 
         user_address = findViewById(R.id.tv1);
         user_address.setText(user_address1);
@@ -308,6 +312,97 @@ public class user_main1 extends AppCompatActivity{
                 startActivity(intent);
             }
         });*/
+
+        mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
+
+        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(MenuItem menuItem) {
+                menuItem.setChecked(true);
+                //mDrawerLayout.closeDrawers();
+
+                int id = menuItem.getItemId();
+                String title = menuItem.getTitle().toString();
+
+                if(id == R.id.b1){
+                    Intent intent = new Intent(getApplicationContext(), user_main1.class);
+                    intent.putExtra("user_name",user_name1);
+                    intent.putExtra("user_address",user_address1);
+                    intent.putExtra("user_lat",user_lat1);
+                    intent.putExtra("user_long",user_long1);
+                    intent.putExtra("user_id",user_id1);
+                    intent.putExtra("user_address_detail",user_address_detail1);
+                    startActivity(intent);
+                }
+                else if(id == R.id.b2){
+                    Intent intent1 = new Intent(getApplicationContext(), user_gongji.class);
+                    intent1.putExtra("user_name",user_name1);
+                    intent1.putExtra("user_address",user_address1);
+                    intent1.putExtra("user_lat",user_lat1);
+                    intent1.putExtra("user_long",user_long1);
+                    intent1.putExtra("user_id",user_id1);
+                    intent1.putExtra("user_address_detail",user_address_detail1);
+                    startActivity(intent1);
+                }
+                else if(id == R.id.b3){
+                    Intent intent2 = new Intent(getApplicationContext(), user_changelocation.class);
+                    intent2.putExtra("user_name",user_name1);
+                    intent2.putExtra("user_address",user_address1);
+                    intent2.putExtra("user_lat",user_lat1);
+                    intent2.putExtra("user_long",user_long1);
+                    intent2.putExtra("user_id",user_id1);
+                    intent2.putExtra("user_address_detail",user_address_detail1);
+                    startActivity(intent2);
+                }
+                else if(id == R.id.b4){
+                    Intent intent3 = new Intent(getApplicationContext(), user_info.class);
+                    intent3.putExtra("user_name",user_name1);
+                    intent3.putExtra("user_address",user_address1);
+                    intent3.putExtra("user_lat",user_lat1);
+                    intent3.putExtra("user_long",user_long1);
+                    intent3.putExtra("user_id",user_id1);
+                    intent3.putExtra("user_address_detail",user_address_detail1);
+                    startActivity(intent3);
+                }
+                else if(id == R.id.b5){
+                    Intent intent4 = new Intent(getApplicationContext(), user_review.class);
+                    intent4.putExtra("user_name",user_name1);
+                    intent4.putExtra("user_address",user_address1);
+                    intent4.putExtra("user_lat",user_lat1);
+                    intent4.putExtra("user_long",user_long1);
+                    intent4.putExtra("user_id",user_id1);
+                    intent4.putExtra("user_address_detail",user_address_detail1);
+                    startActivity(intent4);
+                }
+                else if(id == R.id.b6){
+                    Intent intent5 = new Intent(getApplicationContext(), user_now_order.class);
+                    intent5.putExtra("user_name",user_name1);
+                    intent5.putExtra("user_address",user_address1);
+                    intent5.putExtra("user_lat",user_lat1);
+                    intent5.putExtra("user_long",user_long1);
+                    intent5.putExtra("user_id",user_id1);
+                    intent5.putExtra("user_address_detail",user_address_detail1);
+                    startActivity(intent5);
+                }
+                else if(id == R.id.b7){
+                    Intent intent6 = new Intent(getApplicationContext(), user_order_record.class);
+                    intent6.putExtra("user_name",user_name1);
+                    intent6.putExtra("user_address",user_address1);
+                    intent6.putExtra("user_lat",user_lat1);
+                    intent6.putExtra("user_long",user_long1);
+                    intent6.putExtra("user_id",user_id1);
+                    intent6.putExtra("user_address_detail",user_address_detail1);
+                    startActivity(intent6);
+                }
+                else if(id == R.id.b8){
+                    Intent intent7 = new Intent(getApplicationContext(), user_logout.class);
+                    startActivity(intent7);
+                }
+
+                return true;
+            }
+        });
     }
 
     @Override
@@ -493,14 +588,14 @@ public class user_main1 extends AppCompatActivity{
 
 
 
-    @Override
+    /*@Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu1, menu);
         return true;
-    }
+    }*/
 
-    @Override
+    /*@Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
@@ -589,8 +684,19 @@ public class user_main1 extends AppCompatActivity{
         }
 
         return super.onOptionsItemSelected(item);
-    }
+    }*/
     public void onClick(View v){
 
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()){
+            case android.R.id.home:{ // 왼쪽 상단 버튼 눌렀을 때
+                mDrawerLayout.openDrawer(GravityCompat.START);
+                return true;
+            }
+        }
+        return super.onOptionsItemSelected(item);
     }
 }

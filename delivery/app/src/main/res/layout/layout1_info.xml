@@ -99,6 +99,19 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_margin="3dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="거리:"
+                android:textSize="15dp"
+                android:id="@+id/test1"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_margin="3dp"
             android:layout_gravity="center">
 
@@ -108,6 +121,7 @@
                 android:text="수락"
                 android:id="@+id/getorder"/>
         </LinearLayout>
+
     </LinearLayout>
 
 

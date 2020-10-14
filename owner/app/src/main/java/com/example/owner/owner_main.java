@@ -5,6 +5,7 @@ import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.NotificationCompat;
+import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -41,6 +42,8 @@ import android.widget.PopupMenu;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.material.navigation.NavigationView;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -55,7 +58,7 @@ import java.net.URL;
 import java.util.ArrayList;
 
 public class owner_main extends AppCompatActivity implements BackgroundResultReceiver.Receiver{
-
+    private DrawerLayout mDrawerLayout;
     TextView tv1;
     ImageView iv1;
 
@@ -224,6 +227,7 @@ public class owner_main extends AppCompatActivity implements BackgroundResultRec
         getSupportActionBar().setTitle("[메인]  "+owner_name1 + "사장님 안녕하세요.");
         //액션바 배경색 변경
         getSupportActionBar().setBackgroundDrawable(new ColorDrawable(0xFF339999));
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         tv1 = findViewById(R.id.backtext);
         iv1 = findViewById(R.id.backimage);
@@ -232,6 +236,91 @@ public class owner_main extends AppCompatActivity implements BackgroundResultRec
             iv1.setVisibility(View.VISIBLE);
             tv1.setVisibility(View.VISIBLE);
         }
+
+        mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
+
+        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(MenuItem menuItem) {
+                menuItem.setChecked(true);
+                //mDrawerLayout.closeDrawers();
+
+                int id = menuItem.getItemId();
+                String title = menuItem.getTitle().toString();
+
+                if(id == R.id.b1){
+                    Intent intent = new Intent(getApplicationContext(), owner_main.class);
+                    intent.putExtra("owner_name",owner_name1);
+                    intent.putExtra("owner_address",owner_address1);
+                    intent.putExtra("owner_lat",owner_lat1);
+                    intent.putExtra("owner_long",owner_long1);
+                    intent.putExtra("store_name",store_name1);
+                    startActivity(intent);
+                }
+                else if(id == R.id.b2){
+                    Intent intent1 = new Intent(getApplicationContext(), owner_order_y_n.class);
+                    intent1.putExtra("owner_name",owner_name1);
+                    intent1.putExtra("owner_address",owner_address1);
+                    intent1.putExtra("owner_lat",owner_lat1);
+                    intent1.putExtra("owner_long",owner_long1);
+                    intent1.putExtra("store_name",store_name1);
+                    startActivity(intent1);
+                    startActivity(intent1);
+                }
+                else if(id == R.id.b3){
+                    Intent intent2 = new Intent(getApplicationContext(), owner_item_add_del.class);
+                    intent2.putExtra("owner_name",owner_name1);
+                    intent2.putExtra("owner_address",owner_address1);
+                    intent2.putExtra("owner_lat",owner_lat1);
+                    intent2.putExtra("owner_long",owner_long1);
+                    intent2.putExtra("store_name",store_name1);
+                    startActivity(intent2);
+                }
+                else if(id == R.id.b4){
+                    Intent intent3 = new Intent(getApplicationContext(), owner_gongji_management.class);
+                    intent3.putExtra("owner_name",owner_name1);
+                    intent3.putExtra("owner_address",owner_address1);
+                    intent3.putExtra("owner_lat",owner_lat1);
+                    intent3.putExtra("owner_long",owner_long1);
+                    intent3.putExtra("store_name",store_name1);
+                    startActivity(intent3);
+                }
+                else if(id == R.id.b5){
+                    Intent intent4 = new Intent(getApplicationContext(), owner_info.class);
+                    intent4.putExtra("owner_name",owner_name1);
+                    intent4.putExtra("owner_address",owner_address1);
+                    intent4.putExtra("owner_lat",owner_lat1);
+                    intent4.putExtra("owner_long",owner_long1);
+                    intent4.putExtra("store_name",store_name1);
+                    startActivity(intent4);
+                }
+                else if(id == R.id.b6){
+                    Intent intent5 = new Intent(getApplicationContext(), owner_review_management.class);
+                    intent5.putExtra("owner_name",owner_name1);
+                    intent5.putExtra("owner_address",owner_address1);
+                    intent5.putExtra("owner_lat",owner_lat1);
+                    intent5.putExtra("owner_long",owner_long1);
+                    intent5.putExtra("store_name",store_name1);
+                    startActivity(intent5);
+                }
+                else if(id == R.id.b7){
+                    Intent intent6 = new Intent(getApplicationContext(), owner_logout.class);
+                    startActivity(intent6);
+                }
+                else if(id == R.id.b8){
+                    Intent intent7 = new Intent(getApplicationContext(), owner_order_record.class);
+                    intent7.putExtra("owner_name",owner_name1);
+                    intent7.putExtra("owner_address",owner_address1);
+                    intent7.putExtra("owner_lat",owner_lat1);
+                    intent7.putExtra("owner_long",owner_long1);
+                    intent7.putExtra("store_name",store_name1);
+                    startActivity(intent7);
+                }
+
+                return true;
+            }
+        });
 
     }
     private class GetData extends AsyncTask<String, Void, String> {
@@ -381,7 +470,7 @@ public class owner_main extends AppCompatActivity implements BackgroundResultRec
 
 
 
-    @Override
+    /*@Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu2, menu);
@@ -469,7 +558,7 @@ public class owner_main extends AppCompatActivity implements BackgroundResultRec
         }
 
         return super.onOptionsItemSelected(item);
-    }
+    }*/
     public void onClick(View v){
 
     }
@@ -550,6 +639,17 @@ public class owner_main extends AppCompatActivity implements BackgroundResultRec
         startService(intent);
 
 
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()){
+            case android.R.id.home:{ // 왼쪽 상단 버튼 눌렀을 때
+                mDrawerLayout.openDrawer(GravityCompat.START);
+                return true;
+            }
+        }
+        return super.onOptionsItemSelected(item);
     }
 
 }
