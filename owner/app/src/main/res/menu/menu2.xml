@@ -1,37 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/white"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
         android:id="@+id/b1"
-        android:title="메인"
+        android:icon="@drawable/home"
+        android:title="홈"
         />
 
     <item
         android:id="@+id/b2"
+        android:icon="@drawable/alarm"
         android:title="주문 수락/거부"/>
 
     <item
         android:id="@+id/b3"
+        android:icon="@drawable/ordermenu"
         android:title="상품등록"/>
 
     <item
         android:id="@+id/b4"
+        android:icon="@drawable/notificationmanagement"
         android:title="공지사항 관리"/>
 
     <item
         android:id="@+id/b5"
+        android:icon="@drawable/lock"
         android:title="개인정보"/>
 
     <item
         android:id="@+id/b8"
+        android:icon="@drawable/folder"
         android:title="주문기록 관리"/>
 
     <item
         android:id="@+id/b6"
+        android:icon="@drawable/review"
         android:title="리뷰 관리"/>
 
     <item
         android:id="@+id/b7"
+        android:icon="@drawable/logout"
         android:title="로그아웃"/>
 
 </menu>
