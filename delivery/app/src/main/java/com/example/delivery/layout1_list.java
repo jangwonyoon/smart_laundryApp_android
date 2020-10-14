@@ -9,6 +9,8 @@ public class layout1_list {
     private String member_s_number;
     private String member_d_type;
 
+    private String member_a;
+
 
     public String getMember_u_address() {
         return member_u_address;
@@ -34,6 +36,10 @@ public class layout1_list {
         return member_d_type;
     }
 
+    public String getMember_a() {
+        return member_a;
+    }
+
 
 
     public void setMember_u_address(String member_u_address) {
@@ -57,6 +63,10 @@ public class layout1_list {
     }
     public void setMember_d_type(String member_d_type) {
         this.member_d_type = member_d_type;
+    }
+
+    public void setMember_a(String member_a) {
+        this.member_a = member_a;
     }
 
 }

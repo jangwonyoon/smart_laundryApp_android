@@ -9,10 +9,45 @@ android:background="#ffffff"
 android:orientation="vertical"
 android:weightSum="10">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/latlong"
+        android:textSize="15dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"
+        android:gravity="right"
+        >
+
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:gravity="right"
+            android:text="스마트 경로"
+            android:layout_gravity="center"
+            />
+
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:padding="10dp"
+            android:id="@+id/smartswitch"/>
+    </LinearLayout>
+    <!--<TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/latlong"
+        android:textSize="15dp"/>-->
 
     <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="9.5"
         android:id="@+id/frame">
 
         <TextView

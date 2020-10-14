@@ -37,5 +37,5 @@ dependencies {
 
     compile 'com.android.support:support-v4:23.4.0'
     implementation 'com.naver.maps:map-sdk:3.9.1'
-
+    implementation 'com.kyleduo.switchbutton:library:2.0.0'
 }
