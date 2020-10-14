@@ -195,15 +195,17 @@ public class forgot_id_pw extends Activity {
 
 
 
-
-
-        signup_back = (Button) findViewById(R.id.layout2_b1);
-        signup_back.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                Intent intent = new Intent(forgot_id_pw.this, MainActivity.class);
-                startActivity(intent);
-            }
-        });
+        /*
+        뒤로가기 버튼 자바 코드
+        이미지 삽입 후 다시 활성화
+        */
+//        signup_back = (Button) findViewById(R.id.layout2_b1);
+//        signup_back.setOnClickListener(new View.OnClickListener() {
+//            public void onClick(View v) {
+//                Intent intent = new Intent(forgot_id_pw.this, MainActivity.class);
+//                startActivity(intent);
+//            }
+//        });
 
         /*checkemail = (Button) findViewById(R.id.layout2_b2);
         checkemail.setOnClickListener(new View.OnClickListener(){

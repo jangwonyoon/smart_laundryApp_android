@@ -1,15 +1,19 @@
 package com.example.user;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.UiThread;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
+import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.fragment.app.FragmentActivity;
 
 import android.Manifest;
 import android.app.Activity;
 import android.app.FragmentManager;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.graphics.PointF;
 import android.graphics.drawable.ColorDrawable;
 import android.location.Address;
 import android.location.Geocoder;
@@ -34,9 +38,17 @@ import com.android.volley.toolbox.Volley;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapFragment;
-import com.google.android.gms.maps.OnMapReadyCallback;
-import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.android.material.navigation.NavigationView;
+import com.naver.maps.geometry.LatLng;
+import com.naver.maps.map.CameraAnimation;
+import com.naver.maps.map.CameraUpdate;
+import com.naver.maps.map.NaverMap;
+import com.naver.maps.map.OnMapReadyCallback;
+import com.naver.maps.map.UiSettings;
+import com.naver.maps.map.overlay.InfoWindow;
+import com.naver.maps.map.overlay.Marker;
+import com.naver.maps.map.util.FusedLocationSource;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -44,18 +56,25 @@ import org.json.JSONObject;
 import java.io.IOException;
 import java.util.List;
 
-public class user_changelocation extends AppCompatActivity implements GoogleMap.OnMyLocationButtonClickListener,
-        GoogleMap.OnMyLocationClickListener,
-        OnMapReadyCallback {
+public class user_changelocation extends AppCompatActivity
+        implements OnMapReadyCallback {
 
     String[] permission_list = {
             Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.ACCESS_COARSE_LOCATION
     };
 
+    private DrawerLayout mDrawerLayout;
+
+    Double latitude,longitude;
+    List<Address> a=null;
+
+    private FusedLocationSource locationSource;
+    private static final int LOCATION_PERMISSION_REQUEST_CODE = 1000;
+    private NaverMap naverMap;
+
     private FragmentManager fragmentManager;
     private MapFragment mapFragment;
     private GoogleMap mMap;
-    Double latitude, longitude;
     private long backBtnTime = 0;
 
     TextView get_text;
@@ -72,7 +91,6 @@ public class user_changelocation extends AppCompatActivity implements GoogleMap.
     Double user_lat, user_long;
     String user_address, user_id, user_address_detail;
 
-    List<Address> a;
 
     @Override
     public void onBackPressed() {
@@ -106,23 +124,12 @@ public class user_changelocation extends AppCompatActivity implements GoogleMap.
 
         //액션바 설정하기//
         //액션바 타이틀 변경하기
-        getSupportActionBar().setTitle("[위치변경]  " + user_name1 + "님 안녕하세요.");
+        getSupportActionBar().setTitle("위치 변경");
         //액션바 배경색 변경
         getSupportActionBar().setBackgroundDrawable(new ColorDrawable(0xFF339999));
-
-        /*menubar= (Button) findViewById(R.id.btn_open);
-        menubar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                PopupMenu popup = new PopupMenu(user_main1.this , menubar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
 
-
-                MenuInflater inf = popup.getMenuInflater();
-                inf.inflate(R.menu.menu1, popup.getMenu());
-                popup.show();
-            }
-        });*/
 
         et1 = (EditText) findViewById(R.id.layout3_et1);
 
@@ -134,7 +141,8 @@ public class user_changelocation extends AppCompatActivity implements GoogleMap.
                 try {
                     user_lat = latitude;
                     user_long = longitude;
-                    user_address = a.get(0).getAddressLine(0);
+                    String m = a.get(0).getAddressLine(0).replaceAll("대한민국","");
+                    user_address = m;
                     user_id = user_id1;
                     user_address_detail = et1.getText().toString();
                 } catch (Exception e) {
@@ -185,16 +193,119 @@ public class user_changelocation extends AppCompatActivity implements GoogleMap.
         });
 
 
-        fragmentManager = getFragmentManager();
+        /*fragmentManager = getFragmentManager();
         mapFragment = (MapFragment) fragmentManager.findFragmentById(R.id.googlemap);
+        mapFragment.getMapAsync(this);*/
+
+
+        locationSource =
+                new FusedLocationSource(this, LOCATION_PERMISSION_REQUEST_CODE);
+        androidx.fragment.app.FragmentManager fm = getSupportFragmentManager();
+        com.naver.maps.map.MapFragment mapFragment = (com.naver.maps.map.MapFragment)fm.findFragmentById(R.id.map);
+        if (mapFragment == null) {
+            mapFragment = com.naver.maps.map.MapFragment.newInstance();
+            fm.beginTransaction().add(R.id.map, mapFragment).commit();
+        }
+
         mapFragment.getMapAsync(this);
+
+        mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
+
+        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(MenuItem menuItem) {
+                menuItem.setChecked(true);
+                //mDrawerLayout.closeDrawers();
+
+                int id = menuItem.getItemId();
+                String title = menuItem.getTitle().toString();
+
+                if(id == R.id.b1){
+                    Intent intent = new Intent(getApplicationContext(), user_main1.class);
+                    intent.putExtra("user_name",user_name1);
+                    intent.putExtra("user_address",user_address1);
+                    intent.putExtra("user_lat",user_lat1);
+                    intent.putExtra("user_long",user_long1);
+                    intent.putExtra("user_id",user_id1);
+                    intent.putExtra("user_address_detail",user_address_detail1);
+                    startActivity(intent);
+                }
+                else if(id == R.id.b2){
+                    Intent intent1 = new Intent(getApplicationContext(), user_gongji.class);
+                    intent1.putExtra("user_name",user_name1);
+                    intent1.putExtra("user_address",user_address1);
+                    intent1.putExtra("user_lat",user_lat1);
+                    intent1.putExtra("user_long",user_long1);
+                    intent1.putExtra("user_id",user_id1);
+                    intent1.putExtra("user_address_detail",user_address_detail1);
+                    startActivity(intent1);
+                }
+                else if(id == R.id.b3){
+                    Intent intent2 = new Intent(getApplicationContext(), user_changelocation.class);
+                    intent2.putExtra("user_name",user_name1);
+                    intent2.putExtra("user_address",user_address1);
+                    intent2.putExtra("user_lat",user_lat1);
+                    intent2.putExtra("user_long",user_long1);
+                    intent2.putExtra("user_id",user_id1);
+                    intent2.putExtra("user_address_detail",user_address_detail1);
+                    startActivity(intent2);
+                }
+                else if(id == R.id.b4){
+                    Intent intent3 = new Intent(getApplicationContext(), user_info.class);
+                    intent3.putExtra("user_name",user_name1);
+                    intent3.putExtra("user_address",user_address1);
+                    intent3.putExtra("user_lat",user_lat1);
+                    intent3.putExtra("user_long",user_long1);
+                    intent3.putExtra("user_id",user_id1);
+                    intent3.putExtra("user_address_detail",user_address_detail1);
+                    startActivity(intent3);
+                }
+                else if(id == R.id.b5){
+                    Intent intent4 = new Intent(getApplicationContext(), user_review.class);
+                    intent4.putExtra("user_name",user_name1);
+                    intent4.putExtra("user_address",user_address1);
+                    intent4.putExtra("user_lat",user_lat1);
+                    intent4.putExtra("user_long",user_long1);
+                    intent4.putExtra("user_id",user_id1);
+                    intent4.putExtra("user_address_detail",user_address_detail1);
+                    startActivity(intent4);
+                }
+                else if(id == R.id.b6){
+                    Intent intent5 = new Intent(getApplicationContext(), user_now_order.class);
+                    intent5.putExtra("user_name",user_name1);
+                    intent5.putExtra("user_address",user_address1);
+                    intent5.putExtra("user_lat",user_lat1);
+                    intent5.putExtra("user_long",user_long1);
+                    intent5.putExtra("user_id",user_id1);
+                    intent5.putExtra("user_address_detail",user_address_detail1);
+                    startActivity(intent5);
+                }
+                else if(id == R.id.b7){
+                    Intent intent6 = new Intent(getApplicationContext(), user_order_record.class);
+                    intent6.putExtra("user_name",user_name1);
+                    intent6.putExtra("user_address",user_address1);
+                    intent6.putExtra("user_lat",user_lat1);
+                    intent6.putExtra("user_long",user_long1);
+                    intent6.putExtra("user_id",user_id1);
+                    intent6.putExtra("user_address_detail",user_address_detail1);
+                    startActivity(intent6);
+                }
+                else if(id == R.id.b8){
+                    Intent intent7 = new Intent(getApplicationContext(), user_logout.class);
+                    startActivity(intent7);
+                }
+
+                return true;
+            }
+        });
     }
 
-    @Override
+    /*@Override
     public void onMapReady(final GoogleMap googleMap) {
 
 
-        /*마커*/
+        *//*마커*//*
         LatLng location = new LatLng(user_lat1, user_long1);
         MarkerOptions markerOptions = new MarkerOptions();
         markerOptions.title("현재 배달 위치");
@@ -202,7 +313,7 @@ public class user_changelocation extends AppCompatActivity implements GoogleMap.
         markerOptions.position(location);
         googleMap.addMarker(markerOptions);
 
-        /*googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(location,16));*/
+        *//*googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(location,16));*//*
         googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(location, 16));
 
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
@@ -249,13 +360,72 @@ public class user_changelocation extends AppCompatActivity implements GoogleMap.
                 }
 
 
-                /*Double temp1 = latitude;
+                *//*Double temp1 = latitude;
                 Double temp2 = longitude;
                 if (latitude == temp1 || longitude == temp2){
                     googleMap.remove
-                }*/
+                }*//*
             }
         });
+    }*/
+
+    @UiThread
+    @Override
+    public void onMapReady(@NonNull final NaverMap naverMap) {
+        final InfoWindow infoWindow = new InfoWindow();
+        infoWindow.setAdapter(new InfoWindow.DefaultTextAdapter(getApplication()) {
+            @NonNull
+            @Override
+            public CharSequence getText(@NonNull InfoWindow infoWindow) {
+                return "배달 위치";
+            }
+        });
+
+
+        final Marker marker = new Marker();
+        marker.setPosition(new LatLng( user_lat1,user_long1));
+        marker.setMap(naverMap);
+        CameraUpdate cameraUpdate = CameraUpdate.scrollTo(new LatLng(user_lat1,user_long1))
+                .animate(CameraAnimation.Fly, 3000);
+        naverMap.moveCamera(cameraUpdate);
+
+        final Geocoder g = new Geocoder(this);
+
+        UiSettings uiSettings = naverMap.getUiSettings();
+        uiSettings.setCompassEnabled(true);
+        uiSettings.setLocationButtonEnabled(true);
+        naverMap.setLocationSource(locationSource);
+
+        naverMap.setOnMapClickListener(new NaverMap.OnMapClickListener(){
+            @Override
+            public void onMapClick(@NonNull PointF pointF, @NonNull com.naver.maps.geometry.LatLng latLng) {
+                /*Toast.makeText(getApplicationContext(), latLng.latitude + ", " + latLng.longitude+"", Toast.LENGTH_SHORT).show();*/
+                marker.setPosition(new LatLng( latLng.latitude,latLng.longitude));
+                marker.setMap(naverMap);
+                latitude=latLng.latitude;
+                longitude=latLng.longitude;
+
+                infoWindow.open(marker);
+
+                /*naverMap.setLocationTrackingMode(LocationTrackingMode.Follow);*/
+
+                try {
+                    a = g.getFromLocation(latitude,longitude,1);
+                    String m = a.get(0).getAddressLine(0).replaceAll("대한민국","");
+                    Toast.makeText(getApplicationContext(), ""+m, Toast.LENGTH_SHORT).show();
+                    set_address = a.get(0).getAddressLine(0);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+
+
+        /*LatLng coord = new LatLng(37.5670135, 126.9783740);
+
+        Toast.makeText(getApplication(),
+                "위도: " + coord.latitude + ", 경도: " + coord.longitude,
+                Toast.LENGTH_SHORT).show();*/
     }
 
 
@@ -263,14 +433,14 @@ public class user_changelocation extends AppCompatActivity implements GoogleMap.
 
 
 
-    @Override
+    /*@Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu1, menu);
         return true;
-    }
+    }*/
 
-    @Override
+    /*@Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
@@ -357,7 +527,7 @@ public class user_changelocation extends AppCompatActivity implements GoogleMap.
         }
 
         return super.onOptionsItemSelected(item);
-    }
+    }*/
 
     public void checkPermission(){
         //현재 안드로이드 버전이 6.0미만이면 메서드를 종료한다.
@@ -375,7 +545,7 @@ public class user_changelocation extends AppCompatActivity implements GoogleMap.
         }
     }
 
-    @Override
+    /*@Override
     public boolean onMyLocationButtonClick() {
         return false;
     }
@@ -383,5 +553,16 @@ public class user_changelocation extends AppCompatActivity implements GoogleMap.
     @Override
     public void onMyLocationClick(@NonNull Location location) {
 
+    }*/
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()){
+            case android.R.id.home:{ // 왼쪽 상단 버튼 눌렀을 때
+                mDrawerLayout.openDrawer(GravityCompat.START);
+                return true;
+            }
+        }
+        return super.onOptionsItemSelected(item);
     }
 }

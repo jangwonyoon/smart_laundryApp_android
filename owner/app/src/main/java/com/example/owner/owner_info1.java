@@ -82,9 +82,9 @@ public class owner_info1 extends Activity {
         et6 = (EditText) findViewById(R.id.layout_et6);
         et7 = findViewById(R.id.layout_et7);
 
-        et2.setHint(String.valueOf(owner_number1));
+        et2.setHint("0"+String.valueOf(owner_number1));
         et3.setHint(owner_email1);
-        et4.setHint(String.valueOf(owner_store_number1));
+        et4.setHint("0"+String.valueOf(owner_store_number1));
 
         cd = (TextView) findViewById(R.id.layout_cd);
         b6 = (Button) findViewById(R.id.layout_b6);

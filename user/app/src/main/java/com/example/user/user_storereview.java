@@ -97,7 +97,7 @@ public class user_storereview extends Fragment {
         user_address_detail1 = intent.getStringExtra("user_address_detail");
 
         tv1 = rootView.findViewById(R.id.title1);
-        tv1.setText(store_name1+" [리뷰]");
+        tv1.setText(store_name1 + " [리뷰]");
 
         tv2 = (TextView) rootView.findViewById(R.id.avgrating);
         tv3 = (TextView) rootView.findViewById(R.id.total_review_num);

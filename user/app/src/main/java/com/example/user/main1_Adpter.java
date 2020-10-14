@@ -99,11 +99,72 @@ public class main1_Adpter extends RecyclerView.Adapter<main1_Adpter.CustomViewHo
         viewholder.data2.setText(mList.get(position).getMember_data2());
         viewholder.data3.setText(mList.get(position).getMember_data3());
 
+
+
+        viewholder.o_pw.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(context.getApplication(), user_searchhash.class);
+                intent.putExtra("user_name", user_name);
+                intent.putExtra("user_address", user_address);
+                intent.putExtra("user_lat", user_lat);
+                intent.putExtra("user_long", user_long);
+                intent.putExtra("user_id", user_id);
+                intent.putExtra("user_address_detail", user_address_detail);
+                intent.putExtra("data1",mList.get(position).getMember_o_pw());
+
+                intent.putExtra("title", mList.get(position).getMember_s_name());
+                intent.putExtra("gender", mList.get(position).getMember_o_id());
+                intent.putExtra("age", mList.get(position).getMember_o_pw());
+                context.startActivity(intent);
+            }
+        });
+
+        viewholder.data2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(context.getApplication(), user_searchhash.class);
+                intent.putExtra("user_name", user_name);
+                intent.putExtra("user_address", user_address);
+                intent.putExtra("user_lat", user_lat);
+                intent.putExtra("user_long", user_long);
+                intent.putExtra("user_id", user_id);
+                intent.putExtra("user_address_detail", user_address_detail);
+                intent.putExtra("data1",mList.get(position).getMember_data2());
+
+                intent.putExtra("title", mList.get(position).getMember_s_name());
+                intent.putExtra("gender", mList.get(position).getMember_o_id());
+                intent.putExtra("age", mList.get(position).getMember_o_pw());
+                context.startActivity(intent);
+            }
+        });
+
+        viewholder.data3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(context.getApplication(), user_searchhash.class);
+                intent.putExtra("user_name", user_name);
+                intent.putExtra("user_address", user_address);
+                intent.putExtra("user_lat", user_lat);
+                intent.putExtra("user_long", user_long);
+                intent.putExtra("user_id", user_id);
+                intent.putExtra("user_address_detail", user_address_detail);
+                intent.putExtra("data1",mList.get(position).getMember_data3());
+
+                intent.putExtra("title", mList.get(position).getMember_s_name());
+                intent.putExtra("gender", mList.get(position).getMember_o_id());
+                intent.putExtra("age", mList.get(position).getMember_o_pw());
+                context.startActivity(intent);
+            }
+        });
+
         if(mList.get(position).getMember_cd().equals("1")){
             /*viewholder.intothestore.setBackgroundResource();*/
             viewholder.s_name.setTextColor(Color.parseColor("#BEBEBE"));
             viewholder.o_id.setTextColor(Color.parseColor("#BEBEBE"));
             viewholder.o_pw.setTextColor(Color.parseColor("#BEBEBE"));
+            viewholder.data2.setTextColor(Color.parseColor("#BEBEBE"));
+            viewholder.data3.setTextColor(Color.parseColor("#BEBEBE"));
             viewholder.intothestore.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {

@@ -3,4 +3,10 @@
     <color name="colorPrimary">#6200EE</color>
     <color name="colorPrimaryDark">#3700B3</color>
     <color name="colorAccent">#03DAC5</color>
+    <color name="white">#ffffff</color>
+<<<<<<< HEAD
+    <color name="mainColor">#00c7f5</color>
+    <color name="subColor">#2E4052</color>
+=======
+>>>>>>> 2956c5716ce74177d7fc9535e865419175df5d9f
 </resources>

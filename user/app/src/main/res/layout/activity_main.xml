@@ -54,17 +54,19 @@
         android:layout_weight="0.3"
         android:layout_margin="10dp"
         >
+
         <Button
             android:id="@+id/layout1_b1"
             android:layout_width="wrap_content"
             android:layout_height="60dp"
-            android:text="로그인"
-            android:textSize="20dp"
-            android:textStyle="bold"
             android:layout_margin="10dp"
             android:background="@drawable/buttonshape"
             android:fontFamily="@font/medium"
-            ></Button>
+            android:text="로그인"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            />
 
         <Button
             android:id="@+id/layout1_b3"
@@ -76,7 +78,8 @@
             android:layout_margin="10dp"
             android:background="@drawable/buttonshape"
             android:fontFamily="@font/medium"
-            ></Button>
+            android:textColor="@color/white"
+            />
 
 
     </LinearLayout>
@@ -100,7 +103,6 @@
             android:textSize="12dp"
             android:layout_margin="10dp"
             android:background="#00000000"
-
             />
 
 

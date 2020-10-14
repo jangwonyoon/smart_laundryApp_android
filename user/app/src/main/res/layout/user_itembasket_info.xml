@@ -57,9 +57,29 @@
                 android:layout_marginTop="5dp">
                 <Button
                     android:id="@+id/deleteitem"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="취소">
+                    android:layout_width="30dp"
+                    android:layout_height="40dp"
+                    android:text="-"
+                    android:layout_gravity="center"
+                    android:gravity="center">
+
+                </Button>
+
+                <TextView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:id="@+id/count"></TextView>
+
+                <Button
+                    android:id="@+id/putitem"
+                    android:layout_width="30dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="+">
 
                 </Button>
             </LinearLayout>

@@ -12,6 +12,7 @@
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
     <application
+        android:requestLegacyExternalStorage="true"
         android:allowBackup="true"
         android:icon="@mipmap/car"
         android:label="Delivery"
@@ -25,7 +26,7 @@
         <activity android:name=".layout2_first" />
         <activity android:name=".rider_gongji" />
         <activity android:name=".rider_logout" />
-        <activity android:name=".rider_signup3" />
+        <activity android:name=".rider_signup3"/>
         <activity android:name=".rider_signup2" />
         <activity android:name=".rider_signup1" />
         <activity android:name=".login">
@@ -43,6 +44,10 @@
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyCVgBM9ZWqFJdEPp_QgpLsqMxQIb3qqEBI" />
+
+        <meta-data
+            android:name="com.naver.maps.map.CLIENT_ID"
+            android:value="e4xx0ayy2g"/>
     </application>
 
 </manifest>

@@ -55,11 +55,6 @@ public class user_frag_first extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         ViewGroup rootView = (ViewGroup) inflater.inflate(R.layout.activity_user_frag_first, container, false);
 
-
-
-
-
-
             Intent intent = getActivity().getIntent();
             user_name1 = intent.getStringExtra("user_name");
             user_address1 = intent.getStringExtra("user_address");
@@ -132,7 +127,7 @@ public class user_frag_first extends Fragment {
 
 
                 /*String a = "https://map.naver.com/v5/search/"+re_set_title+"?c=14104623.8586647,4511836.5253034,15,0,0,0,dh";*/
-                String a = "https://map.naver.com/v5/search/"+re_set_title;
+                String a = "http://edit0.dothome.co.kr/makeweb/web_search.php?uid="+re_set_title;
                 Sharing_intent.putExtra(Intent.EXTRA_TEXT, Test_Message+"\n"+a);
 
                 Intent Sharing = Intent.createChooser(Sharing_intent, "공유하기");
