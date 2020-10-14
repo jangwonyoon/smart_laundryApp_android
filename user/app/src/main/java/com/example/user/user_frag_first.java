@@ -55,11 +55,6 @@ public class user_frag_first extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         ViewGroup rootView = (ViewGroup) inflater.inflate(R.layout.activity_user_frag_first, container, false);
 
-
-
-
-
-
             Intent intent = getActivity().getIntent();
             user_name1 = intent.getStringExtra("user_name");
             user_address1 = intent.getStringExtra("user_address");

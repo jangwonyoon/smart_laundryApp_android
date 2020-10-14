@@ -29,15 +29,6 @@
                 android:background="@drawable/arrow_back">
 
             </Button>
-
-<!--            <Button-->
-<!--                android:id="@+id/btn1"-->
-<!--                android:layout_width="17dp"-->
-<!--                android:layout_height="30dp"-->
-<!--                android:layout_gravity="right"-->
-<!--                android:layout_marginTop="15dp"-->
-<!--                android:layout_marginRight="15dp"-->
-<!--                android:background="@drawable/share" />-->
         </FrameLayout>
 
     </LinearLayout>
@@ -53,7 +44,6 @@
         android:gravity="center"
         android:textSize="35dp"
         android:textStyle="bold"
-
         />
 
     <LinearLayout
