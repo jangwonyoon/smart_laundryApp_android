@@ -12,6 +12,7 @@
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
     <application
+        android:requestLegacyExternalStorage="true"
         android:allowBackup="true"
         android:icon="@mipmap/washing_machine"
         android:label="@string/app_name"
@@ -19,7 +20,9 @@
         android:roundIcon="@mipmap/washing_machine_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".user_searchhash"></activity>
+        <activity android:name=".showimage"></activity>
+        <activity android:name=".user_searchhash_plus" />
+        <activity android:name=".user_searchhash" />
         <activity android:name=".user_main2" />
         <activity android:name=".user_frag_first" />
         <activity android:name=".see_others_review" />
@@ -44,7 +47,7 @@
         <activity android:name=".mainloading" />
         <activity android:name=".user_login" />
         <activity android:name=".user_signup4" />
-        <activity android:name=".user_signup3"/>
+        <activity android:name=".user_signup3" />
         <activity android:name=".user_signup2" />
         <activity android:name=".user_signup1" />
         <activity android:name=".MainActivity">
@@ -62,10 +65,9 @@
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyCVgBM9ZWqFJdEPp_QgpLsqMxQIb3qqEBI" />
-
         <meta-data
             android:name="com.naver.maps.map.CLIENT_ID"
-            android:value="e4xx0ayy2g"/>
+            android:value="e4xx0ayy2g" />
     </application>
 
 </manifest>

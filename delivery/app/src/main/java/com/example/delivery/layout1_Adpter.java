@@ -65,7 +65,7 @@ public class layout1_Adpter extends RecyclerView.Adapter<layout1_Adpter.CustomVi
 
     class CustomViewHolder extends RecyclerView.ViewHolder {
         protected TextView u_address,s_address,items;
-        protected TextView price,d_type_tv1;
+        protected TextView price,d_type_tv1,test1;
         protected LinearLayout privatereview;
         protected String u_number,s_number,d_type;
         protected Button getorder;
@@ -83,6 +83,7 @@ public class layout1_Adpter extends RecyclerView.Adapter<layout1_Adpter.CustomVi
             this.privatereview = (LinearLayout) view.findViewById(R.id.privatereview);
             this.d_type_tv1 = (TextView) view.findViewById(R.id.d_type);
             this.getorder = (Button) view.findViewById(R.id.getorder);
+            this.test1 = (TextView) view.findViewById(R.id.test1);
 
 
         }
@@ -116,6 +117,8 @@ public class layout1_Adpter extends RecyclerView.Adapter<layout1_Adpter.CustomVi
         viewholder.items.setText("상품: "+mList.get(position).getMember_items());
         viewholder.u_number = mList.get(position).getMember_u_number();
         viewholder.s_number = mList.get(position).getMember_s_number();
+
+        viewholder.test1.setText("거리: "+mList.get(position).getMember_a()+"km");
 
         viewholder.getorder.setOnClickListener(new View.OnClickListener() {
             @Override

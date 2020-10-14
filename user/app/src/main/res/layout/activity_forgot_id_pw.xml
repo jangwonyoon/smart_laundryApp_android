@@ -8,60 +8,50 @@
     android:orientation="vertical"
     android:weightSum="10"
     android:background="@color/white">
-
-<!--    <LinearLayout-->
-<!--        android:id="@+id/layout2_1"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="0dp"-->
-<!--        android:layout_weight="1"-->
-<!--        android:orientation="vertical"-->
-<!--        android:gravity="center">-->
-
-<!--        &lt;!&ndash;<View-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="2dp"-->
-<!--            android:layout_marginTop="20dp"-->
-<!--            android:background="#FF000000" />&ndash;&gt;-->
-
-<!--        <FrameLayout-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content">-->
-
-<!--            <Button-->
-<!--                android:id="@+id/layout2_b1"-->
-<!--                android:layout_width="30dp"-->
-<!--                android:layout_height="30dp"-->
-<!--                android:layout_gravity="left"-->
-<!--                android:layout_marginLeft="20dp"-->
-<!--                android:layout_marginRight="20dp"-->
-
-<!--                android:layout_marginBottom="10dp"-->
-<!--                android:background="@drawable/arrow_back">-->
-
-<!--            </Button>-->
-
-<!--            <TextView-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="match_parent"-->
-<!--                android:gravity="center"-->
-<!--                android:text="ID/PW 찾기"-->
-<!--                android:textSize="30dp"-->
-<!--                android:textStyle="bold"-->
-<!--                android:layout_gravity="center"-->
-<!--                android:fontFamily="@font/title2"></TextView>-->
-<!--        </FrameLayout>-->
-
-<!--        <View-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="2dp"-->
-<!--            android:background="#FF000000" />-->
-
-<!--    </LinearLayout>-->
-
+    <!--    <LinearLayout-->
+    <!--        android:id="@+id/layout2_1"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="0dp"-->
+    <!--        android:layout_weight="1"-->
+    <!--        android:orientation="vertical"-->
+    <!--        android:gravity="center">-->
+    <!--        &lt;!&ndash;<View-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="2dp"-->
+    <!--            android:layout_marginTop="20dp"-->
+    <!--            android:background="#FF000000" />&ndash;&gt;-->
+    <!--        <FrameLayout-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content">-->
+    <!--            <Button-->
+    <!--                android:id="@+id/layout2_b1"-->
+    <!--                android:layout_width="30dp"-->
+    <!--                android:layout_height="30dp"-->
+    <!--                android:layout_gravity="left"-->
+    <!--                android:layout_marginLeft="20dp"-->
+    <!--                android:layout_marginRight="20dp"-->
+    <!--                android:layout_marginBottom="10dp"-->
+    <!--                android:background="@drawable/arrow_back">-->
+    <!--            </Button>-->
+    <!--            <TextView-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="match_parent"-->
+    <!--                android:gravity="center"-->
+    <!--                android:text="ID/PW 찾기"-->
+    <!--                android:textSize="30dp"-->
+    <!--                android:textStyle="bold"-->
+    <!--                android:layout_gravity="center"-->
+    <!--                android:fontFamily="@font/title2"></TextView>-->
+    <!--        </FrameLayout>-->
+    <!--        <View-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="2dp"-->
+    <!--            android:background="#FF000000" />-->
+    <!--    </LinearLayout>-->
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
+        android:layout_height="0dp"
+        android:layout_weight="0.8">
         <com.google.android.material.appbar.MaterialToolbar
             android:id="@+id/layout2_1"
             style="@style/Widget.MaterialComponents.Toolbar.Primary"
@@ -69,19 +59,16 @@
             android:layout_height="?attr/actionBarSize"
             app:title="아이디/패스워드 찾기"
             app:titleTextColor="@color/white"
+            android:background="#00c7f5"
             />
-
-<!--        app:titleTextAppearance=""-->
-
+        <!--        app:titleTextAppearance=""-->
     </com.google.android.material.appbar.AppBarLayout>
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="3.75"
+        android:layout_weight="4.55"
         android:orientation="vertical"
         android:gravity="center">
-
         <TextView
             android:id="@+id/layout2_tv2"
             android:layout_width="match_parent"
@@ -94,15 +81,12 @@
             android:textStyle="bold"
             android:fontFamily="@font/title2"
             >
-
         </TextView>
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:weightSum="10">
-
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -118,10 +102,8 @@
                     android:hint="E-mail"
                     android:fontFamily="@font/medium"
                     >
-
                 </com.google.android.material.textfield.TextInputEditText>
             </com.google.android.material.textfield.TextInputLayout>
-
             <Button
                 android:id="@+id/email"
                 android:layout_weight="2"
@@ -133,9 +115,7 @@
                 android:textColor="@color/white"
                 android:background="@drawable/buttonshape"
                 />
-
         </LinearLayout>
-
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -152,11 +132,8 @@
                 android:hint="인증번호"
                 android:fontFamily="@font/medium"
                 >
-
             </com.google.android.material.textfield.TextInputEditText>
         </com.google.android.material.textfield.TextInputLayout>
-
-
         <Button
             android:id="@+id/layout2_b2"
             android:layout_width="wrap_content"
@@ -169,16 +146,13 @@
             android:fontFamily="@font/medium"
             />
     </LinearLayout>
-
-
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_below="@id/layout2_b2"
-        android:layout_weight="3.75"
+        android:layout_weight="4.55"
         android:gravity="center"
         android:layout_gravity="center">
-
         <TextView
             android:id="@+id/layout2_tv3"
             android:layout_width="match_parent"
@@ -190,7 +164,6 @@
             android:textStyle="bold"
             android:fontFamily="@font/title2"
             />
-
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="50dp"
@@ -208,11 +181,8 @@
                 android:hint="아이디(ID)"
                 android:fontFamily="@font/medium"
                 >
-
             </com.google.android.material.textfield.TextInputEditText>
         </com.google.android.material.textfield.TextInputLayout>
-
-
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="50dp"
@@ -231,10 +201,8 @@
                 android:hint="E-mail"
                 android:fontFamily="@font/medium"
                 >
-
             </com.google.android.material.textfield.TextInputEditText>
         </com.google.android.material.textfield.TextInputLayout>
-
         <Button
             android:id="@+id/layout2_b3"
             android:layout_width="wrap_content"
@@ -247,9 +215,5 @@
             android:fontFamily="@font/medium"
             android:textColor="@color/white"
             />
-
     </RelativeLayout>
-
-
-
 </LinearLayout>

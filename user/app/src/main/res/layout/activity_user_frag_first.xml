@@ -15,7 +15,6 @@
         android:orientation="vertical"
         android:layout_weight="1.0">
 
-
         <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="56dp">
@@ -29,6 +28,10 @@
                 android:background="@drawable/arrow_back">
 
             </Button>
+        </FrameLayout>
+
+    </LinearLayout>
+
 
 <!--            <Button-->
 <!--                android:id="@+id/btn1"-->
@@ -38,10 +41,6 @@
 <!--                android:layout_marginTop="15dp"-->
 <!--                android:layout_marginRight="15dp"-->
 <!--                android:background="@drawable/share" />-->
-        </FrameLayout>
-
-    </LinearLayout>
-
 
     <TextView
         android:id="@+id/title1"
@@ -52,9 +51,7 @@
         android:fontFamily="@font/title2"
         android:gravity="center"
         android:textSize="35dp"
-        android:textStyle="bold"
-
-        />
+        android:textStyle="bold"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -106,7 +103,6 @@
             android:text="최근사장님댓글 1,300"
             android:textStyle="bold"
             />
-
     </LinearLayout>
 
     <View
@@ -144,6 +140,11 @@
 
     </LinearLayout>
 
+    <View
+        android:layout_width="380dp"
+        android:layout_height="2dp"
+        android:background="#808080"
+        android:layout_gravity="center"/>
 
     <ScrollView
         android:layout_width="match_parent"

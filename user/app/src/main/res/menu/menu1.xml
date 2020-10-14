@@ -5,35 +5,43 @@
 
     <item
         android:id="@+id/b1"
-        android:title="메인"
+        android:icon="@drawable/home"
+        android:title="홈"
         />
 
     <item
         android:id="@+id/b2"
+        android:icon="@drawable/notice"
         android:title="공지사항"/>
 
     <item
         android:id="@+id/b3"
+        android:icon="@drawable/location"
         android:title="위치변경"/>
 
     <item
         android:id="@+id/b4"
+        android:icon="@drawable/lock"
         android:title="개인정보"/>
 
     <item
         android:id="@+id/b5"
+        android:icon="@drawable/star"
         android:title="내가 쓴 리뷰보기"/>
 
     <item
         android:id="@+id/b6"
+        android:icon="@drawable/progress"
         android:title="주문현황"/>
 
     <item
         android:id="@+id/b7"
+        android:icon="@drawable/folder"
         android:title="주문내역"/>
 
     <item
         android:id="@+id/b8"
+        android:icon="@drawable/logout"
         android:title="로그아웃"/>
 
 </menu>

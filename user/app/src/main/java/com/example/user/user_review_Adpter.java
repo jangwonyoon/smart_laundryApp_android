@@ -5,6 +5,9 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Matrix;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Environment;
 import android.provider.MediaStore;
@@ -13,6 +16,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RatingBar;
@@ -32,6 +36,7 @@ import org.apache.commons.net.ftp.FTPReply;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -86,7 +91,7 @@ public class user_review_Adpter extends RecyclerView.Adapter<user_review_Adpter.
         protected TextView items;
         protected LinearLayout privatereview;
         protected TextView temp,start;
-        protected ImageView iv1,iv2,iv3;
+        protected ImageButton iv1,iv2,iv3;
 
 
 
@@ -100,7 +105,7 @@ public class user_review_Adpter extends RecyclerView.Adapter<user_review_Adpter.
             this.privatereview = (LinearLayout) view.findViewById(R.id.privatereview);
             this.temp = (TextView) view.findViewById(R.id.temp);
             this.start = (TextView) view.findViewById(R.id.start);
-            this.iv1 = (ImageView) view.findViewById(R.id.image1);
+            this.iv1 = view.findViewById(R.id.image1);
             /*this.iv2 = (ImageView) view.findViewById(R.id.image2);
             this.iv3 = (ImageView) view.findViewById(R.id.image3);*/
 
@@ -174,6 +179,13 @@ public class user_review_Adpter extends RecyclerView.Adapter<user_review_Adpter.
         Log.d(TAG,"여기는 가지고와서 보여주는 부분");
         String imgpath = Environment.getExternalStorageDirectory().getAbsolutePath() + "/saveimage/"+result;
         Bitmap bm = BitmapFactory.decodeFile(imgpath);
+        Matrix matrix = new Matrix();
+        matrix.preScale(0.5f, 0.3f);
+        try {
+            bm = Bitmap.createBitmap(bm, 0, 0, bm.getWidth(), bm.getHeight(), matrix, false);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
         viewholder.iv1.setImageBitmap(bm);
         del_file();
 
@@ -193,6 +205,29 @@ public class user_review_Adpter extends RecyclerView.Adapter<user_review_Adpter.
             viewholder.temp.setText(mList.get(position).getMember_o_comment());
 
         }
+
+
+        viewholder.iv1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(context.getApplicationContext(), showimage.class);
+
+                try {
+                    Drawable temp = viewholder.iv1.getDrawable();
+                    Bitmap tmpBitmap = ((BitmapDrawable)temp).getBitmap();
+
+                    ByteArrayOutputStream stream = new ByteArrayOutputStream();
+                    tmpBitmap.compress(Bitmap.CompressFormat.JPEG, 100, stream);
+                    byte[] byteArray = stream.toByteArray();
+                    intent.putExtra("image", byteArray);
+                }catch (Exception e){
+                    e.printStackTrace();
+                }
+
+
+                context.startActivity(intent);
+            }
+        });
 
 
 

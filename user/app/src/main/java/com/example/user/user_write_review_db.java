@@ -13,7 +13,7 @@ public class user_write_review_db extends StringRequest {
     private Map<String, String> map;
 
     public user_write_review_db(String s_name, String user_id, int date, int rate, String content, String image1,
-                                String image2, String image3, Response.Listener<String> listener){
+                                String image2, String image3, int real_date, Response.Listener<String> listener){
         super(Method.POST,URL,listener,null);
 
         map = new HashMap<>();
@@ -26,6 +26,7 @@ public class user_write_review_db extends StringRequest {
         map.put("image1",image1);
         map.put("image2",image2);
         map.put("image3",image3);
+        map.put("real_date",real_date+"");
 
     }
 

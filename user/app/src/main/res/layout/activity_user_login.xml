@@ -29,6 +29,7 @@
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        app:endIconMode="clear_text"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         >
         <com.google.android.material.textfield.TextInputEditText
@@ -39,16 +40,16 @@
             android:layout_marginRight="30dp"
             android:hint="아이디(ID)"
             android:fontFamily="@font/medium"
+            android:singleLine="true"
             />
     </com.google.android.material.textfield.TextInputLayout>
 
-<!--    app:endIconMode="password_toggle"-->
 
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        app:endIconMode="password_toggle"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-
         >
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/layout5_et2"
@@ -61,6 +62,7 @@
             android:layout_marginLeft="30dp"
             android:layout_marginRight="30dp"
             android:fontFamily="@font/medium"
+            android:singleLine="true"
             />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -74,8 +76,7 @@
         android:fontFamily="@font/medium"
         android:text="     로그인    "
         android:textColor="@color/white"
-        android:textSize="20dp"
-        />
+        android:textSize="20dp" />
 
         <LinearLayout
             android:layout_width="wrap_content"

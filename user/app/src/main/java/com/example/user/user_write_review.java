@@ -1,8 +1,10 @@
 package com.example.user;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Activity;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -76,6 +78,8 @@ public class user_write_review extends Activity {
     String image2 = "b";
     String image3 = "c";
 
+    int temp_date1;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -98,6 +102,7 @@ public class user_write_review extends Activity {
         final String sec1 = secFormat.format(currentTime);
 
         temp_date = month1+day1+hour1+min1+sec1;
+        temp_date1 = Integer.parseInt(temp_date);
 
         ConnectFTP = new user_write_review();
 
@@ -110,6 +115,7 @@ public class user_write_review extends Activity {
         user_address_detail1 = intent.getStringExtra("user_address_detail");
         store_name1 = intent.getStringExtra("store_name");
         date1 = intent.getIntExtra("date",0);
+
 
         rb1 = (RatingBar) findViewById(R.id.rating);
         rb1.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
@@ -233,7 +239,7 @@ public class user_write_review extends Activity {
 
                 //서버로 Volley를 이용해서 요청을 함
                 user_write_review_db registerRequest = new user_write_review_db(store_name1,user_id1, date1, rate,
-                        content, image_address,image2,image3, responseListener);
+                        content, image_address,image2,image3,temp_date1, responseListener);
                 RequestQueue queue = Volley.newRequestQueue(user_write_review.this);
                 queue.add(registerRequest);
             }
@@ -290,7 +296,7 @@ public class user_write_review extends Activity {
                 e.printStackTrace();
             }
 
-            File f = new File(Environment.getExternalStorageDirectory().getAbsolutePath() + "/"+user_id1+temp_date+".jpg");
+            final File f = new File(Environment.getExternalStorageDirectory().getAbsolutePath() + "/"+user_id1+temp_date+".jpg");
             f.delete();
 
 
@@ -302,7 +308,33 @@ public class user_write_review extends Activity {
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
             }
-            uritobitmap.compress(Bitmap.CompressFormat.JPEG, 100, out);
+            uritobitmap.compress(Bitmap.CompressFormat.JPEG, 20, out);
+
+
+            if (f.exists()) {
+                long lFileSize = f.length();
+                //Toast.makeText(getApplicationContext(),""+lFileSize,Toast.LENGTH_LONG).show();
+                if(lFileSize>160000){
+                    f.delete();
+                    iv1.setImageResource(R.drawable.camera);
+                    Toast.makeText(getApplicationContext(),"파일크기가 너무 큽니다.",Toast.LENGTH_LONG).show();
+                    /*AlertDialog.Builder builder = new AlertDialog.Builder(user_write_review.this);
+                    builder.setTitle("알림");
+                    builder.setMessage("파일의 크기가 너무 큽니다.");
+                    builder.setPositiveButton("확인", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int id) {
+                            f.delete();
+                        }
+                    });*/
+                }
+                else{
+
+                }
+            }
+            else {
+                Toast.makeText(getApplicationContext(),"파일이 존재하지 않습니다.",Toast.LENGTH_SHORT).show();
+            }
 
 
         }

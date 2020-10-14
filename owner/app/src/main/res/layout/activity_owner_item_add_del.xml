@@ -1,61 +1,80 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".owner_item_add_del"
     android:orientation="vertical"
-    android:weightSum="10">
+    android:weightSum="10"
+    android:id="@+id/drawer_layout">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="8.5"
-        android:orientation="vertical">
-
-        <TextView
-            android:id="@+id/layout_temp"
-            android:layout_marginTop="30dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:text="* 상품 등록/제거를 할 수 있는 페이지입니다. *"
-            android:textStyle="bold"
-            android:textSize="15dp">
-        </TextView>
-
-        <TextView
-            android:id="@+id/textView_main_result"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text=""></TextView>
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:padding="5dp"
-            android:id="@+id/listView_main_list"
-            android:layout_margin="15dp"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true"/>
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="match_parent"
         android:orientation="vertical"
-        android:layout_weight="1.5">
+        android:weightSum="10">
 
-        <Button
-            android:id="@+id/add"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="+ 추가"
-            android:textSize="20dp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="8.5"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/layout_temp"
+                android:layout_marginTop="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:text="* 상품 등록/제거를 할 수 있는 페이지입니다. *"
+                android:textStyle="bold"
+                android:textSize="15dp">
+            </TextView>
+
+            <TextView
+                android:id="@+id/textView_main_result"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""></TextView>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:padding="5dp"
+                android:id="@+id/listView_main_list"
+                android:layout_margin="15dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            android:layout_weight="1.5">
+
+            <Button
+                android:id="@+id/add"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="+ 추가"
+                android:textSize="20dp"/>
+        </LinearLayout>
     </LinearLayout>
 
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="250dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        app:headerLayout="@layout/navi_header"
+        app:menu="@menu/menu2"/>
+    />
 
-</LinearLayout>
+
+</androidx.drawerlayout.widget.DrawerLayout>
