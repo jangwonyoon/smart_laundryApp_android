@@ -21,23 +21,13 @@
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             app:title="Step2. 회원정보 입력"
-            app:titleTextColor="@color/white" />
+            app:titleTextColor="@color/white"
+            android:background="@color/blue"
+            />
 
     </com.google.android.material.appbar.AppBarLayout>
 
 
-<!--
-
-    뒤로 가기 화살표 아이콘 Button 액션 문제
-
-    topAppBar.setNavigationOnClickListener {
-    // Handle navigation icon press
-}
-
-로 해결 해야함
-
-    app:navigationIcon="@drawable/arrow_back"
--->
 
     <LinearLayout
         android:id="@+id/layout2_1"
@@ -46,7 +36,7 @@
         android:gravity="center"
         android:layout_height="0dp"
         android:orientation="vertical"
-        android:layout_weight="0.1">
+        android:layout_weight="0.2">
 
         <TextView
             android:id="@+id/info"
@@ -117,29 +107,28 @@
 
     <RelativeLayout
         android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_weight="0.72"
+        android:layout_height="2dp"
         android:layout_gravity="center"
         android:layout_margin="10dp"
+        android:layout_weight="0.70"
         android:gravity="center">
 
         <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
             android:id="@+id/layout1"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            >
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/layout2_et1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="이름(name)"
-                android:maxLength="30"
-                android:inputType="text"
                 android:layout_margin="7dp"
                 android:fontFamily="@font/medium"
-                android:singleLine="true"
-                >
+                android:hint="이름(name)"
+                android:inputType="text"
+                android:maxLength="30"
+                android:singleLine="true">
 
             </com.google.android.material.textfield.TextInputEditText>
         </com.google.android.material.textfield.TextInputLayout>
@@ -147,27 +136,27 @@
 
         <LinearLayout
             android:id="@+id/layout2_2"
-            android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/layout1"
+            android:orientation="horizontal"
             android:weightSum="10">
 
             <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layout2"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:id="@+id/layout2"
-                android:layout_weight="8"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+                android:layout_weight="7.5">
+
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/layout2_et2"
                     android:layout_width="250dp"
                     android:layout_height="wrap_content"
-                    android:hint="아이디(ID)(8~16자)"
                     android:layout_margin="7dp"
                     android:fontFamily="@font/medium"
-                    android:singleLine="true"
-                    >
+                    android:hint="아이디(ID)(8~16자)"
+                    android:singleLine="true">
 
                 </com.google.android.material.textfield.TextInputEditText>
             </com.google.android.material.textfield.TextInputLayout>
@@ -175,154 +164,152 @@
 
             <Button
                 android:id="@+id/redundency_id"
-                android:textColor="@color/white"
                 android:layout_width="5dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_margin="7dp"
-                android:layout_weight="2"
+                android:layout_weight="2.5"
                 android:background="@drawable/textback"
-                android:fontFamily="@font/medium"
-                android:text="중복확인" />
+                android:fontFamily="@font/nanum_gothic_regular"
+                android:text="ID 중복확인"
+                android:textColor="@color/white" />
         </LinearLayout>
 
 
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layout3"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/layout3"
-            android:layout_below="@+id/layout2_2"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+            android:layout_below="@+id/layout2_2">
+
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/layout2_et3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/layout2_2"
-                android:hint="비밀번호(Password)(8~16자)"
-                android:maxLength="20"
-                android:inputType="textPassword"
                 android:layout_margin="7dp"
                 android:fontFamily="@font/medium"
-                android:singleLine="true"
-                >
+                android:hint="비밀번호(Password)(8~16자)"
+                android:inputType="textPassword"
+                android:maxLength="20"
+                android:singleLine="true">
 
             </com.google.android.material.textfield.TextInputEditText>
         </com.google.android.material.textfield.TextInputLayout>
 
 
-
         <LinearLayout
             android:id="@+id/layout2_3"
-            android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/layout3"
+            android:orientation="horizontal"
             android:weightSum="10">
 
             <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layout4"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="8"
-                android:id="@+id/layout4"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+                android:layout_weight="8">
+
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/layout2_et4"
                     android:layout_width="250dp"
                     android:layout_height="wrap_content"
-                    android:hint="이메일(E-mail)"
-                    android:text=""
                     android:layout_margin="7dp"
                     android:fontFamily="@font/medium"
+                    android:hint="이메일(E-mail)"
                     android:singleLine="true"
-                    >
+                    android:text="">
 
                 </com.google.android.material.textfield.TextInputEditText>
             </com.google.android.material.textfield.TextInputLayout>
 
 
             <Button
-                android:layout_weight="2"
-                android:textColor="@color/white"
                 android:id="@+id/redundency_email"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="인증"
-                android:layout_margin="7dp"
                 android:layout_gravity="center"
+                android:layout_margin="7dp"
+                android:layout_weight="2"
                 android:background="@drawable/textback"
-                android:fontFamily="@font/medium"/>
+                android:fontFamily="@font/nanum_gothic_regular"
+                android:text="인증"
+                android:textColor="@color/white" />
         </LinearLayout>
 
         <LinearLayout
             android:id="@+id/layout2_4"
-            android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/layout2_3"
+            android:orientation="horizontal"
             android:weightSum="10">
 
 
             <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layout5"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="8"
-                android:id="@+id/layout5"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+                android:layout_weight="8">
+
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/layout2_et6"
                     android:layout_width="250dp"
                     android:layout_height="wrap_content"
-                    android:hint="인증번호입력"
-                    android:maxLength="10"
-                    android:inputType="number"
                     android:layout_margin="7dp"
                     android:fontFamily="@font/medium"
-                    android:singleLine="true"
-                    >
+                    android:hint="인증번호입력"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:singleLine="true">
 
                 </com.google.android.material.textfield.TextInputEditText>
             </com.google.android.material.textfield.TextInputLayout>
 
             <Button
                 android:id="@+id/num_check"
-                android:textColor="@color/white"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="2"
-                android:text="확인"
+                android:layout_gravity="center"
                 android:layout_margin="7dp"
+                android:layout_weight="2"
                 android:background="@drawable/textback"
-                android:fontFamily="@font/medium"
-                android:layout_gravity="center"/>
+                android:fontFamily="@font/nanum_gothic_regular"
+                android:text="확인"
+                android:textColor="@color/white" />
         </LinearLayout>
-
 
 
         <LinearLayout
             android:id="@+id/layout2_5"
-            android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/layout2_4">
+            android:layout_below="@+id/layout2_4"
+            android:orientation="horizontal">
 
 
             <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
                 android:id="@+id/layout6"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/layout2_et5"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/layout2_4"
-                    android:hint="연락처(-제외) ex)01012345678"
-                    android:maxLength="11"
-                    android:inputType="number"
                     android:layout_margin="7dp"
                     android:fontFamily="@font/medium"
-                    android:singleLine="true"
-                    >
+                    android:hint="연락처(-제외) ex)01012345678"
+                    android:inputType="number"
+                    android:maxLength="11"
+                    android:singleLine="true">
 
                 </com.google.android.material.textfield.TextInputEditText>
             </com.google.android.material.textfield.TextInputLayout>
@@ -331,18 +318,17 @@
     <Button
         android:id="@+id/layout2_b2"
         android:layout_weight="0.1"
-        android:layout_width="wrap_content"
+        android:layout_width="150dp"
         android:layout_height="0dp"
         android:layout_below="@+id/layout2_5"
         android:textColor="@color/white"
         android:gravity="center"
-        android:text="진행하기"
+        android:text="다음"
         android:textSize="20dp"
         android:layout_gravity="center"
         android:layout_marginBottom="20dp"
         android:background="@drawable/buttonshape"
-        android:fontFamily="@font/medium">
-
+        android:fontFamily="@font/nanum_gothic_bold">
     </Button>
 
 
