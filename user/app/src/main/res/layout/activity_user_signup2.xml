@@ -13,8 +13,7 @@
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="0.08">
+        android:layout_height="wrap_content">
 
         <com.google.android.material.appbar.MaterialToolbar
             android:id="@+id/topAppBar"
@@ -175,15 +174,16 @@
 
 
             <Button
-                android:layout_weight="2"
                 android:id="@+id/redundency_id"
+                android:textColor="@color/white"
                 android:layout_width="5dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="중복확인"
                 android:layout_margin="7dp"
+                android:layout_weight="2"
                 android:background="@drawable/textback"
-                android:fontFamily="@font/medium"/>
+                android:fontFamily="@font/medium"
+                android:text="중복확인" />
         </LinearLayout>
 
 
@@ -242,6 +242,7 @@
 
             <Button
                 android:layout_weight="2"
+                android:textColor="@color/white"
                 android:id="@+id/redundency_email"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -284,6 +285,7 @@
 
             <Button
                 android:id="@+id/num_check"
+                android:textColor="@color/white"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="2"
@@ -325,21 +327,14 @@
                 </com.google.android.material.textfield.TextInputEditText>
             </com.google.android.material.textfield.TextInputLayout>
         </LinearLayout>
-
-
-
-
     </RelativeLayout>
-
-
-
-
     <Button
         android:id="@+id/layout2_b2"
         android:layout_weight="0.1"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:layout_below="@+id/layout2_5"
+        android:textColor="@color/white"
         android:gravity="center"
         android:text="진행하기"
         android:textSize="20dp"

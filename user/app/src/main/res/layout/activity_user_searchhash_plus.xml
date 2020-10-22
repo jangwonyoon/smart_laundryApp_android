@@ -45,7 +45,7 @@
                 android:text="#인기태그"
                 android:textSize="30dp"
                 android:textStyle="bold"
-                android:fontFamily="@font/title2"></TextView>
+                android:fontFamily="@font/title2"/>
 
         </FrameLayout>
 
@@ -128,7 +128,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text=""
-        android:textSize="1sp"></TextView>
+        android:textSize="1sp"/>
 
     <FrameLayout
         android:layout_width="match_parent"

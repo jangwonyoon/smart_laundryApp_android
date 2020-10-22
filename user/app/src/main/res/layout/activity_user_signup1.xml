@@ -13,7 +13,7 @@
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.08">
+        android:layout_weight="0.07">
 
         <com.google.android.material.appbar.MaterialToolbar
             android:id="@+id/topAppBar1"
@@ -21,9 +21,7 @@
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             app:title="STEP1. 약관 동의"
-            app:titleTextColor="@color/white"
-            />
-
+            app:titleTextColor="@color/white" />
     </com.google.android.material.appbar.AppBarLayout>
 
 
@@ -82,7 +80,7 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.82"
+        android:layout_weight="0.73"
         android:id="@+id/layout2_2"
         android:layout_below="@+id/layout2_1"
         android:layout_marginLeft="10dp"
@@ -304,6 +302,7 @@
             android:textSize="20dp"
             android:layout_margin="20dp"
             android:background="@drawable/buttonshape"
+            android:textColor="@color/white"
             android:fontFamily="@font/medium">
 
         </Button>
