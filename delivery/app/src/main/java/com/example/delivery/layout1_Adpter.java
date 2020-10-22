@@ -118,7 +118,13 @@ public class layout1_Adpter extends RecyclerView.Adapter<layout1_Adpter.CustomVi
         viewholder.u_number = mList.get(position).getMember_u_number();
         viewholder.s_number = mList.get(position).getMember_s_number();
 
-        viewholder.test1.setText("거리: "+mList.get(position).getMember_a()+"km");
+        if(mList.get(position).getMember_a().equals("null")){
+            viewholder.test1.setVisibility(View.GONE);
+        }
+        else {
+            viewholder.test1.setVisibility(View.VISIBLE);
+            viewholder.test1.setText("거리: " + mList.get(position).getMember_a() + "km");
+        }
 
         viewholder.getorder.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -63,13 +63,10 @@ public class layout1 extends Fragment {
     int count = 0;
     String TAG = "phptest";
 
-    EditText mEditTextName;
-    EditText mEditTextCountry;
     TextView mTextViewResult;
     ArrayList<layout1_list> mArrayList;
     layout1_Adpter mAdapter;
     RecyclerView mRecyclerView;
-    EditText mEditTextSearchKeyword;
     String mJsonString;
 
 
@@ -90,8 +87,8 @@ public class layout1 extends Fragment {
         /*latlong = viewGroup.findViewById(R.id.latlong);*/
         Log.d("Main", "onCreate");
 
-        logView = (TextView) viewGroup.findViewById(R.id.latlong);
-        logView.setText("GPS 불러오는 중.....");
+        /*logView = (TextView) viewGroup.findViewById(R.id.latlong);*/
+        /*logView.setText("GPS 불러오는 중.....");*/
         LocationManager locationManager = (LocationManager) getContext().getSystemService(Context.LOCATION_SERVICE);
 
         // GPS 프로바이더 사용가능여부
@@ -107,7 +104,7 @@ public class layout1 extends Fragment {
                 double lat = location.getLatitude();
                 double lng = location.getLongitude();
 
-                logView.setText("latitude: " + lat + ", longitude: " + lng);
+                /*logView.setText("latitude: " + lat + ", longitude: " + lng);*/
 
                 latitude = lat;
                 longitude = lng;
