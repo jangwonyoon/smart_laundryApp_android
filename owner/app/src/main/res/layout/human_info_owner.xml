@@ -12,18 +12,25 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
             <TextView
-                android:layout_marginLeft="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="15dp"
-                android:text="주소:"
-                android:textColor="#111111" />
+                android:text="고객주소"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="20dp"
+                android:textColor="@color/blue"/>
+
             <TextView
                 android:id="@+id/u_address"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="주소넣을곳"
-                android:textSize="15dp"/>
+                android:text="u_주소"
+                android:textSize="18dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="20dp"
+                />
         </LinearLayout>
 
         <LinearLayout
@@ -31,19 +38,26 @@
             android:layout_height="wrap_content">
 
             <TextView
-                android:textColor="#111111"
-                android:layout_marginLeft="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="15dp"
-                android:text="ID:"
-                />
+                android:text="     ID"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="20dp"
+                android:textColor="@color/blue"/>
+
+
             <TextView
                 android:id="@+id/u_id"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="아이디"
-                android:textSize="15dp"/>
+                android:text="u_주소"
+                android:textSize="18dp"
+                android:layout_marginLeft="58dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="20dp"
+                />
         </LinearLayout>
 
         <!--<LinearLayout
@@ -79,7 +93,8 @@
                 android:layout_marginTop="5dp"
                 android:layout_marginBottom="5dp"
                 android:layout_marginRight="10dp"
-                android:text="수거완료"/>
+                android:text="수거완료"
+                android:background="@drawable/buttonshape"/>
 
             <Button
                 android:id="@+id/b2"
@@ -88,7 +103,8 @@
                 android:layout_marginTop="5dp"
                 android:layout_marginBottom="5dp"
                 android:layout_marginLeft="10dp"
-                android:text="배달콜"/>
+                android:text="배달콜"
+                android:background="@drawable/buttonshape"/>
         </LinearLayout>
     </LinearLayout>
 

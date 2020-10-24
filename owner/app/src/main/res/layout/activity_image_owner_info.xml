@@ -15,15 +15,19 @@
             android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:text="아이템"
-            android:layout_margin="10dp"
+            android:layout_marginLeft="30dp"
             android:textSize="17dp"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
 
         <CheckBox
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
             android:id="@+id/layouy2_c1"
-            android:layout_gravity="center"
+            android:layout_marginRight="30dp"
             />
     </LinearLayout>
 

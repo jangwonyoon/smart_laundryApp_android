@@ -13,6 +13,7 @@ import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 
+import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Build;
@@ -20,6 +21,7 @@ import android.os.Bundle;
 import android.telephony.SmsManager;
 import android.text.method.ScrollingMovementMethod;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -50,7 +52,7 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.ArrayList;
 
-public class ImageActivity_owner extends Activity {
+public class ImageActivity_owner extends AppCompatActivity {
     String user_id1, user_address;
     TextView tv1,tv2,tv3,tv4,tv5,tv6,tv7;
     Button back,b1,b2;
@@ -85,7 +87,7 @@ public class ImageActivity_owner extends Activity {
 
 
 
-        back = (Button) findViewById(R.id.layout2_b1);
+        /*back = (Button) findViewById(R.id.layout2_b1);
         back.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent intent = new Intent(ImageActivity_owner.this, owner_main.class);
@@ -97,7 +99,7 @@ public class ImageActivity_owner extends Activity {
 
                 startActivity(intent);
             }
-        });
+        });*/
 
         Intent intent = getIntent();
         owner_name1 = intent.getStringExtra("owner_name");
@@ -108,8 +110,12 @@ public class ImageActivity_owner extends Activity {
         user_address = intent.getStringExtra("u_address");
         store_name1 = intent.getStringExtra("store_name");
 
-        tv1 = (TextView)findViewById(R.id.u_id);
-        tv1.setText(user_id1+"님의 주문표");
+        getSupportActionBar().setTitle(user_id1+" 님의 주문표");
+        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(0xFF4472C4));
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        /*tv1 = (TextView)findViewById(R.id.u_id);*/
+        /*tv1.setText(user_id1+"님의 주문표");*/
 
         tv2 = (TextView)findViewById(R.id.date);
 
@@ -150,8 +156,8 @@ public class ImageActivity_owner extends Activity {
                         TextView tv_n1 = (TextView) findViewById(R.id.u_number);
                         TextView tv_n2 = (TextView) findViewById(R.id.r_number);
 
-                        tv_n1.setText("고객: 0"+user_number);
-                        tv_n2.setText("라이더: "+r_number);
+                        tv_n1.setText(""+user_number);
+                        tv_n2.setText(r_number);
                         if(r_number.equals("null")){
                             tv_n2.setText("라이더: "+"라이더를 불러주세요.");
                         }
@@ -523,6 +529,24 @@ public class ImageActivity_owner extends Activity {
                 }
             }
         }
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()){
+            case android.R.id.home:{
+                Intent intent = new Intent(ImageActivity_owner.this, owner_main.class);
+                intent.putExtra("owner_name",owner_name1);
+                intent.putExtra("owner_address",owner_address1);
+                intent.putExtra("owner_lat",owner_lat1);
+                intent.putExtra("owner_long",owner_long1);
+                intent.putExtra("store_name",store_name1);
+
+                startActivity(intent);
+                return true;
+            }
+        }
+        return super.onOptionsItemSelected(item);
     }
 
 }

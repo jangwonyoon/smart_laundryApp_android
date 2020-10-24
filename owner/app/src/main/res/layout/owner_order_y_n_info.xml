@@ -10,18 +10,26 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
             <TextView
-                android:layout_marginLeft="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="15dp"
-                android:text="주소:"
-                android:textColor="#111111" />
+                android:text="고객주소"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="20dp"
+                android:textColor="@color/blue"/>
+
             <TextView
                 android:id="@+id/u_address"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="주소넣을곳"
-                android:textSize="15dp"/>
+                android:text="u_주소"
+                android:textSize="18dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="20dp"
+                />
+
         </LinearLayout>
 
         <LinearLayout
@@ -30,19 +38,25 @@
             android:orientation="horizontal">
 
             <TextView
-                android:textColor="#111111"
-                android:layout_marginLeft="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="15dp"
-                android:text="상품:"
-                />
+                android:text="   상품"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:layout_marginLeft="20dp"
+                android:textColor="@color/blue"
+                android:layout_marginTop="5dp"/>
+
             <TextView
                 android:id="@+id/item"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="상품목록들"
-                android:textSize="15dp"/>
+                android:text="메뉴목록"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:layout_marginLeft="45dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="5dp"/>
         </LinearLayout>
 
         <LinearLayout
@@ -50,20 +64,33 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
             <TextView
-                android:textColor="#111111"
-                android:layout_marginLeft="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="15dp"
-                android:text="번호:0"
-                />
+                android:text="   번호"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:layout_marginLeft="20dp"
+                android:textColor="@color/blue"
+                android:layout_marginTop="5dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:layout_marginLeft="48dp"
+                android:layout_marginTop="5dp"/>
 
             <TextView
                 android:id="@+id/u_number"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="번호들어갈곳"
-                android:textSize="15dp"/>
+                android:text="메뉴목록"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="5dp"/>
         </LinearLayout>
 
         <LinearLayout
@@ -76,6 +103,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="수락"
+                android:background="@drawable/buttonshape"
                 android:layout_margin="15dp"
 
                 />
@@ -85,6 +113,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="거절"
+                android:background="@drawable/buttonshape"
                 android:layout_margin="15dp"
 
                 />
