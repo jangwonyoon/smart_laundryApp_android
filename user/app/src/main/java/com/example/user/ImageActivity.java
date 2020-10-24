@@ -50,8 +50,9 @@ public class ImageActivity extends AppCompatActivity {
         user_id1 = intent.getStringExtra("user_id");
         user_address_detail1 = intent.getStringExtra("user_address_detail");
 
+        final String re_set_title = intent.getStringExtra("title");
         ActionBar actionBar = getSupportActionBar();
-        actionBar.setTitle("매장");
+        actionBar.setTitle(re_set_title);
         actionBar.setBackgroundDrawable(new ColorDrawable(0xFF4472C4));
         actionBar.setDisplayHomeAsUpEnabled(true);
 
