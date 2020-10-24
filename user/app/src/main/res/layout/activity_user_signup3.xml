@@ -14,7 +14,7 @@
         android:layout_height="wrap_content">
 
         <com.google.android.material.appbar.MaterialToolbar
-            android:background="@color/mainColor"
+            android:background="@color/blue"
             android:id="@+id/topAppBar3"
             style="@style/Widget.MaterialComponents.Toolbar.Primary"
             android:layout_width="match_parent"
@@ -22,55 +22,8 @@
             app:title="STEP3. 위치 설정"
             app:titleTextColor="@color/white"
             />
-
     </com.google.android.material.appbar.AppBarLayout>
 
-<!--    <LinearLayout-->
-<!--        android:id="@+id/layout3_1"-->
-<!--        android:layout_gravity="center"-->
-<!--        android:gravity="center"-->
-<!--        android:layout_marginTop="10dp"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:orientation="vertical">-->
-
-<!--        &lt;!&ndash;<View-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="2dp"-->
-<!--            android:background="#FF000000" />&ndash;&gt;-->
-
-<!--        <FrameLayout-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content">-->
-
-<!--            <Button-->
-<!--                android:id="@+id/layout3_b1"-->
-<!--                android:layout_width="30dp"-->
-<!--                android:layout_height="30dp"-->
-<!--                android:layout_gravity="left"-->
-<!--                android:background="@drawable/arrow_back"-->
-<!--                android:layout_margin="10dp">-->
-
-<!--            </Button>-->
-
-<!--            <TextView-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="match_parent"-->
-<!--                android:layout_gravity="center"-->
-<!--                android:gravity="center"-->
-<!--                android:layout_marginTop="5dp"-->
-<!--                android:text="회원가입"-->
-<!--                android:textSize="30dp"-->
-<!--                android:textStyle="bold"-->
-<!--                android:fontFamily="@font/title2"></TextView>-->
-<!--        </FrameLayout>-->
-
-<!--        <View-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="2dp"-->
-<!--            android:background="#FF000000" />-->
-
-<!--    </LinearLayout>-->
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -92,7 +45,7 @@
             android:textStyle="bold"
             android:textSize="17dp"
             android:text="위치를 지정해주세요.\n*지정한 위치로 서비스합니다.*"
-            android:fontFamily="@font/medium"
+            android:fontFamily="@font/nanum_gothic_regular"
             >
 
         </TextView>
@@ -105,80 +58,23 @@
             android:text="진행하기"
             android:textSize="17dp"
             android:textColor="@color/white"
-            android:fontFamily="@font/medium"
-            android:background="@color/mainColor"
+            android:fontFamily="@font/nanum_gothic_regular"
+            android:background="@drawable/textback"
             >
-
         </Button>
 
-
     </LinearLayout>
-
-<!--    <LinearLayout-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content">-->
-<!--        <com.google.android.material.textfield.TextInputLayout-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:id="@+id/layout3"-->
-<!--            android:layout_below="@+id/layout3_et1"-->
-<!--            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">-->
-<!--            <com.google.android.material.textfield.TextInputEditText-->
-<!--                android:id="@+id/layout2_et3"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="40dp"-->
-<!--                android:layout_below="@+id/layout3_2"-->
-<!--                android:maxLength="20"-->
-<!--                android:inputType="textPassword"-->
-<!--                android:layout_margin="7dp"-->
-<!--                android:fontFamily="@font/medium"-->
-<!--                android:singleLine="true"-->
-<!--                android:hint="상세주소를 입력하세요"-->
-<!--                >-->
-
-<!--            </com.google.android.material.textfield.TextInputEditText>-->
-<!--        </com.google.android.material.textfield.TextInputLayout>-->
-<!--    </LinearLayout>-->
-
-        <EditText
-            android:layout_margin="10dp"
-            android:id="@+id/layout3_et1"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:layout_below="@+id/layout3_2"
-            android:hint="상세주소를 입력하세요."
-            android:fontFamily="@font/medium"
-            android:singleLine="true"
-            >
-        </EditText>
-
-
-<!--    <LinearLayout-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content">-->
-<!--        <com.google.android.material.textfield.TextInputLayout-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:id="@+id/layout3"-->
-<!--            android:layout_below="@+id/layout3_et1"-->
-<!--            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">-->
-<!--            <com.google.android.material.textfield.TextInputEditText-->
-<!--                android:id="@+id/layout2_et3"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="40dp"-->
-<!--                android:layout_below="@+id/layout3_2"-->
-<!--                android:maxLength="20"-->
-<!--                android:inputType="textPassword"-->
-<!--                android:layout_margin="7dp"-->
-<!--                android:fontFamily="@font/medium"-->
-<!--                android:singleLine="true"-->
-<!--                android:hint="상세주소를 입력하세요"-->
-<!--                >-->
-
-<!--            </com.google.android.material.textfield.TextInputEditText>-->
-<!--        </com.google.android.material.textfield.TextInputLayout>-->
-<!--    </LinearLayout>-->
-
+    <EditText
+        android:layout_margin="10dp"
+        android:id="@+id/layout3_et1"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/layout3_2"
+        android:hint="상세주소를 입력하세요."
+        android:fontFamily="@font/nanum_gothic_regular"
+        android:singleLine="true"
+        >
+    </EditText>
 
     <fragment
         android:id="@+id/map"

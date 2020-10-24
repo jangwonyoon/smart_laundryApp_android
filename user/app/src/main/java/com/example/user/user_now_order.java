@@ -101,9 +101,9 @@ public class user_now_order extends AppCompatActivity{
 
         //액션바 설정하기//
         //액션바 타이틀 변경하기
-        getSupportActionBar().setTitle("[주문현황]  "+user_name1+"님 안녕하세요.");
+        getSupportActionBar().setTitle("[주문현황]  "+user_name1+"님");
         //액션바 배경색 변경
-        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(0xFF339999));
+        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(0xFF4472C4));
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         /*menubar= (Button) findViewById(R.id.btn_open);

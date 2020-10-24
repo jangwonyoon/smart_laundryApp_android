@@ -161,20 +161,20 @@ public class user_storereview extends Fragment {
         }
 
 
-        b1 = (Button) rootView.findViewById(R.id.layout2_b1);
-        b1.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), user_main1.class);
-                intent.putExtra("user_name",user_name1);
-                intent.putExtra("user_address",user_address1);
-                intent.putExtra("user_lat",user_lat1);
-                intent.putExtra("user_long",user_long1);
-                intent.putExtra("title",store_name1);
-                intent.putExtra("user_id",user_id1);
-                intent.putExtra("user_address_detail",user_address_detail1);
-                startActivity(intent);
-            }
-        });
+//        b1 = (Button) rootView.findViewById(R.id.layout2_b1);
+//        b1.setOnClickListener(new View.OnClickListener() {
+//            public void onClick(View v) {
+//                Intent intent = new Intent(getActivity(), user_main1.class);
+//                intent.putExtra("user_name",user_name1);
+//                intent.putExtra("user_address",user_address1);
+//                intent.putExtra("user_lat",user_lat1);
+//                intent.putExtra("user_long",user_long1);
+//                intent.putExtra("title",store_name1);
+//                intent.putExtra("user_id",user_id1);
+//                intent.putExtra("user_address_detail",user_address_detail1);
+//                startActivity(intent);
+//            }
+//        });
 
 
         return rootView;

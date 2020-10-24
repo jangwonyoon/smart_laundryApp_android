@@ -7,52 +7,62 @@
         android:id="@+id/intothestore"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        >
+
         <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp">
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
             <TextView
-                android:layout_marginLeft="10dp"
+                android:layout_margin="20dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="15dp"
                 android:text="가게명:"
-                android:textColor="#111111" />
+                android:fontFamily="@font/nanum_gothic_regular"
+                android:textColor="@color/blue" />
             <TextView
                 android:id="@+id/s_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 android:text="가게.."
-                android:textSize="15dp"/>
+                android:textSize="15dp"
+                android:textStyle="bold"
+                />
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="5dp">
+            >
 
             <TextView
-                android:textColor="#111111"
-                android:layout_marginLeft="10dp"
+                android:textColor="@color/blue"
+                android:layout_marginLeft="20dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="15dp"
                 android:text="  날짜  :"
+                android:fontFamily="@font/nanum_gothic_regular"
                 />
             <TextView
                 android:id="@+id/date"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="상품목록들"
-                android:textSize="15dp"/>
+                android:text="날"
+                android:textSize="15dp"
+                android:layout_marginLeft="20dp"
+                android:textStyle="bold"
+                />
         </LinearLayout>
 
 
         <LinearLayout
-            android:layout_width="100dp"
-            android:layout_height="60dp"
-            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="20dp"
             >
 
             <Button
@@ -60,33 +70,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="자세히"
-                android:layout_gravity="center"
-                android:background="@drawable/buttonshape2"
-                android:fontFamily="@font/medium"/>
+                android:background="@drawable/buttonshape"
+                android:fontFamily="@font/nanum_gothic_bold"
+                android:textColor="@color/white"
+                />
         </LinearLayout>
-        <!--<LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <Button
-                android:id="@+id/b1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:layout_marginBottom="5dp"
-                android:layout_marginLeft="80dp"
-                android:text="시작"/>
-
-            <Button
-                android:id="@+id/b2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:layout_marginBottom="5dp"
-                android:layout_marginLeft="60dp"
-                android:text="배달콜"/>
-        </LinearLayout>-->
     </LinearLayout>
 
 

@@ -8,382 +8,292 @@
     android:weightSum="10"
     android:background="@color/white">
 
-    <LinearLayout
-        android:id="@+id/layout2_1"
+    <!--
+    layout2_b1 뒤로 가기 버튼
+    @+id/title1 가게 이
+    @+id/btn1 공유 버
+    @+id/gongjiforuser 공
+    @+id/o_c_time 영업시간
+    @+id/closed_day 휴
+    @+id/t_order 주문
+    @+id/o_name 대표자명
+    @+id/s_name 상호명
+    s_address
+    @+id/o_nin 사업자 등록번
+    -->
+
+    <ImageView
+        android:layout_weight="4"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:orientation="vertical"
-        android:layout_weight="1.0">
-
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="56dp">
-
-            <Button
-                android:id="@+id/layout2_b1"
-                android:layout_width="35dp"
-                android:layout_height="35dp"
-                android:layout_gravity="left"
-                android:layout_margin="10dp"
-                android:background="@drawable/arrow_back">
-
-            </Button>
-        </FrameLayout>
-
-    </LinearLayout>
-
-
-<!--            <Button-->
-<!--                android:id="@+id/btn1"-->
-<!--                android:layout_width="17dp"-->
-<!--                android:layout_height="30dp"-->
-<!--                android:layout_gravity="right"-->
-<!--                android:layout_marginTop="15dp"-->
-<!--                android:layout_marginRight="15dp"-->
-<!--                android:background="@drawable/share" />-->
-
-    <TextView
-        android:id="@+id/title1"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_gravity="center"
-        android:layout_marginTop="5dp"
-        android:fontFamily="@font/title2"
-        android:gravity="center"
-        android:textSize="35dp"
-        android:textStyle="bold"/>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <RatingBar
-            android:gravity="center"
-            android:id="@+id/rating"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:numStars="5"
-            android:isIndicator="false"
-            android:stepSize="1"
-            android:max="5"
-            android:layout_marginStart="40dp"
-            style="?android:attr/ratingBarStyleIndicator"
-            />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="별점"
-            android:textStyle="bold"
-            android:textSize="30dp"
-            android:paddingLeft="20dp"
-            />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="10dp"
-        android:gravity="center"
-        >
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="최근리뷰 1,400"
-            android:textStyle="bold"
-            />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:text="최근사장님댓글 1,300"
-            android:textStyle="bold"
-            />
-    </LinearLayout>
-
-    <View
-        android:layout_width="380dp"
-        android:layout_height="2dp"
-        android:background="#808080"
-        android:layout_gravity="center"/>
-
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center"
-        >
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:drawableLeft="@drawable/call"
-            android:text="전화걸기"
-            />
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="찜"
-            />
-        <Button
-            android:id="@+id/btn1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="공유"
-            />
-
-    </LinearLayout>
-
-    <View
-        android:layout_width="380dp"
-        android:layout_height="2dp"
-        android:background="#808080"
-        android:layout_gravity="center"/>
+        android:background="@drawable/manage"
+        />
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="7.5"
+        android:layout_weight="5"
         android:layout_margin="5dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-            <TextView
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="@color/grey"
+                android:layout_gravity="center"/>
+
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="공지사항"
-                android:textStyle="bold"
-                android:textSize="20dp"
-                android:layout_margin="5dp"
-                android:fontFamily="@font/nexonbold"/>
-            <TextView
-                android:id="@+id/gongjiforuser"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    >
+                    <TextView
+                        android:layout_margin="10dp"
+                        android:fontFamily="@font/nanum_gothic_bold"
+                        android:textColor="@color/black"
+                        android:textSize="24dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/title1"
+                        android:text=""
+                        />
+                    <TextView
+                        android:layout_margin="10dp"
+                        android:textColor="@color/black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/s_address"
+                        android:text=""
+                        />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="아직 공지가 없네요ㅠ.ㅠ"
-                android:textStyle="bold"
-                android:textSize="17dp"
-                android:layout_marginLeft="5dp"
-                android:layout_marginRight="5dp"
-                android:padding="5dp"
-                />
-
-            <View
-                android:layout_width="390dp"
-                android:layout_height="2dp"
-                android:background="#000000"
+                android:layout_height="3dp"
+                android:background="@color/grey"
                 android:layout_gravity="center"/>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="*가게정보*"
-                android:textSize="20dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginLeft="5dp"
-                android:textStyle="bold"
-                android:fontFamily="@font/nexonbold"/>
-
-            <TextView
-                android:layout_margin="10dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="영업정보"
-                android:textStyle="bold"
-                android:textSize="17dp"/>
-
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginLeft="10dp">
+                android:orientation="vertical"
+                >
+                <TextView
+                    android:layout_margin="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="세탁소 이벤트"
+                    android:fontFamily="@font/nanum_gothic_bold"
+                    android:textSize="17dp"
+                    />
 
                 <TextView
+                    android:textColor="@color/black"
+                    android:layout_margin="10dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="영업시간: "
-                    android:textSize="14dp"
-                    android:fontFamily="@font/nexonregular"/>
-                <TextView
-                    android:id="@+id/o_c_time"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text=""
-                    android:textSize="14dp"
-                    android:fontFamily="@font/nexonregular"/>
-
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="5dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="휴무일: "
-                    android:textSize="14dp"
-                    android:fontFamily="@font/nexonregular"/>
-                <TextView
-                    android:id="@+id/closed_day"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text=""
-                    android:textSize="14dp"
-                    android:fontFamily="@font/nexonregular"/>
+                    android:text="* 첫 이용 고객 20% 할인!"
+                    android:fontFamily="@font/nanum_gothic_regular"
+                    />
             </LinearLayout>
 
             <View
-                android:layout_width="390dp"
-                android:layout_height="2dp"
-                android:background="#A7DFDA"
-                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="@color/grey"
                 android:layout_gravity="center"/>
 
-            <TextView
-                android:layout_margin="10dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="가게정보"
-                android:textStyle="bold"
-                android:textSize="17dp"
-                android:fontFamily="@font/nexonregular"/>
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginLeft="10dp">
-
+                android:orientation="vertical"
+                >
                 <TextView
+                    android:layout_margin="10dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="주문 수: "
-                    android:textSize="14dp"
-                    android:fontFamily="@font/nexonregular"/>
+                    android:text="공지사항"
+                    android:fontFamily="@font/nanum_gothic_bold"
+                    android:textSize="17dp"
+                    />
+
                 <TextView
-                    android:id="@+id/t_order"
+                    android:id="@+id/gongjiforuser"
+                    android:layout_margin="10dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text=""
-                    android:textSize="14dp"
-                    android:fontFamily="@font/nexonregular"/>
+                    android:textStyle="bold"
+                    android:fontFamily="@font/nanum_gothic_regular"
+                    />
 
             </LinearLayout>
 
             <View
-                android:layout_width="390dp"
-                android:layout_height="2dp"
-                android:background="#A7DFDA"
-                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="@color/grey"
                 android:layout_gravity="center"/>
 
-            <TextView
-                android:layout_margin="10dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="사업자정보"
-                android:textStyle="bold"
-                android:textSize="17dp"/>
-
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginLeft="10dp">
-
+                android:orientation="vertical"
+                >
                 <TextView
+                    android:layout_margin="10dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="대표자명: "
-                    android:textSize="14dp"
-                    android:fontFamily="@font/nexonregular"/>
+                    android:text="가게 정보"
+                    android:fontFamily="@font/nanum_gothic_bold"
+                    android:textSize="17dp"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text="영업 시간:"
+                        android:layout_margin="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/nanum_gothic_regular"
+                        />
+                    <TextView
+                        android:id="@+id/o_c_time"
+                        android:layout_margin="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/nanum_gothic_regular"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text="휴무일:"
+                        android:layout_margin="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/nanum_gothic_regular"
+                        />
+                    <TextView
+                        android:id="@+id/closed_day"
+                        android:layout_margin="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/nanum_gothic_regular"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text="대표자명:"
+                        android:layout_margin="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/nanum_gothic_regular"
+                        />
+                    <TextView
+                        android:id="@+id/o_name"
+                        android:layout_margin="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/nanum_gothic_regular"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
                 <TextView
-                    android:id="@+id/o_name"
+                    android:text="상호명:"
+                    android:layout_margin="10dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text=""
-                    android:textSize="14dp"
-                    android:fontFamily="@font/nexonregular"/>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginLeft="10dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="상호명: "
-                    android:textSize="14dp"
-                    android:fontFamily="@font/nexonregular"/>
+                    android:fontFamily="@font/nanum_gothic_regular"
+                    />
                 <TextView
                     android:id="@+id/s_name"
+                    android:layout_margin="10dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text=""
-                    android:textSize="14dp"
-                    android:fontFamily="@font/nexonregular"/>
+                    android:textStyle="bold"
+                    android:fontFamily="@font/nanum_gothic_regular"
+                    />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text="사업자등록번호:"
+                        android:layout_margin="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/nanum_gothic_regular"
+                        />
+                    <TextView
+                        android:id="@+id/o_nin"
+                        android:layout_margin="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/nanum_gothic_regular"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text="현재 주문 수:"
+                        android:layout_margin="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/nanum_gothic_regular"
+                        />
+                    <TextView
+                        android:id="@+id/t_order"
+                        android:layout_margin="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/nanum_gothic_regular"
+                        />
+
+                </LinearLayout>
 
             </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginLeft="10dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="사업자주소: "
-                    android:textSize="14dp"
-                    android:fontFamily="@font/nexonregular"/>
-                <TextView
-                    android:id="@+id/s_address"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text=""
-                    android:textSize="14dp"
-                    android:fontFamily="@font/nexonregular"/>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginLeft="10dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="사업자등록번호: "
-                    android:textSize="14dp"
-                    android:fontFamily="@font/nexonregular"/>
-                <TextView
-                    android:id="@+id/o_nin"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text=""
-                    android:textSize="14dp"
-                    android:fontFamily="@font/nexonregular"/>
-
-            </LinearLayout>
-
 
         </LinearLayout>
 
@@ -398,119 +308,30 @@
 
         <Button
             android:id="@+id/intoitemlist"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
             android:text="상품"
             android:textSize="22dp"
-            android:fontFamily="@font/boldsuzin"
-            android:background="@color/mainColor"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:fontFamily="@font/nanum_gothic_regular"
+            android:background="@drawable/buttonshape"
             />
 
     </LinearLayout>
 
-
-
-
-    <!--<ImageView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/image1"
-        android:src="@drawable/ic_launcher_foreground"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="가나다"
-        android:textSize="30dp"/>
-
-    <TextView
-        android:id="@+id/gender1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="가나다라마바사"
-        android:textSize="30dp"/>
-
-    <TextView
-        android:id="@+id/age1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="가나다라마"
-        android:textSize="30dp"/>-->
-
+    <!--
+    layout2_b1 뒤로 가기 버튼
+    @+id/title1 가게 이
+    @+id/btn1 공유 버
+    @+id/gongjiforuser 공
+    @+id/o_c_time 영업시간
+    @+id/closed_day 휴
+    @+id/t_order 주문
+    @+id/o_name 대표자명
+    @+id/s_name 상호명
+    s_address
+    @+id/o_nin 사업자 등록번
+    -->
 
 </LinearLayout>
-
-    <!--
-    <?xml version="1.0" encoding="utf-8"?>
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:orientation="vertical"
-        tools:context=".ImageActivity"
-        >
-
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/image"
-            android:src="@drawable/ic_launcher_foreground"/>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/image1"
-                android:text="가게정보 넣을 곳, 틀 만들고 서버, 디비에서 값 가져와서 틀에 넣을꺼임"
-                android:textSize="30dp" />
-            <TextView
-                android:id="@+id/title1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="가나다"
-                android:textSize="30dp"/>
-        </LinearLayout>
-
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-            <TextView
-                android:layout_below="@id/title1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="아아ㅏ"
-                android:textSize="30dp" />
-            <TextView
-                android:id="@+id/age1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="가나다라마"
-                android:textSize="30dp"/>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <TextView
-                android:layout_below="@+id/age"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="좀되라시발비ㅏ랍젖바더ㅏㅂ더"
-                android:textSize="30dp"/>
-
-            <TextView
-                android:id="@+id/gender1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="가나다라마바사"
-                android:textSize="30dp"/>
-        </LinearLayout>
-
-    </LinearLayout>-->

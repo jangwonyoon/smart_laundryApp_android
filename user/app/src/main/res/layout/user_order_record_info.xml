@@ -7,62 +7,81 @@
         android:id="@+id/intothestore"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:layout_marginTop="30dp"
+        >
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="5dp">
-            <TextView
-                android:layout_marginLeft="10dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="15dp"
-                android:text="가게명:"
-                android:textColor="#111111" />
-            <TextView
-                android:id="@+id/s_name"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="가게.."
-                android:textSize="15dp"/>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp">
-
-            <TextView
-                android:textColor="#111111"
-                android:layout_marginLeft="10dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="15dp"
-                android:text="  날짜  :"
+            >
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/store_icon"
+                android:layout_marginLeft="30dp"
                 />
-            <TextView
-                android:id="@+id/date"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="상품목록들"
-                android:textSize="15dp"/>
+                android:orientation="vertical"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+                    <TextView
+                        android:layout_marginLeft="30dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="15dp"
+                        android:text="가게명:"
+                        android:textColor="@color/blue" />
+                    <TextView
+                        android:id="@+id/s_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="가게.."
+                        android:textSize="15dp"
+                        android:layout_marginLeft="10dp"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    >
+                    <TextView
+                        android:textColor="@color/blue"
+                        android:layout_marginLeft="30dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="15dp"
+                        android:text="날짜:"
+                        />
+                    <TextView
+                        android:id="@+id/date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="상품목록들"
+                        android:textSize="15dp"
+                        android:layout_marginLeft="10dp"
+                        />
+                </LinearLayout>
+            </LinearLayout>
         </LinearLayout>
-
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="70dp"
             android:gravity="center"
-            android:layout_margin="5dp">
-
+            android:layout_marginTop="20dp"
+            >
             <Button
                 android:id="@+id/review"
-               android:layout_width="wrap_content"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="리뷰쓰기"
                 android:textSize="15dp"
-                android:background="@drawable/buttonshape2"/>
-
+                android:background="@drawable/buttonshape"/>
             <Button
                 android:id="@+id/intostore"
                 android:layout_width="wrap_content"
@@ -71,40 +90,19 @@
                 android:layout_marginRight="20dp"
                 android:text="가게보기"
                 android:textSize="15dp"
-                android:background="@drawable/buttonshape2"/>
-
+                android:background="@drawable/buttonshape"/>
             <Button
                 android:id="@+id/detail"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="자세히"
                 android:textSize="15dp"
-                android:background="@drawable/buttonshape2"/>
+                android:background="@drawable/buttonshape"/>
         </LinearLayout>
-        <!--<LinearLayout
+        <View
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <Button
-                android:id="@+id/b1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:layout_marginBottom="5dp"
-                android:layout_marginLeft="80dp"
-                android:text="시작"/>
-
-            <Button
-                android:id="@+id/b2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:layout_marginBottom="5dp"
-                android:layout_marginLeft="60dp"
-                android:text="배달콜"/>
-        </LinearLayout>-->
+            android:layout_height="3dp"
+            android:background="@color/grey"
+            />
     </LinearLayout>
-
-
 </RelativeLayout>
