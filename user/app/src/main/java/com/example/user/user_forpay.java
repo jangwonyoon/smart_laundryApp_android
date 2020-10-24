@@ -54,22 +54,22 @@ public class user_forpay extends Activity {
         tv1 = (TextView) findViewById(R.id.title1);
         tv1.setText(title1+" [결제하기]");
 
-        b1 = (Button) findViewById(R.id.layout2_b1);
+//        b1 = (Button) findViewById(R.id.layout2_b1);
         b2 = (Button) findViewById(R.id.pay);
 
-        b1.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                Intent intent = new Intent(user_forpay.this, user_itembasket.class);
-                intent.putExtra("user_name",user_name1);
-                intent.putExtra("user_address",user_address1);
-                intent.putExtra("user_lat",user_lat1);
-                intent.putExtra("user_long",user_long1);
-                intent.putExtra("title",title1);
-                intent.putExtra("user_id",user_id1);
-                intent.putExtra("user_address_detail",user_address_detail1);
-                startActivity(intent);
-            }
-        });
+//        b1.setOnClickListener(new View.OnClickListener() {
+//            public void onClick(View v) {
+//                Intent intent = new Intent(user_forpay.this, user_itembasket.class);
+//                intent.putExtra("user_name",user_name1);
+//                intent.putExtra("user_address",user_address1);
+//                intent.putExtra("user_lat",user_lat1);
+//                intent.putExtra("user_long",user_long1);
+//                intent.putExtra("title",title1);
+//                intent.putExtra("user_id",user_id1);
+//                intent.putExtra("user_address_detail",user_address_detail1);
+//                startActivity(intent);
+//            }
+//        });
 
         Date currentTime = Calendar.getInstance().getTime();
 
