@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.UiThread;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
+import androidx.core.view.GravityCompat;
 import androidx.fragment.app.FragmentActivity;
 
 import android.Manifest;
@@ -13,6 +14,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.PointF;
+import android.graphics.drawable.ColorDrawable;
 import android.location.Address;
 import android.location.Geocoder;
 import android.location.Location;
@@ -20,9 +22,11 @@ import android.location.LocationListener;
 import android.location.LocationManager;
 import android.net.Uri;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -54,7 +58,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.Locale;
 
-public class layout2_first extends FragmentActivity
+public class layout2_first extends AppCompatActivity
         implements OnMapReadyCallback {
 
     int i=0;
@@ -79,7 +83,8 @@ public class layout2_first extends FragmentActivity
     Double rider_lat1, rider_long1;
     String u_number,s_number,d_type;
     TextView tv1,tv2;
-    Button b1,b2,b3;
+    Button b3;
+    ImageButton b1,b2;
 
 
     String temp_date;
@@ -90,6 +95,7 @@ public class layout2_first extends FragmentActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_layout2_first);
+
 
         Intent intent = getIntent();
         rider_name1 = intent.getStringExtra("rider_name");
@@ -103,13 +109,17 @@ public class layout2_first extends FragmentActivity
         s_number = intent.getStringExtra("s_number");
         d_type = intent.getStringExtra("d_type");
 
+        getSupportActionBar().setTitle("배달정보");
+        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(0xFF4472C4));
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         tv1 = findViewById(R.id.u_number);
         tv2 = findViewById(R.id.s_number);
 
-        tv1.setText("고객: 0"+u_number);
-        tv2.setText("가게: 0"+s_number);
+        tv1.setText(u_number);
+        tv2.setText(s_number);
 
-        b1 = (Button) findViewById(R.id.u_call);
+        b1 = findViewById(R.id.u_call);
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -118,7 +128,7 @@ public class layout2_first extends FragmentActivity
             }
         });
 
-        b2 = (Button) findViewById(R.id.s_call);
+        b2 = findViewById(R.id.s_call);
         b2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -127,7 +137,7 @@ public class layout2_first extends FragmentActivity
             }
         });
 
-        b3 = (Button)findViewById(R.id.layout3_b1);
+        /*b3 = (Button)findViewById(R.id.layout3_b1);
         b3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -140,7 +150,7 @@ public class layout2_first extends FragmentActivity
 
                 startActivity(intent);
             }
-        });
+        });*/
 
 
 
@@ -562,6 +572,24 @@ public class layout2_first extends FragmentActivity
         Toast.makeText(getApplication(),
                 "위도: " + coord.latitude + ", 경도: " + coord.longitude,
                 Toast.LENGTH_SHORT).show();*/
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()){
+            case android.R.id.home:{ // 왼쪽 상단 버튼 눌렀을 때
+                Intent intent = new Intent(layout2_first.this, MainActivity.class);
+                intent.putExtra("rider_id",rider_id1);
+                intent.putExtra("rider_name",rider_name1);
+                intent.putExtra("rider_address",rider_address1);
+                intent.putExtra("rider_lat",rider_lat1);
+                intent.putExtra("rider_long",rider_long1);
+
+                startActivity(intent);
+                return true;
+            }
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     /*@Override

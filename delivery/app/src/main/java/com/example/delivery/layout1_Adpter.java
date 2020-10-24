@@ -65,7 +65,7 @@ public class layout1_Adpter extends RecyclerView.Adapter<layout1_Adpter.CustomVi
 
     class CustomViewHolder extends RecyclerView.ViewHolder {
         protected TextView u_address,s_address,items;
-        protected TextView price,d_type_tv1,test1;
+        protected TextView price,d_type_tv1,test1,distance;
         protected LinearLayout privatereview;
         protected String u_number,s_number,d_type;
         protected Button getorder;
@@ -84,6 +84,7 @@ public class layout1_Adpter extends RecyclerView.Adapter<layout1_Adpter.CustomVi
             this.d_type_tv1 = (TextView) view.findViewById(R.id.d_type);
             this.getorder = (Button) view.findViewById(R.id.getorder);
             this.test1 = (TextView) view.findViewById(R.id.test1);
+            this.distance = view.findViewById(R.id.distance);
 
 
         }
@@ -105,25 +106,27 @@ public class layout1_Adpter extends RecyclerView.Adapter<layout1_Adpter.CustomVi
         viewholder.d_type = mList.get(position).getMember_d_type();
         if(viewholder.d_type.equals("0")){
             viewholder.d_type_tv1.setText("픽업");
-            viewholder.u_address.setText("고객: "+mList.get(position).getMember_u_address());
-            viewholder.s_address.setText("가게: "+mList.get(position).getMember_s_address());
+            viewholder.u_address.setText(mList.get(position).getMember_u_address());
+            viewholder.s_address.setText(mList.get(position).getMember_s_address());
         }
         else{
             viewholder.d_type_tv1.setText("배달");
-            viewholder.u_address.setText("가게: "+mList.get(position).getMember_s_address());
-            viewholder.s_address.setText("고객: "+mList.get(position).getMember_u_address());
+            viewholder.u_address.setText(mList.get(position).getMember_s_address());
+            viewholder.s_address.setText(mList.get(position).getMember_u_address());
         }
-        viewholder.price.setText("비용: "+mList.get(position).getMember_price()+"원");
-        viewholder.items.setText("상품: "+mList.get(position).getMember_items());
+        viewholder.price.setText(mList.get(position).getMember_price()+"원");
+        viewholder.items.setText(mList.get(position).getMember_items());
         viewholder.u_number = mList.get(position).getMember_u_number();
         viewholder.s_number = mList.get(position).getMember_s_number();
 
         if(mList.get(position).getMember_a().equals("null")){
             viewholder.test1.setVisibility(View.GONE);
+            viewholder.distance.setVisibility(View.GONE);
         }
         else {
             viewholder.test1.setVisibility(View.VISIBLE);
-            viewholder.test1.setText("거리: " + mList.get(position).getMember_a() + "km");
+            viewholder.distance.setVisibility(View.VISIBLE);
+            viewholder.test1.setText(mList.get(position).getMember_a() + "km");
         }
 
         viewholder.getorder.setOnClickListener(new View.OnClickListener() {

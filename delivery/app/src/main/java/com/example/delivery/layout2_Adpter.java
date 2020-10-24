@@ -101,16 +101,16 @@ public class layout2_Adpter extends RecyclerView.Adapter<layout2_Adpter.CustomVi
         viewholder.d_type = mList.get(position).getMember_d_type();
         if(viewholder.d_type.equals("0")){
             viewholder.d_type_tv1.setText("픽업");
-            viewholder.u_address.setText("고객: "+mList.get(position).getMember_u_address());
-            viewholder.s_address.setText("가게: "+mList.get(position).getMember_s_address());
+            viewholder.u_address.setText(mList.get(position).getMember_u_address());
+            viewholder.s_address.setText(mList.get(position).getMember_s_address());
         }
         else{
             viewholder.d_type_tv1.setText("배달");
-            viewholder.u_address.setText("가게: "+mList.get(position).getMember_s_address());
-            viewholder.s_address.setText("고객: "+mList.get(position).getMember_u_address());
+            viewholder.u_address.setText(mList.get(position).getMember_s_address());
+            viewholder.s_address.setText(mList.get(position).getMember_u_address());
         }
-        viewholder.price.setText("비용: "+mList.get(position).getMember_price()+"원");
-        viewholder.items.setText("상품: "+mList.get(position).getMember_items());
+        viewholder.price.setText(mList.get(position).getMember_price()+"원");
+        viewholder.items.setText(mList.get(position).getMember_items());
         viewholder.u_number = mList.get(position).getMember_u_number();
         viewholder.s_number = mList.get(position).getMember_s_number();
 

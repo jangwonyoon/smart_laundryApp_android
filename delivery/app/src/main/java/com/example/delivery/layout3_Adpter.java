@@ -77,13 +77,13 @@ public class layout3_Adpter extends RecyclerView.Adapter<layout3_Adpter.CustomVi
         viewholder.d_type = mList.get(position).getMember_d_type();
         if(viewholder.d_type.equals("0")){
             viewholder.d_type_tv1.setText("픽업");
-            viewholder.date.setText("날짜: 2020"+mList.get(position).getMember_temp_date());
-            viewholder.price.setText("비용: "+mList.get(position).getMember_r_price());
+            viewholder.date.setText(mList.get(position).getMember_temp_date());
+            viewholder.price.setText(mList.get(position).getMember_r_price());
         }
         else{
             viewholder.d_type_tv1.setText("배달");
-            viewholder.date.setText("날짜: 2020"+mList.get(position).getMember_temp_date());
-            viewholder.price.setText("비용: "+mList.get(position).getMember_r_price());
+            viewholder.date.setText(mList.get(position).getMember_temp_date());
+            viewholder.price.setText(mList.get(position).getMember_r_price());
         }
 
 

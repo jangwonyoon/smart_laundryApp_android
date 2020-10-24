@@ -62,8 +62,8 @@ public class MainActivity extends AppCompatActivity {
         fragment2 = new layout2();
         fragment3 = new layout3();
 
-        getSupportActionBar().setTitle(rider_name1+" 라이더님 안녕하세요.");
-        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(0xFF339999));
+        getSupportActionBar().setTitle(rider_name1+"님");
+        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(0xFF4472C4));
 
 
         //제일 처음 띄워줄 뷰를 세팅해줍니다. commit();까지 해줘야 합니다.

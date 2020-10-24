@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-xmlns:app="http://schemas.android.com/apk/res-auto"
-xmlns:tools="http://schemas.android.com/tools"
-android:layout_width="match_parent"
-android:layout_height="match_parent"
-tools:context=".layout1"
-android:background="#ffffff"
-android:orientation="vertical"
-android:weightSum="10">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".layout1"
+    android:background="#ffffff"
+    android:orientation="vertical"
+    android:weightSum="10">
 
     <!--<TextView
         android:layout_width="wrap_content"
@@ -18,26 +18,66 @@ android:weightSum="10">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.5"
-        android:gravity="right"
-        >
+        android:layout_weight="2"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="주문받기"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:fontFamily="@font/nanum_gothic_bold"
+                android:layout_marginLeft="20dp"
+                />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:textSize="16dp"
+                android:gravity="right"
+                android:text="스마트 경로"
+                android:layout_gravity="center"
+                />
+
+            <Switch
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:padding="10dp"
+                android:id="@+id/smartswitch" />
+        </LinearLayout>
 
         <TextView
-            android:id="@+id/text"
-            android:layout_width="wrap_content"
+            android:id="@+id/tv1"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="16dp"
-            android:gravity="right"
-            android:text="스마트 경로"
-            android:layout_gravity="center"
-            />
-
-        <Switch
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:padding="10dp"
-            android:id="@+id/smartswitch"/>
+            android:text="※ 현재 배달콜을 보실 수 있습니다."
+            android:textSize="17dp"
+            android:textStyle="bold"
+            android:layout_marginTop="25dp"
+            android:fontFamily="@font/title2"
+            android:textColor="@color/blue"
+            android:singleLine="true" />
     </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:background="#B2B2B2"
+        />
     <!--<TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -47,7 +87,7 @@ android:weightSum="10">
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="9.5"
+        android:layout_weight="8"
         android:id="@+id/frame">
 
         <TextView
