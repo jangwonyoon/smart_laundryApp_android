@@ -315,6 +315,7 @@
             android:textColor="@color/white"
             android:textStyle="bold"
             android:fontFamily="@font/nanum_gothic_regular"
+            android:background="@drawable/buttonshape"
             />
 
     </LinearLayout>

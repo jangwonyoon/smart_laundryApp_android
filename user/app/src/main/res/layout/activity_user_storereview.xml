@@ -9,69 +9,75 @@
     android:weightSum="10"
     android:background="@color/white">
 
-        <LinearLayout
-        android:layout_weight="1.4"
-        android:id="@+id/layout2_1"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:orientation="vertical">
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="2dp"
-            android:layout_marginTop="20dp"
-            android:background="#FF000000" />
-
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <Button
-                android:id="@+id/layout2_b1"
-                android:layout_width="35dp"
-                android:layout_height="35dp"
-                android:layout_gravity="left"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:background="@drawable/arrow_back">
-            </Button>
-
-            <TextView
-                android:id="@+id/title1"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginTop="5dp"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:text=""
-                android:textSize="25dp"
-                android:textStyle="bold"
-                />
-        </FrameLayout>
-
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:gravity="center"
+        >
+        <TextView
+            android:layout_gravity="center"
+            android:id="@+id/title1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="24dp"
+            android:textStyle="bold"
+            />
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_weight="0.4"
-        android:orientation="horizontal">
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.5"
+        android:orientation="horizontal"
+        android:gravity="center"
+        >
+
+        <TextView
+            android:layout_marginLeft="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="평점:"
+            android:textSize="17dp"
+            android:fontFamily="@font/nanum_gothic_bold"/>
 
         <TextView
             android:id="@+id/avgrating"
-            android:layout_marginLeft="30dp"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:textStyle="bold"
             android:text="0.0"
             android:textSize="17dp"
-            android:fontFamily="@font/medium"/>
+            android:layout_marginLeft="10dp"
+            android:gravity="center"
+            android:fontFamily="@font/nanum_gothic_regular"/>
+
+        <RatingBar
+            android:id="@+id/rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:numStars="5"
+            android:isIndicator="true"
+            android:stepSize="1"
+            android:max="5"
+            android:layout_marginLeft="20dp"
+            style="?android:attr/ratingBarStyleSmall"
+
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"
+        android:orientation="horizontal"
+        android:gravity="center"
+        >
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="70dp"
             android:textSize="17dp"
             android:text="가게 총 리뷰 수: "
             android:textStyle="bold"
@@ -81,39 +87,22 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text=""
-            android:textSize="17dp"/>
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_weight="0.3"
-        android:orientation="horizontal"
-        android:layout_margin="5dp">
-
-        <RatingBar
-            android:layout_marginTop="3dp"
-            android:id="@+id/rating"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:numStars="5"
-            android:isIndicator="true"
-            android:stepSize="1"
-            android:max="5"
-            style="?android:attr/ratingBarStyleSmall"/>
+            android:textSize="17dp"
+            />
     </LinearLayout>
 
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:id="@+id/frame"
-        android:layout_weight="8">
+        android:layout_weight="7">
 
         <TextView
             android:id="@+id/textView_main_result"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="1sp"
-            android:text=""></TextView>
+            android:text=""/>
 
         <androidx.recyclerview.widget.RecyclerView
             android:layout_width="wrap_content"
@@ -142,40 +131,5 @@
             android:textColor="#111111"
             android:visibility="invisible"/>
     </FrameLayout>
-
-
-
-
-
-
 </LinearLayout>
-
-
-
-
-    <!--<ImageView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/image1"
-        android:src="@drawable/ic_launcher_foreground"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="가나다"
-        android:textSize="30dp"/>
-
-    <TextView
-        android:id="@+id/gender1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="가나다라마바사"
-        android:textSize="30dp"/>
-
-    <TextView
-        android:id="@+id/age1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="가나다라마"
-        android:textSize="30dp"/>-->
 
