@@ -212,6 +212,7 @@ public class user_frag_first extends Fragment {
                 }
             };
 
+
             //서버로 Volley를 이용해서 요청을 함
             user_image_db registerRequest = new user_image_db(re_set_title, responseListener);
             RequestQueue queue = Volley.newRequestQueue(getActivity());
