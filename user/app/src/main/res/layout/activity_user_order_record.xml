@@ -15,15 +15,35 @@
         android:layout_height="match_parent"
         android:layout_marginTop="15dp"
         android:orientation="vertical">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="20dp"
-            android:layout_marginLeft="10dp"
-            android:text="*주문기록을 볼 수 있습니다.*"
-            android:textStyle="bold"
-            android:textSize="15dp">
 
-        </TextView>
+        <TextView
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="주문 기록"
+            android:textColor="@color/black"
+            android:fontFamily="@font/nanum_gothic_bold"
+            android:textStyle="bold"
+            android:textSize="24dp"
+            />
+
+        <TextView
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:text="※ 주문기록을 볼 수 있습니다."
+            android:textStyle="bold"
+            android:textSize="15dp"
+            android:layout_marginTop="20dp"
+            />
+
+        <View
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="@color/grey"
+            />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -34,7 +54,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="1sp"
-                android:text=""></TextView>
+                android:text=""/>
 
             <androidx.recyclerview.widget.RecyclerView
                 android:layout_width="wrap_content"
@@ -46,6 +66,7 @@
                 android:layout_alignParentStart="true"
                 android:layout_alignParentLeft="true"/>
         </LinearLayout>
+
     </LinearLayout>
 
     <com.google.android.material.navigation.NavigationView
@@ -56,9 +77,5 @@
         android:fitsSystemWindows="true"
         app:headerLayout="@layout/navi_header"
         app:menu="@menu/menu1"/>
-    />
-
-
-
 
 </androidx.drawerlayout.widget.DrawerLayout>
