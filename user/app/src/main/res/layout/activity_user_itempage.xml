@@ -9,69 +9,46 @@
     android:weightSum="10"
     android:background="@color/white">
 
+
+
+    <!-- 가게명 @+id/title1
+              @+id/layout2_b1 뒤로가기
+    -->
+
+
     <LinearLayout
-        android:id="@+id/layout2_1"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1.5"
-        android:orientation="vertical">
+        android:layout_weight="2">
 
-        <View
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="2dp"
-            android:layout_marginTop="20dp"
-            android:background="#FF000000" />
-
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <Button
-                android:id="@+id/layout2_b1"
-                android:layout_width="35dp"
-                android:layout_height="35dp"
-                android:layout_gravity="left"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:background="@drawable/arrow_back">
-
-            </Button>
-
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
             <TextView
                 android:id="@+id/title1"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:fontFamily="@font/nanum_gothic_bold"
+                android:textSize="24dp"
                 android:layout_gravity="center"
-                android:gravity="center"
-                android:text="앞image에서가져오기"
-                android:textSize="25dp"
+                android:layout_marginTop="80dp"
+                />
+            <TextView
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:text="※ 상품리스트를 볼 수 있습니다."
                 android:textStyle="bold"
-                android:fontFamily="@font/title2"
-                android:layout_marginTop="5dp"></TextView>
-        </FrameLayout>
+                android:textSize="17dp"
+                android:fontFamily="@font/nexonregular">
+            </TextView>
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="2dp"
-            android:background="#FF000000" />
+        </LinearLayout>
 
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="0.4">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="30dp"
-            android:layout_marginLeft="10dp"
-            android:text="*상품리스트를 볼 수 있습니다."
-            android:textStyle="bold"
-            android:textSize="17dp"
-            android:fontFamily="@font/nexonregular">
-
-        </TextView>
 
         <!--<TextView
             android:layout_width="wrap_content"
@@ -85,40 +62,19 @@
         </TextView>-->
 
     </LinearLayout>
-    <!--<ProgressBar
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="2"
-        android:paddingTop="12dp"
-        style=""
-        android:id="@+id/progress" />-->
-
-
-
-        <!--<ScrollView
-            android:layout_width="match_parent"
-            android:layout_height="450dp">-->
-            <!--<ListView
-                android:id="@+id/listview"
-                android:layout_width="match_parent"
-                android:layout_height="450dp"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentLeft="true"/>-->
-        <!--</ScrollView>-->
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginTop="10dp"
-        android:layout_weight="6.8">
+        android:layout_weight="6">
 
         <TextView
             android:id="@+id/textView_main_result"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="1sp"
-            android:text=""></TextView>
+            android:text=""/>
 
         <androidx.recyclerview.widget.RecyclerView
             android:layout_width="wrap_content"
@@ -136,17 +92,20 @@
         android:layout_height="0dp"
         android:layout_weight="1"
         android:gravity="center">
+
         <Button
             android:id="@+id/gotopocket"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:text="장바구니 보기"
+            android:text="장바구니 담기"
             android:textSize="20dp"
-            android:fontFamily="@font/boldsuzin"
+            android:fontFamily="@font/nanum_gothic_regular"
+            android:background="@drawable/buttonshape"
+            android:textColor="@color/white"
+            android:padding="15dp"
             >
 
         </Button>
     </LinearLayout>
-
 </LinearLayout>
