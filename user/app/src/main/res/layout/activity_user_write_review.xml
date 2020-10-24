@@ -8,62 +8,32 @@
     tools:context=".user_write_review"
     android:weightSum="10"
     android:background="@color/white">
-
-<!--    <LinearLayout-->
-<!--        android:layout_weight="1.5"-->
-<!--        android:id="@+id/layout2_1"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="0dp"-->
-<!--        android:orientation="vertical">-->
-
-<!--        <FrameLayout-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content">-->
-
-<!--            <Button-->
-<!--                android:id="@+id/layout2_b1"-->
-<!--                android:layout_width="35dp"-->
-<!--                android:layout_height="35dp"-->
-<!--                android:layout_gravity="left"-->
-<!--                android:layout_marginLeft="10dp"-->
-<!--                android:layout_marginRight="10dp"-->
-<!--                android:layout_marginTop="10dp"-->
-<!--                android:layout_marginBottom="10dp"-->
-<!--                android:background="@drawable/arrow_back">-->
-
-<!--            </Button>-->
-
-<!--        </FrameLayout>-->
-<!--    </LinearLayout>-->
-
-    <com.google.android.material.appbar.AppBarLayout
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent"
-        >
-        <com.google.android.material.appbar.MaterialToolbar
-            android:background="@color/mainColor"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            style="@style/Widget.MaterialComponents.Toolbar.Primary"
-            app:title="리뷰 작성"
-            />
-
-    </com.google.android.material.appbar.AppBarLayout>
-
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="리뷰작성"
+            android:textAlignment="center"
+            android:textSize="20dp"
+            android:fontFamily="@font/nanum_gothic_bold"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginTop="55dp"
+            />
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="상품은 만족하였나요?"
             android:textAlignment="center"
-            android:textSize="20dp"
-            android:layout_marginTop="30dp"
+            android:textSize="15dp"
+            android:fontFamily="@font/nanum_gothic_bold"
+            android:layout_marginTop="20dp"
             />
     </LinearLayout>
-
     <LinearLayout
         android:id="@+id/layout2_2"
         android:layout_below="@id/layout2_1"
@@ -71,64 +41,48 @@
         android:layout_marginTop="30dp"
         android:layout_height="0dp"
         android:layout_weight="0.7"
-        android:layout_marginLeft="10dp">
-
-
+        android:layout_margin="30dp"
+        >
         <TextView
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="30dp"
+            android:gravity="center"
+            android:fontFamily="@font/nanum_gothic_bold"
             android:text="별점:"
-            android:textSize="25dp"
-            android:textStyle="bold"/>
-
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:textStyle="bold" />
         <RatingBar
             android:id="@+id/rating"
+            android:gravity="center"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="30dp"
             android:numStars="5"
             android:isIndicator="false"
             android:stepSize="1"
             android:max="5"
-            style="?android:attr/ratingBarStyleIndicator"/>
-
+            style="?android:attr/ratingBarStyleIndicator"
+            android:layout_marginLeft="30dp"
+            />
     </LinearLayout>
-
-<!--    <LinearLayout-->
-<!--        android:layout_weight="0.5"-->
-<!--        android:id="@+id/layout2_3"-->
-<!--        android:layout_below="@+id/layout2_2"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="0dp"-->
-<!--        android:layout_marginLeft="10dp"-->
-<!--        android:orientation="horizontal">-->
-
-
-<!--        <TextView-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:text="ID: "-->
-<!--            android:textStyle="bold"-->
-<!--            android:textSize="20dp" />-->
-
-<!--        <TextView-->
-<!--            android:id="@+id/user_id"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:textSize="20dp"-->
-<!--            android:text=""/>-->
-
-
-<!--    </LinearLayout>-->
-
     <LinearLayout
         android:layout_weight="5"
         android:id="@+id/layout2_4"
         android:layout_below="@id/layout2_3"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_margin="10dp">
-
-
+        android:layout_margin="30dp"
+        android:orientation="vertical"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="리뷰 작성란"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:fontFamily="@font/nanum_gothic_bold"
+            />
         <EditText
             android:id="@+id/content"
             android:layout_width="match_parent"
@@ -136,93 +90,60 @@
             android:gravity="start"
             android:hint="내용을 입력해 주세요. 상세하게 적을수록 다른 고객에게 큰 도움이 됩니다."
             android:text=""
-            android:textSize="20dp" />
-
+            android:textSize="20dp"
+            android:layout_marginTop="10dp"
+            />
     </LinearLayout>
-
     <LinearLayout
         android:id="@+id/layout2_5"
         android:layout_weight="1.3"
         android:layout_below="@+id/layout2_4"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_margin="10dp">
-
+        android:layout_marginLeft="30dp">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="사진 공유하기"
+            android:layout_gravity="center"
+            android:text="사진 공유"
             android:textSize="20dp"
-            android:textStyle="bold"/>
-
-        <ImageView android:id="@+id/image1"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:fontFamily="@font/nanum_gothic_bold"
+            />
+        <ImageView
+            android:id="@+id/image1"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
-            android:src="@drawable/camera"
+            android:src="@drawable/picture1"
             />
-
     </LinearLayout>
-
-<!--    <LinearLayout-->
-<!--        android:id="@+id/layout2_6"-->
-<!--        android:layout_weight="1"-->
-<!--        android:layout_below="@+id/layout2_5"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="0dp"-->
-<!--        android:layout_margin="20dp"-->
-<!--        android:gravity="center">-->
-
-<!--        <Button-->
-<!--            android:id="@+id/cancel"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:text="취소"-->
-<!--            android:textSize="25dp"-->
-<!--            android:background="@color/mainColor"-->
-<!--            />-->
-
-<!--        <Button-->
-<!--            android:id="@+id/write"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:text="등록"-->
-<!--            android:textSize="25dp"-->
-<!--            android:background="@color/mainColor"-->
-<!--            />-->
-<!--    </LinearLayout>-->
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:weightSum="1"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
         >
 
         <Button
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/buttonshape3"
+            android:fontFamily="@font/nanum_gothic_bold"
             android:text="취소"
-            android:textSize="25dp"
-            android:layout_weight="0.5"
-            android:fontFamily="@font/medium"
-            android:textColor="@color/white"
-            android:background="@color/subColor"
-            />
+            android:textColor="@color/blue"
+            android:textSize="20dp" />
 
         <Button
             android:id="@+id/write"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="0.5"
-            android:fontFamily="@font/medium"
-            android:text="등록"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nanum_gothic_bold"
+            android:text="리뷰등록"
             android:textColor="@color/white"
-            android:background="@color/mainColor"
-            android:textSize="25dp" />
+            android:background="@drawable/buttonshape"
+            android:textSize="20dp"
+            android:layout_marginLeft="20dp"
+            />
     </LinearLayout>
-
 </LinearLayout>
-
-<!--    /* 취소 버튼 변수 작성 요망
-        취소 버튼 눌렀을시 전 페이지로 리다이렉트
-*/-->
