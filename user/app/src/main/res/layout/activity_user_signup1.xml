@@ -7,80 +7,80 @@
     android:orientation="vertical"
     android:weightSum="1"
     tools:context=".user_signup1"
-    android:background="@color/white"
     >
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.07">
+        android:layout_weight="0.08">
 
         <com.google.android.material.appbar.MaterialToolbar
             android:id="@+id/topAppBar1"
-            style="@style/Widget.MaterialComponents.Toolbar.Primary"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             app:title="STEP1. 약관 동의"
-            app:titleTextColor="@color/white" />
+            app:titleTextColor="@color/white"
+            android:background="@color/blue"
+            />
     </com.google.android.material.appbar.AppBarLayout>
 
 
-<!--    <LinearLayout-->
-<!--        android:id="@+id/layout2_1"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="0dp"-->
-<!--        android:layout_weight="0.1"-->
-<!--        android:layout_gravity="center"-->
+    <!--    <LinearLayout-->
+    <!--        android:id="@+id/layout2_1"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="0dp"-->
+    <!--        android:layout_weight="0.1"-->
+    <!--        android:layout_gravity="center"-->
 
-<!--        android:gravity="center"-->
-<!--        android:orientation="vertical">-->
+    <!--        android:gravity="center"-->
+    <!--        android:orientation="vertical">-->
 
-<!--        &lt;!&ndash;<View-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="2dp"-->
-<!--            android:background="#FF000000"-->
-<!--            />&ndash;&gt;-->
+    <!--        &lt;!&ndash;<View-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="2dp"-->
+    <!--            android:background="#FF000000"-->
+    <!--            />&ndash;&gt;-->
 
-<!--        <FrameLayout-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content">-->
+    <!--        <FrameLayout-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content">-->
 
-<!--            <Button-->
-<!--                android:id="@+id/layout2_b1"-->
-<!--                android:layout_width="30dp"-->
-<!--                android:layout_height="30dp"-->
-<!--                android:layout_gravity="left"-->
-<!--                android:layout_margin="10dp"-->
-<!--                android:background="@drawable/arrow_back">-->
+    <!--            <Button-->
+    <!--                android:id="@+id/layout2_b1"-->
+    <!--                android:layout_width="30dp"-->
+    <!--                android:layout_height="30dp"-->
+    <!--                android:layout_gravity="left"-->
+    <!--                android:layout_margin="10dp"-->
+    <!--                android:background="@drawable/arrow_back">-->
 
-<!--            </Button>-->
+    <!--            </Button>-->
 
-<!--            <TextView-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="match_parent"-->
-<!--                android:layout_marginTop="5dp"-->
-<!--                android:layout_gravity="center"-->
-<!--                android:text="회원가입"-->
-<!--                android:textSize="30dp"-->
-<!--                android:textStyle="bold"-->
-<!--                android:gravity="center"-->
-<!--                android:fontFamily="@font/title2">-->
-<!--                -->
-<!--            </TextView>-->
-<!--        </FrameLayout>-->
+    <!--            <TextView-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="match_parent"-->
+    <!--                android:layout_marginTop="5dp"-->
+    <!--                android:layout_gravity="center"-->
+    <!--                android:text="회원가입"-->
+    <!--                android:textSize="30dp"-->
+    <!--                android:textStyle="bold"-->
+    <!--                android:gravity="center"-->
+    <!--                android:fontFamily="@font/title2">-->
+    <!--                -->
+    <!--            </TextView>-->
+    <!--        </FrameLayout>-->
 
-<!--        <View-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="2dp"-->
-<!--            android:background="#FF000000"-->
-<!--            />-->
+    <!--        <View-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="2dp"-->
+    <!--            android:background="#FF000000"-->
+    <!--            />-->
 
-<!--    </LinearLayout>-->
+    <!--    </LinearLayout>-->
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.73"
+        android:layout_weight="0.8"
         android:id="@+id/layout2_2"
         android:layout_below="@+id/layout2_1"
         android:layout_marginLeft="10dp"
@@ -96,6 +96,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:fontFamily="@font/nanum_gothic_regular"
                 android:text="제 1 장 총 칙\n\n\n
 제 1 조 (목적)\n
 이 약관은 {COMPANY_NAME}(이하 사이트라 합니다)에서 제공하는 인터넷서비스(이하 서비스라 합니다)의 이용 조건 및 절차에 관한 기본적인 사항을 규정함을 목적으로 합니다.\n
@@ -242,13 +243,9 @@
 \n
 \n
 \n
-(시행일) 이 약관은 2020년 11월부터 시행합니다."
-                android:fontFamily="@font/medium">
-
+(시행일) 이 약관은 2020년 11월부터 시행합니다.">
             </TextView>
-
         </LinearLayout>
-
     </ScrollView>
 
     <LinearLayout
@@ -256,75 +253,54 @@
         android:layout_height="0dp"
         android:id="@+id/layout2_3"
         android:layout_below="@+id/layout2_2"
-        android:layout_weight="0.1"
+        android:layout_weight="0.07"
         android:weightSum="1"
         android:orientation="horizontal"
         android:layout_marginBottom="20dp">
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="0.5"
-            android:gravity="center"
-            android:layout_gravity="center">
-
+            android:gravity="right"
+            >
             <CheckBox
-
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/layouy2_c1"
-                android:gravity="center"
+                android:layout_marginTop="10dp"
                 >
-
             </CheckBox>
-
             <TextView
-
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="동의"
-                android:textSize="20dp"
-                android:gravity="center"
-                android:fontFamily="@font/medium"
+                android:text="위 약관에 동의합니다."
+                android:textSize="13dp"
+                android:fontFamily="@font/nanum_gothic_bold"
+                android:layout_margin="10dp"
+                android:textColor="@color/blue"
                 >
-
             </TextView>
         </LinearLayout>
+    </LinearLayout>
 
-
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.05"
+        android:gravity="center|top"
+        >
         <Button
-            android:layout_weight="0.5"
-            android:layout_width="wrap_content"
-            android:layout_height="60dp"
             android:id="@+id/layout2_b2"
-            android:layout_gravity="center"
-            android:text="진행하기"
-            android:textSize="20dp"
-            android:layout_margin="20dp"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:text="다음"
             android:background="@drawable/buttonshape"
             android:textColor="@color/white"
-            android:fontFamily="@font/medium">
-
-        </Button>
-
+            android:fontFamily="@font/nanum_gothic_bold"
+            />
 
     </LinearLayout>
 
-    <!--<ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/layout2_1"
-        android:fillViewport="true"
-
-        >
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="안녕"
-            >
-
-        </TextView>
-    </ScrollView>-->
 
 
 

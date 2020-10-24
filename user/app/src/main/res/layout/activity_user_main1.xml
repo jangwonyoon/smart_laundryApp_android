@@ -10,7 +10,6 @@
     android:background="@color/white"
     android:id="@+id/drawer_layout"
     >
-
     <LinearLayout
         android:id="@+id/layout4_1"
         android:layout_width="match_parent"
@@ -18,42 +17,59 @@
         android:orientation="vertical"
         android:layout_marginTop="5dp">
 
-        <!--<View
-            android:layout_width="match_parent"
-            android:layout_height="2dp"
-            android:background="#FF000000" />-->
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
             android:orientation="vertical"
-            android:background="@drawable/textback"
-            android:layout_margin="5dp">
+            android:layout_marginLeft="10dp"
+            >
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="현재 내 주소"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:fontFamily="@font/nanum_gothic_bold"
+                />
 
             <TextView
                 android:id="@+id/tv1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:text=""
                 android:textSize="17dp"
                 android:textStyle="bold"
-                android:fontFamily="@font/title2"></TextView>
+                android:fontFamily="@font/title2"
+                android:textColor="@color/blue"
+                android:layout_marginTop="23dp"
+                android:singleLine="true"
+                />
 
-            <!--<View
-                android:layout_width="match_parent"
-                android:layout_height="2dp"
-                android:background="#FF000000" />-->
         </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="8dp"
+            android:background="#B2B2B2"
+            android:layout_marginTop="20dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="세탁소 선택"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/nanum_gothic_bold"
+            />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:weightSum="10">
-
-
 
             <TextView
                 android:id="@+id/text"
@@ -75,15 +91,6 @@
                 android:layout_gravity="center"
                 android:gravity="right"
                 android:layout_weight="3"/>
-
-            <!--<Button
-                android:id="@+id/switchbutton"
-                android:layout_width="0dp"
-                android:layout_weight="3"
-                android:layout_height="wrap_content"
-                android:text="OFF"
-                android:background="@drawable/textback"
-                android:fontFamily="@font/boldsuzin"/>-->
         </LinearLayout>
 
         <TextView
@@ -92,7 +99,7 @@
             android:layout_height="0dp"
             android:layout_weight="0.1"
             android:text=""
-            android:textSize="1sp"></TextView>
+            android:textSize="1sp"/>
 
         <FrameLayout
             android:layout_width="match_parent"
@@ -115,6 +122,7 @@
                     android:layout_alignParentStart="true"
                     android:layout_alignParentLeft="true"/>
             </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
             <ImageView
                 android:layout_width="70dp"
                 android:layout_height="70dp"
@@ -144,8 +152,5 @@
         android:fitsSystemWindows="true"
         app:headerLayout="@layout/navi_header"
         app:menu="@menu/menu1"/>
-    />
-
-    <!--app:headerLayout="@layout/navi_header"-->
 
 </androidx.drawerlayout.widget.DrawerLayout>

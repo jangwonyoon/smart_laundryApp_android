@@ -115,25 +115,25 @@ public class user_frag_first extends Fragment {
             RequestQueue queue1 = Volley.newRequestQueue(getActivity());
             queue1.add(registerRequest1);
 
-        btn1 = rootView.findViewById(R.id.btn1);
-        btn1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent Sharing_intent = new Intent(Intent.ACTION_SEND);
-                Sharing_intent.setType("text/plain");
-
-                String Test_Message = re_set_title+" 에 대한 정보보기!";
-
-
-
-                /*String a = "https://map.naver.com/v5/search/"+re_set_title+"?c=14104623.8586647,4511836.5253034,15,0,0,0,dh";*/
-                String a = "http://edit0.dothome.co.kr/makeweb/web_search.php?uid="+re_set_title;
-                Sharing_intent.putExtra(Intent.EXTRA_TEXT, Test_Message+"\n"+a);
-
-                Intent Sharing = Intent.createChooser(Sharing_intent, "공유하기");
-                startActivity(Sharing);
-            }
-        });
+//        btn1 = rootView.findViewById(R.id.btn1);
+//        btn1.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent Sharing_intent = new Intent(Intent.ACTION_SEND);
+//                Sharing_intent.setType("text/plain");
+//
+//                String Test_Message = re_set_title+" 에 대한 정보보기!";
+//
+//
+//
+//                /*String a = "https://map.naver.com/v5/search/"+re_set_title+"?c=14104623.8586647,4511836.5253034,15,0,0,0,dh";*/
+//                String a = "http://edit0.dothome.co.kr/makeweb/web_search.php?uid="+re_set_title;
+//                Sharing_intent.putExtra(Intent.EXTRA_TEXT, Test_Message+"\n"+a);
+//
+//                Intent Sharing = Intent.createChooser(Sharing_intent, "공유하기");
+//                startActivity(Sharing);
+//            }
+//        });
 
 
 
@@ -142,19 +142,19 @@ public class user_frag_first extends Fragment {
             main_title.setText(re_set_title);
             /*title = main_title.getText().toString();*/
 
-            user_main1_back = (Button) rootView.findViewById(R.id.layout2_b1);
-            user_main1_back.setOnClickListener(new View.OnClickListener() {
-                public void onClick(View v) {
-                    Intent intent = new Intent(getActivity(), user_main1.class);
-                    intent.putExtra("user_name",user_name1);
-                    intent.putExtra("user_address",user_address1);
-                    intent.putExtra("user_lat",user_lat1);
-                    intent.putExtra("user_long",user_long1);
-                    intent.putExtra("user_id",user_id1);
-                    intent.putExtra("user_address_detail",user_address_detail1);
-                    startActivity(intent);
-                }
-            });
+//            user_main1_back = (Button) rootView.findViewById(R.id.layout2_b1);
+//            user_main1_back.setOnClickListener(new View.OnClickListener() {
+//                public void onClick(View v) {
+//                    Intent intent = new Intent(getActivity(), user_main1.class);
+//                    intent.putExtra("user_name",user_name1);
+//                    intent.putExtra("user_address",user_address1);
+//                    intent.putExtra("user_lat",user_lat1);
+//                    intent.putExtra("user_long",user_long1);
+//                    intent.putExtra("user_id",user_id1);
+//                    intent.putExtra("user_address_detail",user_address_detail1);
+//                    startActivity(intent);
+//                }
+//            });
 
             intoitemlist = (Button)rootView.findViewById(R.id.intoitemlist);
             intoitemlist.setOnClickListener(new View.OnClickListener() {
