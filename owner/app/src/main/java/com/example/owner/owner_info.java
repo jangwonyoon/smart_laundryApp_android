@@ -84,10 +84,10 @@ public class owner_info extends AppCompatActivity{
 
         //액션바 설정하기//
         //액션바 타이틀 변경하기
-        getSupportActionBar().setTitle("[개인정보] "+owner_name1+"사장님 안녕하세요.");
-        //액션바 배경색 변경
-        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(0xFF339999));
+        getSupportActionBar().setTitle("[개인정보] "+owner_name1+"사장님");
+        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(0xFF4472C4));
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setHomeAsUpIndicator(R.drawable.menu3);
 
 
         owner_ch_info = (Button) findViewById(R.id.layout5_b1);
@@ -235,12 +235,12 @@ public class owner_info extends AppCompatActivity{
         });
 
     }
-    @Override
+    /*@Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu2, menu);
         return true;
-    }
+    }*/
 
     /*@Override
     public boolean onOptionsItemSelected(MenuItem item) {

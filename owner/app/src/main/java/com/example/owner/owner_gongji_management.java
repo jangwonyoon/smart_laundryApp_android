@@ -83,10 +83,10 @@ public class owner_gongji_management extends AppCompatActivity{
 
         //액션바 설정하기//
         //액션바 타이틀 변경하기
-        getSupportActionBar().setTitle("[공지사항] "+owner_name1+"사장님 안녕하세요.");
-        //액션바 배경색 변경
-        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(0xFF339999));
+        getSupportActionBar().setTitle("[공지사항] "+owner_name1+"사장님");
+        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(0xFF4472C4));
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setHomeAsUpIndicator(R.drawable.menu3);
 
 
         et1.setText(gongji1);
