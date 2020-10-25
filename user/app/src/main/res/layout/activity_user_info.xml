@@ -8,14 +8,14 @@
     tools:context=".user_info"
     android:background="@color/white"
     android:id="@+id/drawer_layout">
-
-
+    ​
+    ​
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:gravity="center">
-
+        ​
         <TextView
             android:id="@+id/layout5_tv1"
             android:layout_width="wrap_content"
@@ -27,9 +27,9 @@
             android:layout_gravity="left"
             android:textStyle="bold"
             android:fontFamily="@font/medium">
-
+            ​
         </TextView>
-
+        ​
         <EditText
             android:id="@+id/layout5_et2"
             android:layout_marginTop="10dp"
@@ -45,7 +45,7 @@
             android:singleLine="true"
             android:fontFamily="@font/medium"
             />
-
+        ​
         <Button
             android:id="@+id/layout5_b1"
             android:layout_below="@+id/layout5_et2"
@@ -58,7 +58,7 @@
             android:background="@drawable/buttonshape"
             />
     </LinearLayout>
-
+    ​
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/nav_view"
         android:layout_width="250dp"
@@ -68,8 +68,8 @@
         app:headerLayout="@layout/navi_header"
         app:menu="@menu/menu1"/>
     />
-
-
-
-
+    ​
+    ​
+    ​
+    ​
 </androidx.drawerlayout.widget.DrawerLayout>

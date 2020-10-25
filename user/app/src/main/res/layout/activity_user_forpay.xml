@@ -10,104 +10,65 @@
     android:background="@color/white">
 
     <LinearLayout
-        android:id="@+id/layout2_1"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1.5"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:layout_weight="2.5">
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="2dp"
-            android:layout_marginTop="20dp"
-            android:background="#FF000000" />
-
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <Button
-                android:id="@+id/layout2_b1"
-                android:layout_width="35dp"
-                android:layout_height="35dp"
-                android:layout_gravity="left"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:background="@drawable/arrow_back">
-
-            </Button>
-
-            <TextView
-                android:id="@+id/title1"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:text="앞image에서가져오기"
-                android:textSize="25dp"
-                android:textStyle="bold"
-                android:fontFamily="@font/title2"
-                android:layout_marginTop="5dp"></TextView>
-        </FrameLayout>
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="2dp"
-            android:background="#FF000000" />
-
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:id="@+id/title1"
+            android:layout_gravity="center"
+            android:textSize="24dp"
+            android:textStyle="bold"
+            android:layout_marginTop="80dp"
+            android:fontFamily="@font/nanum_gothic_bold"
+            />
     </LinearLayout>
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="@color/grey"
+        android:layout_gravity="center"/>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="7.5"
+        android:layout_weight="6.5"
+        android:layout_margin="30dp"
         android:orientation="vertical">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="30dp"
-            android:layout_margin="10dp"
             android:text="요청사항"
             android:textStyle="bold"
             android:textSize="20dp"
             android:fontFamily="@font/medium">
         </TextView>
 
-
-        <!--<EditText
-            android:id="@+id/editText3"
-            android:layout_width="match_parent"
-            android:layout_height="380dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:gravity="top"
-            android:hint="입력란"
-            />-->
         <EditText
             android:id="@+id/et1"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:hint="요청사항"
+            android:hint="요청사항 입력"
             android:gravity="top"
             />
-    </LinearLayout>
-
-
+    </LinearLayout>란
 
     <Button
         android:id="@+id/pay"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
         android:layout_marginTop="20dp"
+        android:fontFamily="@font/nanum_gothic_regular"
         android:text="결제하기"
         android:textSize="25dp"
-        android:layout_gravity="center"
-        android:fontFamily="@font/boldsuzin"/>
-
-
+        android:background="@drawable/buttonshape"
+        android:textColor="@color/white"
+        />
 </LinearLayout>

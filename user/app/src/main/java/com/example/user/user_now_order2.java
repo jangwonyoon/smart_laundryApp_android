@@ -62,20 +62,20 @@ public class user_now_order2 extends Activity {
         date1 = intent.getIntExtra("date",0);
 
 
-        back = (Button) findViewById(R.id.layout2_b1);
-        back.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                Intent intent = new Intent(user_now_order2.this, user_now_order.class);
-                intent.putExtra("user_name",user_name1);
-                intent.putExtra("user_address",user_address1);
-                intent.putExtra("user_lat",user_lat1);
-                intent.putExtra("user_long",user_long1);
-                intent.putExtra("user_id",user_id1);
-                intent.putExtra("user_address_detail",user_address_detail1);
-
-                startActivity(intent);
-            }
-        });
+//        back = (Button) findViewById(R.id.layout2_b1);
+//        back.setOnClickListener(new View.OnClickListener() {
+//            public void onClick(View v) {
+//                Intent intent = new Intent(user_now_order2.this, user_now_order.class);
+//                intent.putExtra("user_name",user_name1);
+//                intent.putExtra("user_address",user_address1);
+//                intent.putExtra("user_lat",user_lat1);
+//                intent.putExtra("user_long",user_long1);
+//                intent.putExtra("user_id",user_id1);
+//                intent.putExtra("user_address_detail",user_address_detail1);
+//
+//                startActivity(intent);
+//            }
+//        });
 
         tv1 = (TextView)findViewById(R.id.s_name);
         tv1.setText(s_name1);

@@ -98,20 +98,20 @@ public class user_itempage extends Activity {
 
 
 
-        b1 = (Button) findViewById(R.id.layout2_b1);
-        b1.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                Intent intent = new Intent(user_itempage.this, ImageActivity.class);
-                intent.putExtra("user_name",user_name1);
-                intent.putExtra("user_address",user_address1);
-                intent.putExtra("user_lat",user_lat1);
-                intent.putExtra("user_long",user_long1);
-                intent.putExtra("title",title);
-                intent.putExtra("user_id",user_id1);
-                intent.putExtra("user_address_detail",user_address_detail1);
-                startActivity(intent);
-            }
-        });
+//        b1 = (Button) findViewById(R.id.layout2_b1);
+//        b1.setOnClickListener(new View.OnClickListener() {
+//            public void onClick(View v) {
+//                Intent intent = new Intent(user_itempage.this, ImageActivity.class);
+//                intent.putExtra("user_name",user_name1);
+//                intent.putExtra("user_address",user_address1);
+//                intent.putExtra("user_lat",user_lat1);
+//                intent.putExtra("user_long",user_long1);
+//                intent.putExtra("title",title);
+//                intent.putExtra("user_id",user_id1);
+//                intent.putExtra("user_address_detail",user_address_detail1);
+//                startActivity(intent);
+//            }
+//        });
 
         gotopocket = (Button) findViewById(R.id.gotopocket);
         gotopocket.setOnClickListener(new View.OnClickListener(){

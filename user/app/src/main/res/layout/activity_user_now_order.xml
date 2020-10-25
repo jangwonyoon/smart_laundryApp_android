@@ -13,19 +13,35 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="20dp"
         android:orientation="vertical">
+
         <TextView
             android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:text="주문 목록"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:fontFamily="@font/nanum_gothic_bold"
+            android:textColor="@color/black"
+            />
+
+        <TextView
+            android:layout_margin="30dp"
+            android:layout_width="wrap_content"
             android:layout_height="20dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="5dp"
-            android:text="*현재 주문목록들을 볼 수 있습니다.*"
+            android:text="※ 현재 주문목록들을 볼 수 있습니다."
             android:textStyle="bold"
             android:textSize="15dp"
-            android:fontFamily="@font/medium">
+            android:fontFamily="@font/nanum_gothic_bold"
+            />
 
-        </TextView>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="@color/grey"
+            />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -37,7 +53,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="1sp"
-                android:text=""></TextView>
+                android:text=""/>
 
             <androidx.recyclerview.widget.RecyclerView
                 android:layout_width="wrap_content"
@@ -60,10 +76,4 @@
         android:fitsSystemWindows="true"
         app:headerLayout="@layout/navi_header"
         app:menu="@menu/menu1"/>
-    />
-
-
-
-
-
 </androidx.drawerlayout.widget.DrawerLayout>
