@@ -66,7 +66,7 @@ public class user_gongji extends AppCompatActivity{
 
         //액션바 설정하기//
         //액션바 타이틀 변경하기
-        getSupportActionBar().setTitle("[공지사항]  "+user_name1+"님");
+        getSupportActionBar().setTitle("[공지사항]  "+user_name1+"님 안녕하세요.");
         //액션바 배경색 변경
         getSupportActionBar().setBackgroundDrawable(new ColorDrawable(0xFF4472C4));
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);

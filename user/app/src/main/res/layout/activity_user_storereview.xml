@@ -9,11 +9,14 @@
     android:weightSum="10"
     android:background="@color/white">
 
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="2"
         android:gravity="center"
+        android:orientation="vertical"
+        android:layout_marginTop="50dp"
         >
         <TextView
             android:layout_gravity="center"
@@ -23,49 +26,79 @@
             android:text=""
             android:textSize="24dp"
             android:textStyle="bold"
+            android:textColor="@color/black"
+            android:fontFamily="@font/nanum_gothic_bold"
             />
-    </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="0.5"
-        android:orientation="horizontal"
-        android:gravity="center"
-        >
-
-        <TextView
-            android:layout_marginLeft="30dp"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textStyle="bold"
-            android:text="평점:"
-            android:textSize="17dp"
-            android:fontFamily="@font/nanum_gothic_bold"/>
-
-        <TextView
-            android:id="@+id/avgrating"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:textStyle="bold"
-            android:text="0.0"
-            android:textSize="17dp"
-            android:layout_marginLeft="10dp"
+            android:layout_weight="0.5"
             android:gravity="center"
-            android:fontFamily="@font/nanum_gothic_regular"/>
+            android:orientation="vertical"
+            >
 
-        <RatingBar
-            android:id="@+id/rating"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:numStars="5"
-            android:isIndicator="true"
-            android:stepSize="1"
-            android:max="5"
-            android:layout_marginLeft="20dp"
-            style="?android:attr/ratingBarStyleSmall"
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                >
+                <RatingBar
+                    android:id="@+id/rating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:numStars="5"
+                    android:isIndicator="true"
+                    android:stepSize="1"
+                    android:max="5"
+                    android:layout_marginLeft="20dp"
+                    style="?android:attr/ratingBarStyleSmall"
+                    />
 
-            />
+                <TextView
+                    android:id="@+id/avgrating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textStyle="bold"
+                    android:text="0.0"
+                    android:textSize="17dp"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center"
+                    android:fontFamily="@font/nanum_gothic_regular"
+                    android:textColor="@color/blue"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="30dp"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="17dp"
+                    android:text="리뷰 수: "
+                    android:textStyle="bold"
+                    android:fontFamily="@font/nanum_gothic_bold"
+                    android:textColor="@color/black"
+                    />
+                <TextView
+                    android:id="@+id/total_review_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="17dp"
+                    android:textColor="@color/blue"
+                    android:fontFamily="@font/nanum_gothic_bold"
+                    />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
     </LinearLayout>
 
     <LinearLayout
@@ -75,20 +108,6 @@
         android:orientation="horizontal"
         android:gravity="center"
         >
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="17dp"
-            android:text="가게 총 리뷰 수: "
-            android:textStyle="bold"
-            android:fontFamily="@font/medium"/>
-        <TextView
-            android:id="@+id/total_review_num"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text=""
-            android:textSize="17dp"
-            />
     </LinearLayout>
 
     <FrameLayout

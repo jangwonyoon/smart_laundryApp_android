@@ -254,9 +254,10 @@ public class user_main1 extends AppCompatActivity{
         getSupportActionBar().setTitle(user_name1+"님");
         //액션바 배경색 변경
         getSupportActionBar().setBackgroundDrawable(new ColorDrawable(0xFF4472C4));
+        //홈버튼 표시
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        // 네비게이션 바 아이콘
         getSupportActionBar().setHomeAsUpIndicator(R.drawable.menu3);
-
 
         user_address = findViewById(R.id.tv1);
         user_address.setText(user_address1);
