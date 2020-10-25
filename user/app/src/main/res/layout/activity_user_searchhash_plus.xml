@@ -15,7 +15,8 @@
         android:gravity="center"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:background="@color/blue">
 
         <!--<View
             android:layout_width="match_parent"
@@ -45,14 +46,11 @@
                 android:text="#인기태그"
                 android:textSize="30dp"
                 android:textStyle="bold"
-                android:fontFamily="@font/title2"/>
+                android:fontFamily="@font/title2"
+                android:textColor="@color/white"/>
 
         </FrameLayout>
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="2dp"
-            android:background="#FF000000" />
 
     </LinearLayout>
 

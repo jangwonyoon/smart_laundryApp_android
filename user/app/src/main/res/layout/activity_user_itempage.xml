@@ -84,20 +84,32 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="2"
-        android:gravity="center">
+        android:gravity="center"
+        android:weightSum="3">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="돌아가기"
+            android:id="@+id/layout2_b1"
+            android:textColor="@color/white"
+            android:fontFamily="@font/nanum_gothic_bold"
+            android:background="@drawable/buttonshape"
+            android:layout_marginRight="20dp"
+            android:textSize="20dp"/>
 
         <Button
             android:id="@+id/gotopocket"
-            android:layout_width="200dp"
-            android:layout_height="50dp"
-            android:layout_margin="10dp"
-            android:text="장바구니 담기"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="20dp"
+            android:text="담기"
             android:textSize="20dp"
             android:fontFamily="@font/nanum_gothic_bold"
             android:background="@drawable/buttonshape"
-            android:textColor="@color/white"
-            android:padding="15dp"
-            >
+            android:textColor="@color/white">
 
         </Button>
     </LinearLayout>

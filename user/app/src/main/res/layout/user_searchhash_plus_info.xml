@@ -22,8 +22,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:padding="10dp"
-                android:background="@color/colorAccent"
+                android:background="@color/blue"
                 android:gravity="center"
+                android:textColor="@color/white"
                 android:text="#드라이"
                 android:textSize="30dp"/>
 
