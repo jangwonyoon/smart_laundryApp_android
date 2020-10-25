@@ -8,60 +8,7 @@
     android:orientation="vertical"
     android:background="@color/white">
 
-
-    <LinearLayout
-        android:id="@+id/layout3_1"
-        android:layout_gravity="center"
-        android:gravity="center"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-
-        <!--<View
-            android:layout_width="match_parent"
-            android:layout_height="2dp"
-            android:background="#FF000000" />-->
-
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <Button
-                android:id="@+id/layout3_b1"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_gravity="left"
-                android:background="@drawable/arrow_back"
-                android:layout_margin="10dp">
-
-            </Button>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:layout_marginTop="5dp"
-                android:text="#검색"
-                android:textSize="30dp"
-                android:textStyle="bold"
-                android:fontFamily="@font/title2"></TextView>
-
-            <Button
-                android:id="@+id/ingi"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:layout_gravity="right"
-                android:text="인기태그"/>
-        </FrameLayout>
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="2dp"
-            android:background="#FF000000" />
-
-    </LinearLayout>
+    <!-- android:id="@+id/ingi"-->
 
     <FrameLayout
         android:layout_width="match_parent"
@@ -72,18 +19,19 @@
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
             android:id="@+id/layout1">
+
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/layout2_et1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="검색"
+                android:hint="검색 |"
                 android:maxLength="30"
                 android:inputType="text"
                 android:layout_margin="7dp"
-                android:fontFamily="@font/medium"
+                android:fontFamily="@font/nanum_gothic_bold"
                 android:singleLine="true"
+                android:textColor="@color/grey"
                 >
-
             </com.google.android.material.textfield.TextInputEditText>
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -112,7 +60,10 @@
             android:id="@+id/showdata1"
             android:text=""
             android:textSize="15dp"
-            android:background="@color/white"/>
+            android:background="@color/white"
+            android:fontFamily="@font/nanum_gothic_bold"
+            android:textStyle="bold"
+            />
 
         <Button
             android:layout_width="wrap_content"
@@ -120,14 +71,20 @@
             android:id="@+id/showdata2"
             android:text=""
             android:textSize="15dp"
-            android:background="@color/white"/>
+            android:background="@color/white"
+            android:fontFamily="@font/nanum_gothic_bold"
+            android:textStyle="bold"
+            />
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/showdata3"
             android:text=""
             android:textSize="15dp"
-            android:background="@color/white"/>
+            android:background="@color/white"
+            android:fontFamily="@font/nanum_gothic_bold"
+            android:textStyle="bold"
+            />
     </LinearLayout>
 
     <TextView
@@ -135,15 +92,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text=""
-        android:textSize="1sp"></TextView>
+        android:textSize="1sp"/>
 
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/frame">
-
-
-
             <androidx.recyclerview.widget.RecyclerView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"

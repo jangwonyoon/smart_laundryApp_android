@@ -16,7 +16,7 @@
             android:layout_margin="5dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
-            android:src="@drawable/ic_launcher_foreground" />
+            android:src="@drawable/jyp" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -24,30 +24,39 @@
             android:layout_marginLeft="10dp"
             android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/s_name"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:text="Large Text"
-                android:textSize="18dp"
-                android:textColor="#111111"
-                android:fontFamily="@font/nexonregular"/>
+                >
 
-            <TextView
-                android:layout_marginTop="5dp"
-                android:id="@+id/o_id"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Medium Text"
-                android:textSize="15dp"
-                android:textColor="#111111"
-                android:fontFamily="@font/nexonregular"/>
+                <TextView
+                    android:id="@+id/s_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Large Text"
+                    android:textSize="18dp"
+                    android:textColor="#111111"
+                    android:fontFamily="@font/nanum_gothic_bold"
+                    android:layout_marginTop="20dp"
+                    />
+                <TextView
+                    android:id="@+id/o_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Medium Text"
+                    android:textSize="15dp"
+                    android:textColor="#111111"
+                    android:fontFamily="@font/nanum_gothic_bold"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="10dp"
+                    />
+            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="3dp">
+                android:layout_marginTop="15dp"
+                >
 
                 <TextView
                     android:id="@+id/o_pw"
@@ -57,7 +66,7 @@
                     android:textSize="15dp"
                     android:textColor="#111111"
                     android:layout_marginRight="3dp"
-                    android:fontFamily="@font/nexonlight"/>
+                    android:fontFamily="@font/nanum_gothic_regular"/>
 
                 <TextView
                     android:id="@+id/data2"
@@ -67,7 +76,7 @@
                     android:textSize="15dp"
                     android:textColor="#111111"
                     android:layout_marginRight="3dp"
-                    android:fontFamily="@font/nexonlight"/>
+                    android:fontFamily="@font/nanum_gothic_regular"/>
 
                 <TextView
                     android:id="@+id/data3"
@@ -76,7 +85,7 @@
                     android:text="Medium Text"
                     android:textSize="15dp"
                     android:textColor="#111111"
-                    android:fontFamily="@font/nexonlight"/>
+                    android:fontFamily="@font/nanum_gothic_regular"/>
 
             </LinearLayout>
 
