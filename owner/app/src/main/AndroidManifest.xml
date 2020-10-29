@@ -21,7 +21,7 @@
         android:roundIcon="@mipmap/washing_machine_owner_foreground"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".showimage"></activity>
+        <activity android:name=".showimage"/>
         <activity android:name=".owner_forgot_pw_change" />
         <activity android:name=".owner_forgot_id_pw" />
         <activity android:name=".owner_order_record2" />
@@ -29,18 +29,12 @@
         <activity android:name=".owner_review_management_reply" />
         <activity android:name=".owner_info1" />
         <activity android:name=".owner_item_add_del_up_del" />
-        <activity android:name=".owner_item_add_del_add" />
+        <activity android:name=".owner_item_add_del_add"/>
         <activity android:name=".owner_item_add_del" />
         <activity android:name=".owner_logout" />
         <activity android:name=".owner_review_management" />
         <activity android:name=".owner_info" />
-        <activity android:name=".owner_gongji_management">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        <activity android:name=".owner_gongji_management"/>
         <activity android:name=".owner_order_y_n" />
         <activity android:name=".owner_main" />
         <activity android:name=".mainloading" />
@@ -50,11 +44,11 @@
         <activity android:name=".owner_signup2" />
         <activity android:name=".owner_signup1" />
         <activity android:name=".MainActivity">
-<!--            <intent-filter>-->
-<!--                <action android:name="android.intent.action.MAIN" />-->
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-<!--                <category android:name="android.intent.category.LAUNCHER" />-->
-<!--            </intent-filter>-->
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity android:name=".ImageActivity_owner" /> <!-- 구글 API -->
         <meta-data

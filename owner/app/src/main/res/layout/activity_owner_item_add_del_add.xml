@@ -5,71 +5,101 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".owner_item_add_del_add"
-    android:gravity="center"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:weightSum="10"
+    android:background="@color/white"
+    >
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="추가"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:gravity="center"
+        android:text="상품 등록"
+        android:layout_marginTop="30dp"
         android:textStyle="bold"
+        android:textColor="@color/black"
+        android:fontFamily="@font/notosanskrbold"
         android:textSize="25dp"/>
-    <LinearLayout
-        android:id="@+id/layout_info3"
-        android:layout_margin="10dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text=" 상품명: "
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:layout_marginLeft="20dp"
-            android:textStyle="bold">
 
-        </TextView>
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="0dp"
+       android:layout_weight="4"
+       >
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_margin="40dp"
+           android:orientation="vertical"
+           android:background="#CEDAF1"
+           android:padding="20dp"
+           >
 
-        <EditText
-            android:id="@+id/layout_et1"
-            android:layout_width="250dp"
-            android:layout_height="50dp"
-            android:layout_marginLeft="5dp"
-            >
+           <LinearLayout
+               android:id="@+id/layout_info3"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:orientation="horizontal"
+               >
 
-        </EditText>
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text=" 상품명: "
+                   android:textSize="20dp"
+                   android:fontFamily="@font/notosanskrbold"
+                   android:layout_marginLeft="20dp"
+                   android:textStyle="bold"
+                   android:textColor="@color/black"
+                   >
 
-    </LinearLayout>
+               </TextView>
 
-    <LinearLayout
-        android:id="@+id/layout_info4"
-        android:layout_margin="10dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/layout_info3"
-        android:orientation="horizontal">
+               <EditText
+                   android:id="@+id/layout_et1"
+                   android:layout_width="250dp"
+                   android:layout_height="50dp"
+                   android:layout_marginLeft="5dp"
+                   android:backgroundTint = "@color/blue"
+                   >
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="   가격: "
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:layout_marginLeft="20dp"
-            android:textStyle="bold">
+               </EditText>
 
-        </TextView>
+           </LinearLayout>
 
-        <EditText
-            android:id="@+id/layout_et2"
-            android:layout_width="250dp"
-            android:layout_height="50dp"
-            android:layout_marginLeft="15dp"
-            >
+           <LinearLayout
+               android:id="@+id/layout_info4"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_below="@id/layout_info3"
+               android:orientation="horizontal">
 
-        </EditText>
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="   가격: "
+                   android:textSize="20dp"
+                   android:fontFamily="@font/notosanskrbold"
+                   android:textColor="@color/black"
+                   android:layout_marginLeft="20dp"
+                   android:textStyle="bold">
 
-    </LinearLayout>
+               </TextView>
+
+               <EditText
+                   android:id="@+id/layout_et2"
+                   android:layout_width="250dp"
+                   android:layout_height="50dp"
+                   android:layout_marginLeft="15dp"
+                   android:backgroundTint = "@color/blue"
+                   />
+           </LinearLayout>
+
+       </LinearLayout>
+
+   </LinearLayout>
 
 
     <LinearLayout
@@ -77,16 +107,20 @@
         android:layout_height="100dp"
         android:orientation="vertical"
         android:layout_below="@+id/layout_info4"
-        android:gravity="center"
+        android:gravity="start"
+        android:layout_weight="3"
         >
 
         <Button
             android:id="@+id/layout_b4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:textSize="20dp"
-            android:text="추가하기">
-
+            android:text="등록"
+            android:textColor="@color/white"
+            android:background="@drawable/buttonshape2"
+            >
         </Button>
 
 
