@@ -75,28 +75,31 @@
             android:gravity="center"
             android:layout_marginTop="20dp"
             >
-            <Button
+            <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/review"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="리뷰쓰기"
                 android:textSize="15dp"
+                android:textColor="@color/white"
                 android:background="@drawable/buttonshape"/>
-            <Button
+            <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/intostore"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:text="가게보기"
+                android:textColor="@color/white"
                 android:textSize="15dp"
                 android:background="@drawable/buttonshape"/>
-            <Button
+            <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/detail"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="자세히"
                 android:textSize="15dp"
+                android:textColor="@color/white"
                 android:background="@drawable/buttonshape"/>
         </LinearLayout>
         <View
