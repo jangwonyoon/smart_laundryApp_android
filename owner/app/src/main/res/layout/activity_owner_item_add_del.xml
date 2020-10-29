@@ -19,15 +19,27 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="8.5"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            >
 
             <TextView
-                android:id="@+id/layout_temp"
+                android:gravity="center"
                 android:layout_marginTop="30dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:text="* 상품 등록/제거를 할 수 있는 페이지입니다. *"
+                android:text="상품관리"
+                android:textColor="@color/black"
+                android:fontFamily="@font/notosanskrbold"
+                android:textStyle="bold"
+                android:textSize="24dp">
+            </TextView>
+
+            <TextView
+                android:gravity="center"
+                android:id="@+id/layout_temp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="상품 등록/제거를 할 수 있는 페이지입니다."
                 android:textStyle="bold"
                 android:textSize="15dp">
             </TextView>
@@ -36,7 +48,7 @@
                 android:id="@+id/textView_main_result"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text=""></TextView>
+                android:text=""/>
 
             <androidx.recyclerview.widget.RecyclerView
                 android:layout_width="wrap_content"
@@ -49,20 +61,37 @@
                 android:layout_alignParentLeft="true"/>
         </LinearLayout>
 
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:orientation="vertical"
-            android:layout_weight="1.5">
+            android:orientation="horizontal"
+            android:layout_weight="1.5"
+            android:gravity="center"
+            >
 
             <Button
                 android:id="@+id/add"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:layout_marginLeft="30dp"
+                android:background="@drawable/buttonshape3"
+                android:fontFamily="@font/regular"
                 android:text="+ 추가"
-                android:textSize="20dp"/>
+                android:textColor="@color/blue"
+                android:textSize="15dp" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="저장"
+                android:textSize="15dp"
+                android:layout_marginLeft="30dp"
+                android:background="@drawable/buttonshape2"
+                android:textColor="@color/white"
+                android:fontFamily="@font/regular"
+                />
         </LinearLayout>
     </LinearLayout>
 
@@ -74,7 +103,4 @@
         android:fitsSystemWindows="true"
         app:headerLayout="@layout/navi_header"
         app:menu="@menu/menu2"/>
-    />
-
-
 </androidx.drawerlayout.widget.DrawerLayout>
