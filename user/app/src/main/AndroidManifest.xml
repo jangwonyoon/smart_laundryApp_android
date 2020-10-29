@@ -21,11 +21,11 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".showimage"></activity>
-        <activity android:name=".user_searchhash_plus" />
+        <activity android:name=".user_searchhash_plus"/>
         <activity android:name=".user_searchhash" />
         <activity android:name=".user_main2" />
         <activity android:name=".user_frag_first" />
-        <activity android:name=".see_others_review" />
+        <activity android:name=".see_others_review"/>
         <activity android:name=".user_forgot_pw_change" />
         <activity android:name=".user_write_review" />
         <activity android:name=".user_order_record2" />

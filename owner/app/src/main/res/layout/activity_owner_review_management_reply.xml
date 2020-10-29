@@ -45,7 +45,7 @@
                 android:gravity="center"
                 android:text="리뷰관리"
                 android:textSize="25dp"
-                android:textStyle="bold"></TextView>
+                android:textStyle="bold"/>
         </FrameLayout>
 
         <View

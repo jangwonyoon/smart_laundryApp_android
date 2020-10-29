@@ -70,8 +70,8 @@ public class see_others_review extends Activity {
         user_id1 = intent.getStringExtra("user_id");
         user_address_detail1 = intent.getStringExtra("user_address_detail");
 
-        tv1 = findViewById(R.id.u_id);
-        tv1.setText(now_user_id1);
+//        tv1 = findViewById(R.id.u_id);
+//        tv1.setText(now_user_id1);
 
 
         tv2 = findViewById(R.id.num);
@@ -102,21 +102,6 @@ public class see_others_review extends Activity {
         see_others_review_db_sum registerRequest = new see_others_review_db_sum(now_user_id1, responseListener);
         RequestQueue queue = Volley.newRequestQueue(see_others_review.this);
         queue.add(registerRequest);
-
-        b1 = (Button) findViewById(R.id.layout2_b1);
-        b1.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                Intent intent = new Intent(see_others_review.this, ImageActivity.class);
-                intent.putExtra("user_name",user_name1);
-                intent.putExtra("user_address",user_address1);
-                intent.putExtra("user_lat",user_lat1);
-                intent.putExtra("user_long",user_long1);
-                intent.putExtra("title",store_name1);
-                intent.putExtra("user_id",user_id1);
-                intent.putExtra("user_address_detail",user_address_detail1);
-                startActivity(intent);
-            }
-        });
 
         mTextViewResult = (TextView)findViewById(R.id.textView_main_result);
         mRecyclerView = (RecyclerView) findViewById(R.id.listView_main_list);

@@ -22,9 +22,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:padding="10dp"
-                android:background="@color/colorAccent"
                 android:gravity="center"
                 android:text="#드라이"
+                android:background="@drawable/a"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:fontFamily="@font/nanum_gothic_bold"
                 android:textSize="30dp"/>
 
         </LinearLayout>
