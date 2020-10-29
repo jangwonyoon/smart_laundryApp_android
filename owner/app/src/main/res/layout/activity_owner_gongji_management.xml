@@ -19,22 +19,34 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:orientation="vertical"
-            android:layout_weight="8.5">
+            android:layout_weight="8.5"
+            android:gravity="center"
+            >
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="*공지사항 관리*"
-                android:layout_margin="5dp"
-                android:textStyle="bold"
-                android:textSize="20dp"/>
+                android:text="공지사항 관리"
+                android:fontFamily="@font/notosanskrbold"
+                android:textColor="@color/black"
+                android:textSize="25dp"
+                android:layout_marginTop="20dp"
+
+                />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="가게의 운영방침 및 자랑, 이벤트 등 우리 가게를 소개해주세요!"
-                android:textSize="15dp"
+                android:textSize="12dp"
+                android:fontFamily="@font/regular"
                 android:textStyle="bold"
-                android:layout_margin="5dp"/>
+                />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="#E2E2E2"
+                />
+
 
             <EditText
                 android:id="@+id/contentgongji"
@@ -43,7 +55,7 @@
                 android:layout_margin="5dp"
                 android:gravity="top"
                 android:hint="입력란"
-                android:textSize="15dp"/>
+                android:textSize="15dp" />
         </LinearLayout>
 
 
@@ -59,7 +71,11 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:text="저장"
-                android:layout_gravity="center" />
+                android:layout_gravity="center"
+                android:background="@color/blue"
+                android:textColor="@color/white"
+                android:fontFamily="@font/notomedium"
+                />
         </LinearLayout>
     </LinearLayout>
 
@@ -71,9 +87,5 @@
         android:fitsSystemWindows="true"
         app:headerLayout="@layout/navi_header"
         app:menu="@menu/menu2"/>
-    />
-
-
-
 
 </androidx.drawerlayout.widget.DrawerLayout>
