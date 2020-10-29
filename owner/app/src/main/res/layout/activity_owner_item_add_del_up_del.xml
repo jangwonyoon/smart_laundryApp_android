@@ -4,78 +4,100 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".owner_item_add_del_up_del"
-    android:gravity="center"
-    android:orientation="vertical">
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/layout_info3">
+    tools:context=".owner_item_add_del_add"
+    android:orientation="vertical"
+    android:weightSum="10"
+    android:background="@color/white"
+    >
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="수정/삭제"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:gravity="center"
+        android:text="상품 수정/삭제"
+        android:layout_marginTop="30dp"
         android:textStyle="bold"
+        android:textColor="@color/black"
+        android:fontFamily="@font/notosanskrbold"
         android:textSize="25dp"/>
-    </LinearLayout>
 
 
     <LinearLayout
-        android:id="@+id/layout_info3"
-        android:layout_margin="10dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <TextView
-            android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="4"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text=" 상품명: "
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:layout_marginLeft="20dp"
-            android:textStyle="bold">
-
-        </TextView>
-
-        <EditText
-            android:id="@+id/layout_et1"
-            android:layout_width="250dp"
-            android:layout_height="50dp"
-            android:layout_marginLeft="5dp"
+            android:layout_margin="40dp"
+            android:orientation="vertical"
+            android:background="#CEDAF1"
+            android:padding="20dp"
             >
 
-        </EditText>
+            <LinearLayout
+                android:id="@+id/layout_info3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
 
-    </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" 상품명: "
+                    android:textSize="20dp"
+                    android:fontFamily="@font/notosanskrbold"
+                    android:layout_marginLeft="20dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    >
 
-    <LinearLayout
-        android:id="@+id/layout_info4"
-        android:layout_margin="10dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/layout_info3"
-        android:orientation="horizontal">
+                </TextView>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="   가격: "
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:layout_marginLeft="20dp"
-            android:textStyle="bold">
+                <EditText
+                    android:id="@+id/layout_et1"
+                    android:layout_width="250dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="5dp"
+                    android:backgroundTint = "@color/blue"
+                    >
 
-        </TextView>
+                </EditText>
 
-        <EditText
-            android:id="@+id/layout_et2"
-            android:layout_width="250dp"
-            android:layout_height="50dp"
-            android:layout_marginLeft="15dp"
-            >
+            </LinearLayout>
 
-        </EditText>
+            <LinearLayout
+                android:id="@+id/layout_info4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/layout_info3"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="   가격: "
+                    android:textSize="20dp"
+                    android:fontFamily="@font/notosanskrbold"
+                    android:textColor="@color/black"
+                    android:layout_marginLeft="20dp"
+                    android:textStyle="bold">
+
+                </TextView>
+
+                <EditText
+                    android:id="@+id/layout_et2"
+                    android:layout_width="250dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="15dp"
+                    android:backgroundTint = "@color/blue"
+                    />
+            </LinearLayout>
+
+        </LinearLayout>
 
     </LinearLayout>
 
@@ -83,34 +105,43 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:orientation="horizontal"
+        android:orientation="vertical"
         android:layout_below="@+id/layout_info4"
-        android:gravity="center"
+        android:gravity="start"
+        android:layout_weight="3"
         >
 
-        <Button
-            android:id="@+id/layout_b4"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="20dp"
-            android:layout_marginRight="20dp"
-            android:text="수정완료">
+            android:gravity="center"
+            >
 
-        </Button>
+            <Button
+                android:id="@+id/layout_b4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/buttonshape3"
+                android:text="수정"
+                android:textColor="@color/blue"
+                >
 
-        <Button
-            android:id="@+id/layout_b3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:textSize="20dp"
-            android:text="    삭제    ">
+            </Button>
 
-        </Button>
+            <Button
+                android:id="@+id/layout_b3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:textSize="20dp"
+                android:text="삭제"
+                android:background="@drawable/buttonshape2"
+                android:textColor="@color/white"
+                />
+        </LinearLayout>
 
 
     </LinearLayout>
-
-
-
 </LinearLayout>
