@@ -69,7 +69,7 @@
             android:gravity="center"
             >
 
-            <Button
+            <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/add"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -81,7 +81,7 @@
                 android:textColor="@color/blue"
                 android:textSize="15dp" />
 
-            <Button
+            <androidx.appcompat.widget.AppCompatButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"

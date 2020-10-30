@@ -4,7 +4,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -18,7 +20,7 @@ import com.android.volley.toolbox.Volley;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-public class owner_review_management_reply extends Activity {
+public class owner_review_management_reply extends AppCompatActivity {
     private Button b1,b2;
     private EditText et1;
     private TextView tv1;
@@ -40,6 +42,10 @@ public class owner_review_management_reply extends Activity {
         store_name1 = intent.getStringExtra("store_name");
         now_user_id1 = intent.getStringExtra("now_user_id");
         date1 = intent.getStringExtra("date");
+
+        getSupportActionBar().setTitle("[리뷰 관리]"+ store_name1+ "사장님");
+        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(0xFF4472C4));
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         date = Integer.parseInt(date1);
         tv1 = (TextView) findViewById(R.id.now_user_id);
@@ -64,7 +70,6 @@ public class owner_review_management_reply extends Activity {
                                 intent.putExtra("owner_lat",owner_lat1);
                                 intent.putExtra("owner_long",owner_long1);
                                 intent.putExtra("store_name",store_name1);
-
                                 startActivity(intent);
                             }
                             //실패한 경우
@@ -86,10 +91,12 @@ public class owner_review_management_reply extends Activity {
                 queue.add(registerRequest);
             }
         });
+    }
 
-        b2 = (Button) findViewById(R.id.layout2_b1);
-        b2.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()){
+            case android.R.id.home:{ // 왼쪽 상단 버튼 눌렀을 때
                 Intent intent = new Intent(owner_review_management_reply.this, owner_review_management.class);
                 intent.putExtra("owner_name",owner_name1);
                 intent.putExtra("owner_address",owner_address1);
@@ -98,7 +105,11 @@ public class owner_review_management_reply extends Activity {
                 intent.putExtra("store_name",store_name1);
 
                 startActivity(intent);
+                return true;
             }
-        });
+        }
+        return super.onOptionsItemSelected(item);
     }
+
+
 }

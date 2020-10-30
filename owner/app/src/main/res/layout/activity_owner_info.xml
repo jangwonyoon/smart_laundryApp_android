@@ -41,17 +41,18 @@
             android:singleLine="true"
             android:text="12345678"
             android:inputType="textPassword"
-            ></EditText>
+            />
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/layout5_b1"
             android:layout_below="@+id/layout5_et2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="확인"
-
             android:textSize="20dp"
-            ></Button>
+            android:background="@drawable/buttonshape2"
+            android:textColor="@color/white"
+            />
     </LinearLayout>
 
     <com.google.android.material.navigation.NavigationView
@@ -62,6 +63,4 @@
         android:fitsSystemWindows="true"
         app:headerLayout="@layout/navi_header"
         app:menu="@menu/menu2"/>
-    />
-
 </androidx.drawerlayout.widget.DrawerLayout>

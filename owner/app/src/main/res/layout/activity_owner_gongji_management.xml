@@ -65,14 +65,14 @@
             android:layout_weight="1.5"
             android:gravity="center">
 
-            <Button
+            <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/savebutton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:text="저장"
                 android:layout_gravity="center"
-                android:background="@color/blue"
+                android:background="@drawable/buttonshape2"
                 android:textColor="@color/white"
                 android:fontFamily="@font/notomedium"
                 />
