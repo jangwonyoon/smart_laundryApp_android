@@ -8,7 +8,57 @@
     android:orientation="vertical"
     android:background="@color/white">
 
-    <!-- android:id="@+id/ingi"-->
+
+    <LinearLayout
+        android:id="@+id/layout3_1"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/blue"
+        >
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/layout3_b1"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="left"
+                android:background="@drawable/arrow_back"
+                android:layout_margin="10dp">
+
+            </Button>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/nanum_gothic_bold"
+                android:gravity="center"
+                android:text="#검색"
+                android:textSize="30dp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                />
+
+            <Button
+                android:id="@+id/ingi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_gravity="right"
+                android:text="인기태그"
+                android:background="@color/blue"
+                android:textColor="@color/white"
+                />
+        </FrameLayout>
+
+    </LinearLayout>
 
     <FrameLayout
         android:layout_width="match_parent"

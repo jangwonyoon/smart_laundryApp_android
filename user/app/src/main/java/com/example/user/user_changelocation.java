@@ -124,7 +124,7 @@ public class user_changelocation extends AppCompatActivity
 
         //액션바 설정하기//
         //액션바 타이틀 변경하기
-        getSupportActionBar().setTitle("위치 변경");
+        getSupportActionBar().setTitle("[위치변경] "+user_name1+"님");
         //액션바 배경색 변경
         getSupportActionBar().setBackgroundDrawable(new ColorDrawable(0xFF4472C4));
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);

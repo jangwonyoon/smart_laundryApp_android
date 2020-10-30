@@ -8,6 +8,52 @@
     android:orientation="vertical"
     android:background="@color/white">
 
+
+    <LinearLayout
+        android:id="@+id/layout3_1"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/blue">
+
+        <!--<View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#FF000000" />-->
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/layout3_b1"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="left"
+                android:background="@drawable/arrow_back"
+                android:layout_margin="10dp">
+
+            </Button>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_marginTop="5dp"
+                android:text="#인기태그"
+                android:textSize="30dp"
+                android:textStyle="bold"
+                android:fontFamily="@font/title2"
+                android:textColor="@color/white"/>
+
+        </FrameLayout>
+
+
+    </LinearLayout>
+
     <TextView
         android:id="@+id/textView_main_result"
         android:layout_width="wrap_content"
@@ -20,9 +66,12 @@
         android:layout_height="match_parent"
         android:id="@+id/frame">
 
+
+
             <androidx.recyclerview.widget.RecyclerView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
+
                 android:padding="5dp"
                 android:id="@+id/listView_main_list"
                 android:layout_alignParentTop="true"

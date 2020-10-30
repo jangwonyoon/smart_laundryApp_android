@@ -78,7 +78,7 @@ public class user_searchhash_Adpter_plus extends RecyclerView.Adapter<user_searc
     @Override
     public void onBindViewHolder(@NonNull CustomViewHolder viewholder, final int position) {
 
-        viewholder.s_name.setText(mList.get(position).getMember_s_name());
+        viewholder.s_name.setText("#"+mList.get(position).getMember_s_name());
 
         viewholder.cv1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -90,7 +90,7 @@ public class user_searchhash_Adpter_plus extends RecyclerView.Adapter<user_searc
                 intent.putExtra("user_long", user_long);
                 intent.putExtra("user_id", user_id);
                 intent.putExtra("user_address_detail", user_address_detail);
-                intent.putExtra("data1",mList.get(position).getMember_s_name());
+                intent.putExtra("data1","#"+mList.get(position).getMember_s_name());
                 context.startActivity(intent);
             }
         });

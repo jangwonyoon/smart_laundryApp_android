@@ -9,7 +9,7 @@
     android:weightSum="10"
     android:background="@color/white">
 
-    <LinearLayout
+    <!--<LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:orientation="vertical"
@@ -26,18 +26,18 @@
             android:layout_marginTop="80dp"
             android:fontFamily="@font/nanum_gothic_bold"
             />
-    </LinearLayout>
+    </LinearLayout>-->
 
-    <View
+    <!--<View
         android:layout_width="match_parent"
         android:layout_height="3dp"
         android:background="@color/grey"
-        android:layout_gravity="center"/>
+        android:layout_gravity="center"/>-->
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="6.5"
+        android:layout_weight="9.5"
         android:layout_margin="30dp"
         android:orientation="vertical">
 
@@ -57,9 +57,9 @@
             android:hint="요청사항 입력"
             android:gravity="top"
             />
-    </LinearLayout>란
+    </LinearLayout>
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/pay"
         android:layout_width="200dp"
         android:layout_height="50dp"

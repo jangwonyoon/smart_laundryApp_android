@@ -32,7 +32,7 @@
                 android:text="위치를 지정해주세요.\n*지정한 위치로 서비스합니다.*\n"
                 >
             </TextView>
-            <Button
+            <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/layout3_b2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -41,8 +41,9 @@
                 android:textSize="15dp"
                 android:layout_gravity="center"
                 android:fontFamily="@font/medium"
+                android:textColor="@color/white"
                 android:background="@drawable/buttonshape">
-            </Button>
+            </androidx.appcompat.widget.AppCompatButton>
         </LinearLayout>
         <EditText
             android:layout_below="@+id/layout3_2"

@@ -1,5 +1,6 @@
 package com.example.user;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.NotificationCompat;
 
@@ -8,7 +9,9 @@ import android.app.Notification;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -27,7 +30,7 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.Locale;
 
-public class user_forpay extends Activity {
+public class user_forpay extends AppCompatActivity {
 
     String user_name1, user_address1, user_id1, user_address_detail1;
     Double user_lat1, user_long1;
@@ -51,8 +54,13 @@ public class user_forpay extends Activity {
         user_id1 = intent.getStringExtra("user_id");
         user_address_detail1 = intent.getStringExtra("user_address_detail");
 
-        tv1 = (TextView) findViewById(R.id.title1);
-        tv1.setText(title1+" [결제하기]");
+        /*tv1 = (TextView) findViewById(R.id.title1);
+        tv1.setText(title1+" [결제하기]");*/
+
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setTitle(title1+"[결제하기]");
+        actionBar.setBackgroundDrawable(new ColorDrawable(0xFF4472C4));
+        actionBar.setDisplayHomeAsUpEnabled(true);
 
 //        b1 = (Button) findViewById(R.id.layout2_b1);
         b2 = (Button) findViewById(R.id.pay);
@@ -139,5 +147,24 @@ public class user_forpay extends Activity {
                 queue.add(registerRequest);
             }
         });
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()){
+            case android.R.id.home:{ // 왼쪽 상단 버튼 눌렀을 때
+                Intent intent = new Intent(user_forpay.this, user_itembasket.class);
+                intent.putExtra("user_name",user_name1);
+                intent.putExtra("user_address",user_address1);
+                intent.putExtra("user_lat",user_lat1);
+                intent.putExtra("user_long",user_long1);
+                intent.putExtra("title",title1);
+                intent.putExtra("user_id",user_id1);
+                intent.putExtra("user_address_detail",user_address_detail1);
+                startActivity(intent);
+                return true;
+            }
+        }
+        return super.onOptionsItemSelected(item);
     }
 }

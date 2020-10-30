@@ -51,7 +51,7 @@
                 android:gravity="center"
                 >
 
-                <Button
+                <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/deleteitem"
                     android:layout_width="30dp"
                     android:layout_height="30dp"
@@ -69,7 +69,7 @@
                     android:textStyle="bold"
                     android:id="@+id/count"/>
 
-                <Button
+                <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/putitem"
                     android:layout_width="30dp"
                     android:layout_height="30dp"

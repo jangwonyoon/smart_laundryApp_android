@@ -1,5 +1,6 @@
 package com.example.user;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -8,10 +9,12 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.graphics.drawable.ColorDrawable;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.text.method.ScrollingMovementMethod;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
@@ -36,7 +39,7 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.ArrayList;
 
-public class user_itembasket extends Activity {
+public class user_itembasket extends AppCompatActivity {
     TextView tv1;
 
     String user_name1, user_address1, user_id1, user_address_detail1;
@@ -74,8 +77,13 @@ public class user_itembasket extends Activity {
         user_id1 = intent.getStringExtra("user_id");
         user_address_detail1 = intent.getStringExtra("user_address_detail");
 
-        tv1 = findViewById(R.id.title1);
-        tv1.setText(title1+" [장바구니]");
+        /*tv1 = findViewById(R.id.title1);
+        tv1.setText(title1+" [장바구니]");*/
+
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setTitle(title1+"[장바구니]");
+        actionBar.setBackgroundDrawable(new ColorDrawable(0xFF4472C4));
+        actionBar.setDisplayHomeAsUpEnabled(true);
 
         sumprice = (TextView) findViewById(R.id.sumprice);
 
@@ -146,20 +154,20 @@ public class user_itembasket extends Activity {
 
 
 
-//        b1 = (Button) findViewById(R.id.layout2_b1);
-//        b1.setOnClickListener(new View.OnClickListener() {
-//            public void onClick(View v) {
-//                Intent intent = new Intent(user_itembasket.this, user_itempage.class);
-//                intent.putExtra("user_name",user_name1);
-//                intent.putExtra("user_address",user_address1);
-//                intent.putExtra("user_lat",user_lat1);
-//                intent.putExtra("user_long",user_long1);
-//                intent.putExtra("title",title1);
-//                intent.putExtra("user_id",user_id1);
-//                intent.putExtra("user_address_detail",user_address_detail1);
-//                startActivity(intent);
-//            }
-//        });
+        /*b1 = (Button) findViewById(R.id.layout2_b1);
+        b1.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent = new Intent(user_itembasket.this, user_itempage.class);
+                intent.putExtra("user_name",user_name1);
+                intent.putExtra("user_address",user_address1);
+                intent.putExtra("user_lat",user_lat1);
+                intent.putExtra("user_long",user_long1);
+                intent.putExtra("title",title1);
+                intent.putExtra("user_id",user_id1);
+                intent.putExtra("user_address_detail",user_address_detail1);
+                startActivity(intent);
+            }
+        });*/
 
         goforpay.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -315,5 +323,24 @@ public class user_itembasket extends Activity {
             Log.d(TAG, "showResult : ", e);
         }
 
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()){
+            case android.R.id.home:{ // 왼쪽 상단 버튼 눌렀을 때
+                Intent intent = new Intent(user_itembasket.this, user_itempage.class);
+                intent.putExtra("user_name",user_name1);
+                intent.putExtra("user_address",user_address1);
+                intent.putExtra("user_lat",user_lat1);
+                intent.putExtra("user_long",user_long1);
+                intent.putExtra("title",title1);
+                intent.putExtra("user_id",user_id1);
+                intent.putExtra("user_address_detail",user_address_detail1);
+                startActivity(intent);
+                return true;
+            }
+        }
+        return super.onOptionsItemSelected(item);
     }
 }

@@ -236,7 +236,7 @@ public class user_itembasket_Adpter extends RecyclerView.Adapter<user_itembasket
                             JSONObject jsonObject = new JSONObject(response);
                             boolean success = jsonObject.getBoolean("success"); //php보면 response가 success면 ㄱㄱ
                             if(success){ //회원등록에 성공한 경우
-                                Toast.makeText(context.getApplicationContext(),"취소완료",Toast.LENGTH_SHORT).show();
+                                /*Toast.makeText(context.getApplicationContext(),"취소완료",Toast.LENGTH_SHORT).show();*/
 
                                 Intent intent = new Intent(context.getApplicationContext(),user_itembasket.class);
                                 intent.putExtra("user_name",user_name);

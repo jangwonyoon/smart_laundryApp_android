@@ -57,7 +57,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:layout_marginTop="5dp">
-                <Button
+                <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/deleteitem"
                     android:layout_width="30dp"
                     android:layout_height="40dp"
@@ -68,7 +68,7 @@
                     android:textColor="@color/white"
                     >
 
-                </Button>
+                </androidx.appcompat.widget.AppCompatButton>
 
                 <TextView
                     android:layout_width="30dp"
@@ -78,7 +78,7 @@
                     android:textStyle="bold"
                     android:id="@+id/count"/>
 
-                <Button
+                <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/putitem"
                     android:layout_width="30dp"
                     android:layout_height="40dp"
@@ -89,7 +89,7 @@
                     android:textColor="@color/white"
                     >
 
-                </Button>
+                </androidx.appcompat.widget.AppCompatButton>
             </LinearLayout>
         </LinearLayout>
 </RelativeLayout>
