@@ -84,7 +84,7 @@ TextRank는 핵심 단어를 선택하기 위해서 단어 간의 co-occurrence 
 이 랭킹이 높은 순서대로 키워드와 핵심 문장이 됩니다. 
 
 
-```
+```py
 from collections import Counter
 
 def scan_vocabulary(sents, tokenize, min_count=2):
@@ -106,7 +106,7 @@ vocab_to_idx: {vocab: idx}의 형태의 딕셔너리.
   
 이제 그래프에 필요한 node들이 생성되었습니다.
 
-```
+```py
 from collections import defaultdict
 from scipy.sparse import csr_matrix
 
@@ -169,7 +169,7 @@ tokenize 함수는 불필요한 단어를 모두 걸러내고, 필요한 단어 
 
 위 과정을 정리하면 아래와 같은 word_graph 함수를 만들 수 있습니다.
 
-```
+```py
 def word_graph(sents, tokenize=None, min_count=2, window=2, min_cooccurrence=2):
     idx_to_vocab, vocab_to_idx = scan_vocabulary(sents, tokenize, min_count)
     tokens = [tokenize(sent) for sent in sents]
@@ -183,7 +183,7 @@ A * R 은 column j에서 row i로의 랭킹 R_j의 전달되는 값을 의미합
 이 값에 df 를 곱하고, 모든 마디에 1 - df 를 더합니다. 신뢰도 높은 R값을 위해 이를 max_iter 만큼 반복합니다.
 값이 수렴하게되면 max_iter 값이 더 높아도 랭킹 R의 값은 변하지 않습니다.
 
-```
+```py
 import numpy as np
 from sklearn.preprocessing import normalize
 
@@ -206,7 +206,7 @@ def pagerank(x, df=0.85, max_iter=30):
 
 이 과정을 정리하면 아래와 같은 textrank_keyword 함수를 만들 수 있습니다.
 
-```
+```py
 def textrank_keyword(sents, tokenize, min_count, window, min_cooccurrence, df=0.85, max_iter=30, topk=30):
     g, idx_to_vocab = word_graph(sents, tokenize, min_count, window, min_cooccurrence)
     R = pagerank(g, df, max_iter).reshape(-1)	#1차원 배열로 reshape
@@ -241,7 +241,8 @@ def textrank_keyword(sents, tokenize, min_count, window, min_cooccurrence, df=0.
 문장들의 가중치를 계산할 때, '~가, ~도'와 같은 불필요하게 가중치가 높아질 수 있는 단어들은 stopword라는 변수로 제외시킵니다.
 아직 세탁소 댓글을 다 만들지 못해 stopword는 지정하지 않았습니다.
 위 데이터에서 가중치가 높은 sents와 keyword를 뽑아 csv파일로 저장합니다.
-```
+
+```py
 from konlpy.tag import Komoran
 from summarizer import KeywordSummarizer
 from summarizer import KeysentenceSummarizer
@@ -254,7 +255,7 @@ komoran = Komoran()		#Java로 이루어진 한국어 형태소 분석기
 
 a = pd.read_csv('C:/py36/review_emotion.csv', encoding='utf-8')
 
-'''
+'''py
 a.columns=['num','ID','review','score']
 a['review'] = a['review'].str.replace(pat='[^\w\s]', repl= ' ')  # replace all special symbols to space
 a['review'] = a['review'].str.replace(pat='[\s\s+]', repl= ' ', regex=True)  # replace multiple spaces with a single space
