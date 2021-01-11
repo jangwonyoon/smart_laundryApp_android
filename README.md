@@ -9,8 +9,7 @@
 - **프로젝트 형태 :**  홍익대학교 캡스톤 디자인
 - **팀원 :** 윤장원(팀장), 이의연, 전종욱, 여태권
 - **사이트 배포 링크( AWS S3 ) :** [http://laudaryservice.s3-website.ap-northeast-2.amazonaws.com/](http://laudaryservice.s3-website.ap-northeast-2.amazonaws.com/)
-
-세탁이 :[http://edit0.dothome.co.kr/makeweb/web_searching.php](http://edit0.dothome.co.kr/makeweb/web_searching.php)
+- **세탁이** :[http://edit0.dothome.co.kr/makeweb/web_searching.php](http://edit0.dothome.co.kr/makeweb/web_searching.php)
 - [http://edit0.dothome.co.kr/makeweb/web_o_login.php](http://edit0.dothome.co.kr/makeweb/web_o_login.php)
 - **안드로이드 배포 :**
 - **EC2 ( AWS EC2)**
