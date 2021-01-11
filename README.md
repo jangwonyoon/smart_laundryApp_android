@@ -7,7 +7,7 @@
 - **팀 명 :**  Keep_going
 - **프로젝트 명 :** 세탁만세
 - **프로젝트 형태 :**  홍익대학교 캡스톤 디자인
-- **팀원 :** 윤장원(팀장), 이의연, 전종욱, 여태권
+- **팀원 :** [윤장원(팀장)](https://github.com/jangwonyoon), [이의연](https://github.com/euiyeonlee), [전종욱](https://github.com/EDIT0), [여태권](https://github.com/taekyeo110)
 - **사이트 배포 링크( AWS S3 ) :** [http://laudaryservice.s3-website.ap-northeast-2.amazonaws.com/](http://laudaryservice.s3-website.ap-northeast-2.amazonaws.com/)
 - **세탁이** :[http://edit0.dothome.co.kr/makeweb/web_searching.php](http://edit0.dothome.co.kr/makeweb/web_searching.php)
 - [http://edit0.dothome.co.kr/makeweb/web_o_login.php](http://edit0.dothome.co.kr/makeweb/web_o_login.php)
@@ -19,8 +19,6 @@
 
 ## 2. Project
 
----
-
 # 프로젝트 소개
 
 **세탁물을 원하는 시간에 받고 싶은 경우, 세탁물 맡기기 귀찮거나 받으러 가기 귀찮은 경우 세탁물 대행 서비스입니다.** 
@@ -28,10 +26,6 @@
 ## 3.Team member
 
 ### 팀장 : 윤장원
-
----
-
-![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/060eba23-51a5-4361-a6c3-7c3b9f29959c/.jpeg](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/060eba23-51a5-4361-a6c3-7c3b9f29959c/.jpeg)
 
 - **Role** : Team Leader
 - **Position** : Full-stack, dev-ops
@@ -59,11 +53,7 @@
         - GitHub를 통한 코드 리뷰 및 개발
 
     ### 팀원 : 이의연
-
-    ---
-
-     
-
+    
     ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/d42cf934-7491-4ee1-bf90-131a1a602a1c/.jpeg](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/d42cf934-7491-4ee1-bf90-131a1a602a1c/.jpeg)
 
     - **Role** : Team Member
@@ -84,8 +74,6 @@
 
     ### 팀원 : 전종욱
 
-    ---
-
     ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/f1cab579-66ec-4731-bff6-e6ef338b1a13/.jpeg](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/f1cab579-66ec-4731-bff6-e6ef338b1a13/.jpeg)
 
     - **Role** : Full-stack , Native developer(android)
@@ -93,7 +81,7 @@
     - **Stack** : Android , php , mysql , phpMyadmin
     - **Works**
         - **Native 개발**
-            - 전체적인 안드로이드 앱 기능 구현
+            - 안드로이드 앱 기능 구현
             - Client, Owner, Deliver app 개발
             - Android <-> PHP <-> Mysql
         - **Back-End**
@@ -107,8 +95,6 @@
             - GitHub를 통한 코드 리뷰 및 개발
 
         ### 팀원 : 여태권
-
-        ---
 
         ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/a72399ba-dec4-4a7e-a3bf-dabf5838339f/.jpeg](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/a72399ba-dec4-4a7e-a3bf-dabf5838339f/.jpeg)
 
@@ -127,3 +113,6 @@
             - **협업**
                 - GitHub을 통한 코드 리뷰 및 개발
                 - Slack을 통한 빠른 소통
+                
+##4. 데모영상
+<iframe width="896" height="504" src="https://www.youtube.com/embed/PxrmLCCEaHU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
