@@ -25,6 +25,9 @@
 
 ## 3.Team member
 
+https://media.vlpt.us/images/jangwonyoon/post/400de9ff-ad7a-4be9-bc9b-27838e18de7f/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA%202020-11-12%20%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE%201.50.15.png
+
+
 ### 팀장 : 윤장원
 
 - **Role** : Team Leader
@@ -74,8 +77,6 @@
 
     ### 팀원 : 전종욱
 
-    ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/f1cab579-66ec-4731-bff6-e6ef338b1a13/.jpeg](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/f1cab579-66ec-4731-bff6-e6ef338b1a13/.jpeg)
-
     - **Role** : Full-stack , Native developer(android)
     - **Position** : Team Member
     - **Stack** : Android , php , mysql , phpMyadmin
@@ -96,8 +97,6 @@
 
         ### 팀원 : 여태권
 
-        ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/a72399ba-dec4-4a7e-a3bf-dabf5838339f/.jpeg](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/a72399ba-dec4-4a7e-a3bf-dabf5838339f/.jpeg)
-
         - **Role** : Team Member
         - **Position** : Back-end, Data analyst
         - **Stack** : python, tensorflow , mysql, R
@@ -113,6 +112,7 @@
             - **협업**
                 - GitHub을 통한 코드 리뷰 및 개발
                 - Slack을 통한 빠른 소통
-                
-##4. 데모영상
-<iframe width="896" height="504" src="https://www.youtube.com/embed/PxrmLCCEaHU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+## 4. 데모영상 
+
+[![세탁이Demo](https://media.vlpt.us/images/jangwonyoon/post/25e2e52a-18c7-4863-9af8-99e56aa0401b/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA%202020-11-12%20%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE%201.34.26.png)](https://www.youtube.com/watch?v=PxrmLCCEaHU&t=46s)
