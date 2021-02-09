@@ -88,19 +88,19 @@
 - **Stack** : Android , php , mysql , phpMyadmin
 - **Works**
 
-      - **Native 개발**
-        - 안드로이드 앱 기능 구현
-        - Client, Owner, Deliver app 개발
-        - Android <-> PHP <-> Mysql
-      - **Back-End**
-        - 데이터 베이스 관계 스키마 구축 및 구현
-        - 데이터 베이스 mysql, phpMyadmin 연동 및 쿼리 작성
-        - FTP 파일 전송 프로토콜을 통한 파일 전송
-      - **배포**
-        - 안드로이드 App을 apk파일로 배포
-      - **협업**
-        - Slack을 통한 빠른 소통
-        - GitHub를 통한 코드 리뷰 및 개발
+  - **Native 개발**
+    - 안드로이드 앱 기능 구현
+    - Client, Owner, Deliver app 개발
+    - Android <-> PHP <-> Mysql
+  - **Back-End**
+    - 데이터 베이스 관계 스키마 구축 및 구현
+    - 데이터 베이스 mysql, phpMyadmin 연동 및 쿼리 작성
+    - FTP 파일 전송 프로토콜을 통한 파일 전송
+  - **배포**
+    - 안드로이드 App을 apk파일로 배포
+  - **협업**
+    - Slack을 통한 빠른 소통
+    - GitHub를 통한 코드 리뷰 및 개발
 
 ### 팀원 : 여태권
 
